@@ -125,14 +125,18 @@ class HTTPRequest{
                 {
                     //print(error)
                     result = HTTPResult(isError: true, message: error.localizedDescription, dict: ["nil":"nil"])
+                    //Ending taks
                     finish = true
                 }
             }
+            //Resume tasks
             task.resume()
             session.finishTasksAndInvalidate()
             
         }
+        //While no response wait
         while(!finish) { usleep(300) }
+        //Return the result
         return result
     }
     

@@ -6,4 +6,8 @@
 //  Copyright © 2017 Guillaume Jette. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Date{
+    
+}
