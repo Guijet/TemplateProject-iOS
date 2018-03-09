@@ -52,6 +52,16 @@
 		<string>Lato-BlackItalic.tff</string>
 		<string>Lato-Regular.ttf</string>
 		<string>Lato-Black.ttf</string>
+		<string>Montserrat-Light.otf</string>
+		<string>Montserrat-Regular.otf</string>
+		<string>Montserrat-Medium.otf</string>
+		<string>Montserrat-Bold.otf</string>
+		<string>Montserrat-Thin.otf</string>
+		<string>Montserrat-ExtraLight.otf</string>
+		<string>Ubuntu-Light.ttf</string>
+		<string>Ubuntu-Regular.ttf</string>
+		<string>Ubuntu-Medium.ttf</string>
+		<string>Ubuntu-Bold.ttf</string>
 	</array>
 </dict>
 </plist>

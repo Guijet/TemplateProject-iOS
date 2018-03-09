@@ -224,19 +224,23 @@ extension UIImageView{
         }
     }
     
-//    func getOptimizeImageAsync(url: String){
-//        let refrsh = UIActivityIndicatorView()
-//        refrsh.frame = CGRect(x: self.bounds.midX - (self.frame.height / 2), y: self.bounds.minY, width: self.frame.height, height: self.frame.height)
-//        refrsh.color = UIColor().hex("#6CA743")
-//        self.addSubview(refrsh)
-//        refrsh.startAnimating()
-//        DispatchQueue.global(qos: .background).async {
-//            let image = Utility().getOptimizeImage(url: url)
-//            DispatchQueue.main.async {
-//                self.image = image
-//                refrsh.stopAnimating()
-//                refrsh.removeFromSuperview()
-//            }
-//        }
-//    }
+    func getOptimizeImageAsync(url: String){
+        let refrsh = UIActivityIndicatorView()
+        refrsh.frame = CGRect(x: self.bounds.midX - (self.frame.height / 2), y: self.bounds.minY, width: self.frame.height, height: self.frame.height)
+        refrsh.color = UIColor().hex("#6CA743")
+        self.addSubview(refrsh)
+        refrsh.startAnimating()
+        DispatchQueue.global(qos: .background).async {
+            let image = Utility().getOptimizeImage(url: url)
+            DispatchQueue.main.async {
+                self.image = image
+                refrsh.stopAnimating()
+                refrsh.removeFromSuperview()
+            }
+        }
+    }
+    
+    func getProfileImageIfAvailable(_ url:String){
+        
+    }
 }

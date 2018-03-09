@@ -42,27 +42,6 @@ extension UIView{
         self.layer.shadowPath = shadowPath.cgPath
     }
     
-    func addDashedBorder2(strokeColor: UIColor, lineWidth: CGFloat) {
-        self.layoutIfNeeded()
-        let strokeColor = strokeColor.cgColor
-        
-        let shapeLayer:CAShapeLayer = CAShapeLayer()
-        let frameSize = self.frame.size
-        let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
-        
-        shapeLayer.bounds = shapeRect
-        shapeLayer.position = CGPoint(x: frameSize.width/2, y: frameSize.height/2)
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = strokeColor
-        shapeLayer.lineWidth = lineWidth
-        shapeLayer.lineJoin = kCALineJoinRound
-        
-        shapeLayer.lineDashPattern = [5,5] // adjust to your liking
-        shapeLayer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: shapeRect.width, height: shapeRect.height), cornerRadius: self.layer.cornerRadius).cgPath
-        
-        self.layer.addSublayer(shapeLayer)
-    }
-    
     //Create gradient color as background
     //based on tow colors from Sketch
     //Start points and end points can be changed
@@ -77,6 +56,15 @@ extension UIView{
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
         gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
         self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    //ROUNDED CORNERS FOR CHOSEN SIDES
+    //
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
     }
     
     //Create a dashed line patern
@@ -107,13 +95,17 @@ extension UIView{
     //
     //
     //
-    func createHR(x: CGFloat,y: CGFloat, width: CGFloat,color: UIColor) {
+    func createHR(x: CGFloat,y: CGFloat, width: CGFloat,color: UIColor,isAlphaZero:Bool = false) {
         let hr = UITextView()
+        hr.accessibilityIdentifier = "HR"
         hr.isSelectable = false
         hr.isEditable = false
         hr.frame = CGRect(x: x, y: y, width: width, height: 1)
         hr.backgroundColor = color
         hr.isUserInteractionEnabled = false
+        if(isAlphaZero){
+            hr.alpha = 0
+        }
         self.addSubview(hr)
     }
     
@@ -144,4 +136,50 @@ extension UIView{
     func rh(_ val: CGFloat) -> CGFloat {
         return val * (self.frame.height / 667)
     }
+    
+
+    //Create a new instance of a
+    //view (a copy of it)
+    //
+    //
+    func copyView<T: UIView>() -> T {
+        return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self)) as! T
+    }
+    
+    //MARGIN UTILITY FOR iOS 11.0 ++
+    //
+    //
+    var safeTopAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.topAnchor
+        } else {
+            return self.topAnchor
+        }
+    }
+    
+    var safeLeftAnchor: NSLayoutXAxisAnchor {
+        if #available(iOS 11.0, *){
+            return self.safeAreaLayoutGuide.leftAnchor
+        }else {
+            return self.leftAnchor
+        }
+    }
+    
+    var safeRightAnchor: NSLayoutXAxisAnchor {
+        if #available(iOS 11.0, *){
+            return self.safeAreaLayoutGuide.rightAnchor
+        }else {
+            return self.rightAnchor
+        }
+    }
+    
+    var safeBottomAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.bottomAnchor
+        } else {
+            return self.bottomAnchor
+        }
+    }
+    
+    
 }

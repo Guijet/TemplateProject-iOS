@@ -15,8 +15,8 @@ extension UILabel{
         self.attributedText = attributedString
     }
     
-    func createLabel(frame:CGRect,textColor:UIColor,fontName:String,fontSize:CGFloat,textAignment:NSTextAlignment,text:String){
-        self.frame = frame
+    func createLabel(x:CGFloat,y:CGFloat,width:CGFloat,height:CGFloat,textColor:UIColor,fontName:String,fontSize:CGFloat,textAignment:NSTextAlignment,text:String){
+        self.frame = CGRect(x: x, y: y, width: width, height: height)
         self.textColor = textColor
         self.font = UIFont(name:fontName, size: fontSize)
         self.textAlignment = textAignment

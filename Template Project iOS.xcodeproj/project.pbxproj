@@ -14,40 +14,76 @@
 		463047011FBF38F9005F1106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */; };
 		4630470C1FBF38FA005F1106 /* Template_Project_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630470B1FBF38FA005F1106 /* Template_Project_iOSTests.swift */; };
 		463047171FBF38FA005F1106 /* Template_Project_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463047161FBF38FA005F1106 /* Template_Project_iOSUITests.swift */; };
-		465E19EE1FD4C17100E8466B /* GoogleMapTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E01FD4C17000E8466B /* GoogleMapTools.swift */; };
-		465E19EF1FD4C17100E8466B /* ArrayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E11FD4C17000E8466B /* ArrayTools.swift */; };
-		465E19F01FD4C17100E8466B /* StringTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E21FD4C17000E8466B /* StringTools.swift */; };
-		465E19F11FD4C17100E8466B /* UIImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E31FD4C17000E8466B /* UIImageTools.swift */; };
-		465E19F21FD4C17100E8466B /* UIScrollViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E41FD4C17000E8466B /* UIScrollViewTools.swift */; };
-		465E19F31FD4C17100E8466B /* UIViewControllerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E51FD4C17000E8466B /* UIViewControllerTools.swift */; };
-		465E19F41FD4C17100E8466B /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E61FD4C17000E8466B /* ColorTools.swift */; };
-		465E19F51FD4C17100E8466B /* UIViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E71FD4C17100E8466B /* UIViewTools.swift */; };
-		465E19F61FD4C17100E8466B /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E81FD4C17100E8466B /* ProgressBar.swift */; };
-		465E19F71FD4C17100E8466B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19E91FD4C17100E8466B /* Images.swift */; };
-		465E19F81FD4C17100E8466B /* TextFieldsTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19EA1FD4C17100E8466B /* TextFieldsTools.swift */; };
-		465E19F91FD4C17100E8466B /* UILabelTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19EB1FD4C17100E8466B /* UILabelTools.swift */; };
-		465E19FA1FD4C17100E8466B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19EC1FD4C17100E8466B /* DateHelper.swift */; };
-		465E19FB1FD4C17100E8466B /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465E19ED1FD4C17100E8466B /* HTTPRequest.swift */; };
-		46A71F50204206470069B169 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A71F4F204206470069B169 /* DottedLine.swift */; };
-		46C5E7F4201124B70035B68B /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E2201124B70035B68B /* Lato-Black.ttf */; };
-		46C5E7F5201124B70035B68B /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E3201124B70035B68B /* Lato-BlackItalic.ttf */; };
-		46C5E7F6201124B70035B68B /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E4201124B70035B68B /* Lato-Bold.ttf */; };
-		46C5E7F7201124B70035B68B /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E5201124B70035B68B /* Lato-BoldItalic.ttf */; };
-		46C5E7F8201124B70035B68B /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E6201124B70035B68B /* Lato-Hairline.ttf */; };
-		46C5E7F9201124B70035B68B /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E7201124B70035B68B /* Lato-HairlineItalic.ttf */; };
-		46C5E7FA201124B70035B68B /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E8201124B70035B68B /* Lato-Heavy.ttf */; };
-		46C5E7FB201124B70035B68B /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7E9201124B70035B68B /* Lato-HeavyItalic.ttf */; };
-		46C5E7FC201124B70035B68B /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7EA201124B70035B68B /* Lato-Italic.ttf */; };
-		46C5E7FD201124B70035B68B /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7EB201124B70035B68B /* Lato-Light.ttf */; };
-		46C5E7FE201124B70035B68B /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7EC201124B70035B68B /* Lato-LightItalic.ttf */; };
-		46C5E7FF201124B70035B68B /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7ED201124B70035B68B /* Lato-Medium.ttf */; };
-		46C5E800201124B70035B68B /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7EE201124B70035B68B /* Lato-MediumItalic.ttf */; };
-		46C5E801201124B70035B68B /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7EF201124B70035B68B /* Lato-Regular.ttf */; };
-		46C5E802201124B70035B68B /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7F0201124B70035B68B /* Lato-Semibold.ttf */; };
-		46C5E803201124B70035B68B /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7F1201124B70035B68B /* Lato-SemiboldItalic.ttf */; };
-		46C5E804201124B70035B68B /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7F2201124B70035B68B /* Lato-Thin.ttf */; };
-		46C5E805201124B70035B68B /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C5E7F3201124B70035B68B /* Lato-ThinItalic.ttf */; };
-		46D645BA200D288700BD3D64 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D645B9200D288700BD3D64 /* LineGraphView.swift */; };
+		469339E82052ED9500A5B173 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339BC2052ED9500A5B173 /* Lato-Black.ttf */; };
+		469339E92052ED9500A5B173 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339BD2052ED9500A5B173 /* Lato-BlackItalic.ttf */; };
+		469339EA2052ED9500A5B173 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339BE2052ED9500A5B173 /* Lato-Bold.ttf */; };
+		469339EB2052ED9500A5B173 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339BF2052ED9500A5B173 /* Lato-BoldItalic.ttf */; };
+		469339EC2052ED9500A5B173 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C02052ED9500A5B173 /* Lato-Hairline.ttf */; };
+		469339ED2052ED9500A5B173 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C12052ED9500A5B173 /* Lato-HairlineItalic.ttf */; };
+		469339EE2052ED9500A5B173 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C22052ED9500A5B173 /* Lato-Heavy.ttf */; };
+		469339EF2052ED9500A5B173 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C32052ED9500A5B173 /* Lato-HeavyItalic.ttf */; };
+		469339F02052ED9500A5B173 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C42052ED9500A5B173 /* Lato-Italic.ttf */; };
+		469339F12052ED9500A5B173 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C52052ED9500A5B173 /* Lato-Light.ttf */; };
+		469339F22052ED9500A5B173 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C62052ED9500A5B173 /* Lato-LightItalic.ttf */; };
+		469339F32052ED9500A5B173 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C72052ED9500A5B173 /* Lato-Medium.ttf */; };
+		469339F42052ED9500A5B173 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C82052ED9500A5B173 /* Lato-MediumItalic.ttf */; };
+		469339F52052ED9500A5B173 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339C92052ED9500A5B173 /* Lato-Regular.ttf */; };
+		469339F62052ED9500A5B173 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339CA2052ED9500A5B173 /* Lato-Semibold.ttf */; };
+		469339F72052ED9500A5B173 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339CB2052ED9500A5B173 /* Lato-SemiboldItalic.ttf */; };
+		469339F82052ED9500A5B173 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339CC2052ED9500A5B173 /* Lato-Thin.ttf */; };
+		469339F92052ED9500A5B173 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339CD2052ED9500A5B173 /* Lato-ThinItalic.ttf */; };
+		469339FA2052ED9500A5B173 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339CE2052ED9500A5B173 /* Montserrat-Black.otf */; };
+		469339FB2052ED9500A5B173 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339CF2052ED9500A5B173 /* Montserrat-Bold.otf */; };
+		469339FC2052ED9500A5B173 /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D02052ED9500A5B173 /* Montserrat-ExtraBold.otf */; };
+		469339FD2052ED9500A5B173 /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D12052ED9500A5B173 /* Montserrat-ExtraLight.otf */; };
+		469339FE2052ED9500A5B173 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D22052ED9500A5B173 /* Montserrat-Light.otf */; };
+		469339FF2052ED9500A5B173 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D32052ED9500A5B173 /* Montserrat-Medium.otf */; };
+		46933A002052ED9500A5B173 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D42052ED9500A5B173 /* Montserrat-Regular.otf */; };
+		46933A012052ED9500A5B173 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D52052ED9500A5B173 /* Montserrat-SemiBold.otf */; };
+		46933A022052ED9500A5B173 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D62052ED9500A5B173 /* Montserrat-Thin.otf */; };
+		46933A032052ED9500A5B173 /* MontserratAlternates-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D72052ED9500A5B173 /* MontserratAlternates-Black.otf */; };
+		46933A042052ED9500A5B173 /* MontserratAlternates-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D82052ED9500A5B173 /* MontserratAlternates-Bold.otf */; };
+		46933A052052ED9500A5B173 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339D92052ED9500A5B173 /* MontserratAlternates-ExtraBold.otf */; };
+		46933A062052ED9500A5B173 /* MontserratAlternates-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339DA2052ED9500A5B173 /* MontserratAlternates-ExtraLight.otf */; };
+		46933A072052ED9500A5B173 /* MontserratAlternates-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339DB2052ED9500A5B173 /* MontserratAlternates-Light.otf */; };
+		46933A082052ED9500A5B173 /* MontserratAlternates-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339DC2052ED9500A5B173 /* MontserratAlternates-Medium.otf */; };
+		46933A092052ED9500A5B173 /* MontserratAlternates-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339DD2052ED9500A5B173 /* MontserratAlternates-Regular.otf */; };
+		46933A0A2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339DE2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf */; };
+		46933A0B2052ED9500A5B173 /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469339DF2052ED9500A5B173 /* MontserratAlternates-Thin.otf */; };
+		46933A0C2052ED9500A5B173 /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E02052ED9500A5B173 /* Ubuntu-Bold.ttf */; };
+		46933A0D2052ED9500A5B173 /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E12052ED9500A5B173 /* Ubuntu-BoldItalic.ttf */; };
+		46933A0E2052ED9500A5B173 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E22052ED9500A5B173 /* Ubuntu-Italic.ttf */; };
+		46933A0F2052ED9500A5B173 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E32052ED9500A5B173 /* Ubuntu-Light.ttf */; };
+		46933A102052ED9500A5B173 /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E42052ED9500A5B173 /* Ubuntu-LightItalic.ttf */; };
+		46933A112052ED9500A5B173 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E52052ED9500A5B173 /* Ubuntu-Medium.ttf */; };
+		46933A122052ED9500A5B173 /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E62052ED9500A5B173 /* Ubuntu-MediumItalic.ttf */; };
+		46933A132052ED9500A5B173 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 469339E72052ED9500A5B173 /* Ubuntu-Regular.ttf */; };
+		46933A3A2052EDAE00A5B173 /* CalendarTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A162052EDAE00A5B173 /* CalendarTools.swift */; };
+		46933A3B2052EDAE00A5B173 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A172052EDAE00A5B173 /* DateHelper.swift */; };
+		46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A192052EDAE00A5B173 /* CircleGesture.swift */; };
+		46933A3D2052EDAE00A5B173 /* SafeAreaGuideExemple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A1B2052EDAE00A5B173 /* SafeAreaGuideExemple.swift */; };
+		46933A3E2052EDAE00A5B173 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A1C2052EDAE00A5B173 /* Utility.swift */; };
+		46933A3F2052EDAE00A5B173 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A1E2052EDAE00A5B173 /* LineGraph.swift */; };
+		46933A402052EDAE00A5B173 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A202052EDAE00A5B173 /* Images.swift */; };
+		46933A412052EDAE00A5B173 /* UIImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A212052EDAE00A5B173 /* UIImageTools.swift */; };
+		46933A422052EDAE00A5B173 /* GoogleMapTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A232052EDAE00A5B173 /* GoogleMapTools.swift */; };
+		46933A432052EDAE00A5B173 /* NavigationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A252052EDAE00A5B173 /* NavigationTools.swift */; };
+		46933A442052EDAE00A5B173 /* TopSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A272052EDAE00A5B173 /* TopSelector.swift */; };
+		46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A292052EDAE00A5B173 /* StripeClass.swift */; };
+		46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A2B2052EDAE00A5B173 /* ArrayTools.swift */; };
+		46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A2C2052EDAE00A5B173 /* AttributedStringTools.swift */; };
+		46933A482052EDAE00A5B173 /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A2D2052EDAE00A5B173 /* ColorTools.swift */; };
+		46933A492052EDAE00A5B173 /* FloatTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A2E2052EDAE00A5B173 /* FloatTools.swift */; };
+		46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A2F2052EDAE00A5B173 /* NSNumberTools.swift */; };
+		46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A302052EDAE00A5B173 /* StringTools.swift */; };
+		46933A4C2052EDAE00A5B173 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A322052EDAE00A5B173 /* PieChart.swift */; };
+		46933A4D2052EDAE00A5B173 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A332052EDAE00A5B173 /* ProgressBar.swift */; };
+		46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A342052EDAE00A5B173 /* TextFieldsTools.swift */; };
+		46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A352052EDAE00A5B173 /* UILabelTools.swift */; };
+		46933A502052EDAE00A5B173 /* UIScrollViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A362052EDAE00A5B173 /* UIScrollViewTools.swift */; };
+		46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A372052EDAE00A5B173 /* UITableViewTools.swift */; };
+		46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A382052EDAE00A5B173 /* UIViewControllerTools.swift */; };
+		46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A392052EDAE00A5B173 /* UIViewTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,40 +117,76 @@
 		463047121FBF38FA005F1106 /* Template Project iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Template Project iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463047161FBF38FA005F1106 /* Template_Project_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template_Project_iOSUITests.swift; sourceTree = "<group>"; };
 		463047181FBF38FA005F1106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		465E19E01FD4C17000E8466B /* GoogleMapTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapTools.swift; sourceTree = "<group>"; };
-		465E19E11FD4C17000E8466B /* ArrayTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTools.swift; sourceTree = "<group>"; };
-		465E19E21FD4C17000E8466B /* StringTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTools.swift; sourceTree = "<group>"; };
-		465E19E31FD4C17000E8466B /* UIImageTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageTools.swift; sourceTree = "<group>"; };
-		465E19E41FD4C17000E8466B /* UIScrollViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewTools.swift; sourceTree = "<group>"; };
-		465E19E51FD4C17000E8466B /* UIViewControllerTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTools.swift; sourceTree = "<group>"; };
-		465E19E61FD4C17000E8466B /* ColorTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTools.swift; sourceTree = "<group>"; };
-		465E19E71FD4C17100E8466B /* UIViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTools.swift; sourceTree = "<group>"; };
-		465E19E81FD4C17100E8466B /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		465E19E91FD4C17100E8466B /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		465E19EA1FD4C17100E8466B /* TextFieldsTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsTools.swift; sourceTree = "<group>"; };
-		465E19EB1FD4C17100E8466B /* UILabelTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTools.swift; sourceTree = "<group>"; };
-		465E19EC1FD4C17100E8466B /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
-		465E19ED1FD4C17100E8466B /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-		46A71F4F204206470069B169 /* DottedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
-		46C5E7E2201124B70035B68B /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
-		46C5E7E3201124B70035B68B /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7E4201124B70035B68B /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		46C5E7E5201124B70035B68B /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7E6201124B70035B68B /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
-		46C5E7E7201124B70035B68B /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7E8201124B70035B68B /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
-		46C5E7E9201124B70035B68B /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7EA201124B70035B68B /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
-		46C5E7EB201124B70035B68B /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
-		46C5E7EC201124B70035B68B /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7ED201124B70035B68B /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
-		46C5E7EE201124B70035B68B /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7EF201124B70035B68B /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		46C5E7F0201124B70035B68B /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
-		46C5E7F1201124B70035B68B /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		46C5E7F2201124B70035B68B /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
-		46C5E7F3201124B70035B68B /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
-		46D645B9200D288700BD3D64 /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
+		469339BC2052ED9500A5B173 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		469339BD2052ED9500A5B173 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		469339BE2052ED9500A5B173 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		469339BF2052ED9500A5B173 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		469339C02052ED9500A5B173 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		469339C12052ED9500A5B173 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		469339C22052ED9500A5B173 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		469339C32052ED9500A5B173 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		469339C42052ED9500A5B173 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		469339C52052ED9500A5B173 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		469339C62052ED9500A5B173 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		469339C72052ED9500A5B173 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		469339C82052ED9500A5B173 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		469339C92052ED9500A5B173 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		469339CA2052ED9500A5B173 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		469339CB2052ED9500A5B173 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		469339CC2052ED9500A5B173 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		469339CD2052ED9500A5B173 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		469339CE2052ED9500A5B173 /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		469339CF2052ED9500A5B173 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		469339D02052ED9500A5B173 /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		469339D12052ED9500A5B173 /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
+		469339D22052ED9500A5B173 /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		469339D32052ED9500A5B173 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		469339D42052ED9500A5B173 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		469339D52052ED9500A5B173 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		469339D62052ED9500A5B173 /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.otf"; sourceTree = "<group>"; };
+		469339D72052ED9500A5B173 /* MontserratAlternates-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Black.otf"; sourceTree = "<group>"; };
+		469339D82052ED9500A5B173 /* MontserratAlternates-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.otf"; sourceTree = "<group>"; };
+		469339D92052ED9500A5B173 /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
+		469339DA2052ED9500A5B173 /* MontserratAlternates-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraLight.otf"; sourceTree = "<group>"; };
+		469339DB2052ED9500A5B173 /* MontserratAlternates-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.otf"; sourceTree = "<group>"; };
+		469339DC2052ED9500A5B173 /* MontserratAlternates-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Medium.otf"; sourceTree = "<group>"; };
+		469339DD2052ED9500A5B173 /* MontserratAlternates-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.otf"; sourceTree = "<group>"; };
+		469339DE2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
+		469339DF2052ED9500A5B173 /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.otf"; sourceTree = "<group>"; };
+		469339E02052ED9500A5B173 /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		469339E12052ED9500A5B173 /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		469339E22052ED9500A5B173 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		469339E32052ED9500A5B173 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		469339E42052ED9500A5B173 /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		469339E52052ED9500A5B173 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		469339E62052ED9500A5B173 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		469339E72052ED9500A5B173 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		46933A162052EDAE00A5B173 /* CalendarTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTools.swift; sourceTree = "<group>"; };
+		46933A172052EDAE00A5B173 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		46933A192052EDAE00A5B173 /* CircleGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGesture.swift; sourceTree = "<group>"; };
+		46933A1B2052EDAE00A5B173 /* SafeAreaGuideExemple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeAreaGuideExemple.swift; sourceTree = "<group>"; };
+		46933A1C2052EDAE00A5B173 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		46933A1E2052EDAE00A5B173 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		46933A202052EDAE00A5B173 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		46933A212052EDAE00A5B173 /* UIImageTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageTools.swift; sourceTree = "<group>"; };
+		46933A232052EDAE00A5B173 /* GoogleMapTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapTools.swift; sourceTree = "<group>"; };
+		46933A252052EDAE00A5B173 /* NavigationTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTools.swift; sourceTree = "<group>"; };
+		46933A272052EDAE00A5B173 /* TopSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSelector.swift; sourceTree = "<group>"; };
+		46933A292052EDAE00A5B173 /* StripeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeClass.swift; sourceTree = "<group>"; };
+		46933A2B2052EDAE00A5B173 /* ArrayTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTools.swift; sourceTree = "<group>"; };
+		46933A2C2052EDAE00A5B173 /* AttributedStringTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringTools.swift; sourceTree = "<group>"; };
+		46933A2D2052EDAE00A5B173 /* ColorTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTools.swift; sourceTree = "<group>"; };
+		46933A2E2052EDAE00A5B173 /* FloatTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatTools.swift; sourceTree = "<group>"; };
+		46933A2F2052EDAE00A5B173 /* NSNumberTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberTools.swift; sourceTree = "<group>"; };
+		46933A302052EDAE00A5B173 /* StringTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTools.swift; sourceTree = "<group>"; };
+		46933A322052EDAE00A5B173 /* PieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		46933A332052EDAE00A5B173 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		46933A342052EDAE00A5B173 /* TextFieldsTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsTools.swift; sourceTree = "<group>"; };
+		46933A352052EDAE00A5B173 /* UILabelTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTools.swift; sourceTree = "<group>"; };
+		46933A362052EDAE00A5B173 /* UIScrollViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewTools.swift; sourceTree = "<group>"; };
+		46933A372052EDAE00A5B173 /* UITableViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewTools.swift; sourceTree = "<group>"; };
+		46933A382052EDAE00A5B173 /* UIViewControllerTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTools.swift; sourceTree = "<group>"; };
+		46933A392052EDAE00A5B173 /* UIViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,33 +214,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		461D1B6C1FC334020017F37F /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				465E19E11FD4C17000E8466B /* ArrayTools.swift */,
-				465E19E61FD4C17000E8466B /* ColorTools.swift */,
-				465E19EC1FD4C17100E8466B /* DateHelper.swift */,
-				465E19E01FD4C17000E8466B /* GoogleMapTools.swift */,
-				465E19ED1FD4C17100E8466B /* HTTPRequest.swift */,
-				465E19E91FD4C17100E8466B /* Images.swift */,
-				465E19E81FD4C17100E8466B /* ProgressBar.swift */,
-				465E19E21FD4C17000E8466B /* StringTools.swift */,
-				465E19EA1FD4C17100E8466B /* TextFieldsTools.swift */,
-				465E19E31FD4C17000E8466B /* UIImageTools.swift */,
-				465E19EB1FD4C17100E8466B /* UILabelTools.swift */,
-				465E19E41FD4C17000E8466B /* UIScrollViewTools.swift */,
-				465E19E51FD4C17000E8466B /* UIViewControllerTools.swift */,
-				465E19E71FD4C17100E8466B /* UIViewTools.swift */,
-				46D645B9200D288700BD3D64 /* LineGraphView.swift */,
-				46A71F4F204206470069B169 /* DottedLine.swift */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
 		463046EA1FBF38F9005F1106 = {
 			isa = PBXGroup;
 			children = (
-				46C5E7E1201124B70035B68B /* Fonts */,
 				463046F51FBF38F9005F1106 /* Template Project iOS */,
 				4630470A1FBF38FA005F1106 /* Template Project iOSTests */,
 				463047151FBF38FA005F1106 /* Template Project iOSUITests */,
@@ -189,7 +237,8 @@
 		463046F51FBF38F9005F1106 /* Template Project iOS */ = {
 			isa = PBXGroup;
 			children = (
-				461D1B6C1FC334020017F37F /* Tools */,
+				46933A142052EDAE00A5B173 /* Tools */,
+				469339BB2052ED9500A5B173 /* Fonts */,
 				463046F61FBF38F9005F1106 /* AppDelegate.swift */,
 				463046F81FBF38F9005F1106 /* ViewController.swift */,
 				463046FA1FBF38F9005F1106 /* Main.storyboard */,
@@ -218,29 +267,176 @@
 			path = "Template Project iOSUITests";
 			sourceTree = "<group>";
 		};
-		46C5E7E1201124B70035B68B /* Fonts */ = {
+		469339BB2052ED9500A5B173 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				46C5E7E2201124B70035B68B /* Lato-Black.ttf */,
-				46C5E7E3201124B70035B68B /* Lato-BlackItalic.ttf */,
-				46C5E7E4201124B70035B68B /* Lato-Bold.ttf */,
-				46C5E7E5201124B70035B68B /* Lato-BoldItalic.ttf */,
-				46C5E7E6201124B70035B68B /* Lato-Hairline.ttf */,
-				46C5E7E7201124B70035B68B /* Lato-HairlineItalic.ttf */,
-				46C5E7E8201124B70035B68B /* Lato-Heavy.ttf */,
-				46C5E7E9201124B70035B68B /* Lato-HeavyItalic.ttf */,
-				46C5E7EA201124B70035B68B /* Lato-Italic.ttf */,
-				46C5E7EB201124B70035B68B /* Lato-Light.ttf */,
-				46C5E7EC201124B70035B68B /* Lato-LightItalic.ttf */,
-				46C5E7ED201124B70035B68B /* Lato-Medium.ttf */,
-				46C5E7EE201124B70035B68B /* Lato-MediumItalic.ttf */,
-				46C5E7EF201124B70035B68B /* Lato-Regular.ttf */,
-				46C5E7F0201124B70035B68B /* Lato-Semibold.ttf */,
-				46C5E7F1201124B70035B68B /* Lato-SemiboldItalic.ttf */,
-				46C5E7F2201124B70035B68B /* Lato-Thin.ttf */,
-				46C5E7F3201124B70035B68B /* Lato-ThinItalic.ttf */,
+				469339BC2052ED9500A5B173 /* Lato-Black.ttf */,
+				469339BD2052ED9500A5B173 /* Lato-BlackItalic.ttf */,
+				469339BE2052ED9500A5B173 /* Lato-Bold.ttf */,
+				469339BF2052ED9500A5B173 /* Lato-BoldItalic.ttf */,
+				469339C02052ED9500A5B173 /* Lato-Hairline.ttf */,
+				469339C12052ED9500A5B173 /* Lato-HairlineItalic.ttf */,
+				469339C22052ED9500A5B173 /* Lato-Heavy.ttf */,
+				469339C32052ED9500A5B173 /* Lato-HeavyItalic.ttf */,
+				469339C42052ED9500A5B173 /* Lato-Italic.ttf */,
+				469339C52052ED9500A5B173 /* Lato-Light.ttf */,
+				469339C62052ED9500A5B173 /* Lato-LightItalic.ttf */,
+				469339C72052ED9500A5B173 /* Lato-Medium.ttf */,
+				469339C82052ED9500A5B173 /* Lato-MediumItalic.ttf */,
+				469339C92052ED9500A5B173 /* Lato-Regular.ttf */,
+				469339CA2052ED9500A5B173 /* Lato-Semibold.ttf */,
+				469339CB2052ED9500A5B173 /* Lato-SemiboldItalic.ttf */,
+				469339CC2052ED9500A5B173 /* Lato-Thin.ttf */,
+				469339CD2052ED9500A5B173 /* Lato-ThinItalic.ttf */,
+				469339CE2052ED9500A5B173 /* Montserrat-Black.otf */,
+				469339CF2052ED9500A5B173 /* Montserrat-Bold.otf */,
+				469339D02052ED9500A5B173 /* Montserrat-ExtraBold.otf */,
+				469339D12052ED9500A5B173 /* Montserrat-ExtraLight.otf */,
+				469339D22052ED9500A5B173 /* Montserrat-Light.otf */,
+				469339D32052ED9500A5B173 /* Montserrat-Medium.otf */,
+				469339D42052ED9500A5B173 /* Montserrat-Regular.otf */,
+				469339D52052ED9500A5B173 /* Montserrat-SemiBold.otf */,
+				469339D62052ED9500A5B173 /* Montserrat-Thin.otf */,
+				469339D72052ED9500A5B173 /* MontserratAlternates-Black.otf */,
+				469339D82052ED9500A5B173 /* MontserratAlternates-Bold.otf */,
+				469339D92052ED9500A5B173 /* MontserratAlternates-ExtraBold.otf */,
+				469339DA2052ED9500A5B173 /* MontserratAlternates-ExtraLight.otf */,
+				469339DB2052ED9500A5B173 /* MontserratAlternates-Light.otf */,
+				469339DC2052ED9500A5B173 /* MontserratAlternates-Medium.otf */,
+				469339DD2052ED9500A5B173 /* MontserratAlternates-Regular.otf */,
+				469339DE2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf */,
+				469339DF2052ED9500A5B173 /* MontserratAlternates-Thin.otf */,
+				469339E02052ED9500A5B173 /* Ubuntu-Bold.ttf */,
+				469339E12052ED9500A5B173 /* Ubuntu-BoldItalic.ttf */,
+				469339E22052ED9500A5B173 /* Ubuntu-Italic.ttf */,
+				469339E32052ED9500A5B173 /* Ubuntu-Light.ttf */,
+				469339E42052ED9500A5B173 /* Ubuntu-LightItalic.ttf */,
+				469339E52052ED9500A5B173 /* Ubuntu-Medium.ttf */,
+				469339E62052ED9500A5B173 /* Ubuntu-MediumItalic.ttf */,
+				469339E72052ED9500A5B173 /* Ubuntu-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		46933A142052EDAE00A5B173 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				46933A152052EDAE00A5B173 /* Date */,
+				46933A182052EDAE00A5B173 /* Gestures */,
+				46933A1A2052EDAE00A5B173 /* Global Utility */,
+				46933A1D2052EDAE00A5B173 /* Graph */,
+				46933A1F2052EDAE00A5B173 /* Images */,
+				46933A222052EDAE00A5B173 /* Maps */,
+				46933A242052EDAE00A5B173 /* Navigation */,
+				46933A262052EDAE00A5B173 /* Segmented Controller */,
+				46933A282052EDAE00A5B173 /* Stripe */,
+				46933A2A2052EDAE00A5B173 /* Utility */,
+				46933A312052EDAE00A5B173 /* Views */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		46933A152052EDAE00A5B173 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				46933A162052EDAE00A5B173 /* CalendarTools.swift */,
+				46933A172052EDAE00A5B173 /* DateHelper.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		46933A182052EDAE00A5B173 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				46933A192052EDAE00A5B173 /* CircleGesture.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		46933A1A2052EDAE00A5B173 /* Global Utility */ = {
+			isa = PBXGroup;
+			children = (
+				46933A1B2052EDAE00A5B173 /* SafeAreaGuideExemple.swift */,
+				46933A1C2052EDAE00A5B173 /* Utility.swift */,
+			);
+			path = "Global Utility";
+			sourceTree = "<group>";
+		};
+		46933A1D2052EDAE00A5B173 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				46933A1E2052EDAE00A5B173 /* LineGraph.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		46933A1F2052EDAE00A5B173 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				46933A202052EDAE00A5B173 /* Images.swift */,
+				46933A212052EDAE00A5B173 /* UIImageTools.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		46933A222052EDAE00A5B173 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				46933A232052EDAE00A5B173 /* GoogleMapTools.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		46933A242052EDAE00A5B173 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				46933A252052EDAE00A5B173 /* NavigationTools.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		46933A262052EDAE00A5B173 /* Segmented Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46933A272052EDAE00A5B173 /* TopSelector.swift */,
+			);
+			path = "Segmented Controller";
+			sourceTree = "<group>";
+		};
+		46933A282052EDAE00A5B173 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				46933A292052EDAE00A5B173 /* StripeClass.swift */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
+		46933A2A2052EDAE00A5B173 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				46933A2B2052EDAE00A5B173 /* ArrayTools.swift */,
+				46933A2C2052EDAE00A5B173 /* AttributedStringTools.swift */,
+				46933A2D2052EDAE00A5B173 /* ColorTools.swift */,
+				46933A2E2052EDAE00A5B173 /* FloatTools.swift */,
+				46933A2F2052EDAE00A5B173 /* NSNumberTools.swift */,
+				46933A302052EDAE00A5B173 /* StringTools.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		46933A312052EDAE00A5B173 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46933A322052EDAE00A5B173 /* PieChart.swift */,
+				46933A332052EDAE00A5B173 /* ProgressBar.swift */,
+				46933A342052EDAE00A5B173 /* TextFieldsTools.swift */,
+				46933A352052EDAE00A5B173 /* UILabelTools.swift */,
+				46933A362052EDAE00A5B173 /* UIScrollViewTools.swift */,
+				46933A372052EDAE00A5B173 /* UITableViewTools.swift */,
+				46933A382052EDAE00A5B173 /* UIViewControllerTools.swift */,
+				46933A392052EDAE00A5B173 /* UIViewTools.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,27 +546,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C5E7FA201124B70035B68B /* Lato-Heavy.ttf in Resources */,
-				46C5E805201124B70035B68B /* Lato-ThinItalic.ttf in Resources */,
-				46C5E7FD201124B70035B68B /* Lato-Light.ttf in Resources */,
-				46C5E7F4201124B70035B68B /* Lato-Black.ttf in Resources */,
-				46C5E7F6201124B70035B68B /* Lato-Bold.ttf in Resources */,
+				469339FC2052ED9500A5B173 /* Montserrat-ExtraBold.otf in Resources */,
+				469339EE2052ED9500A5B173 /* Lato-Heavy.ttf in Resources */,
+				46933A092052ED9500A5B173 /* MontserratAlternates-Regular.otf in Resources */,
+				469339F92052ED9500A5B173 /* Lato-ThinItalic.ttf in Resources */,
+				469339F12052ED9500A5B173 /* Lato-Light.ttf in Resources */,
+				46933A042052ED9500A5B173 /* MontserratAlternates-Bold.otf in Resources */,
+				469339E82052ED9500A5B173 /* Lato-Black.ttf in Resources */,
+				469339EA2052ED9500A5B173 /* Lato-Bold.ttf in Resources */,
+				46933A0B2052ED9500A5B173 /* MontserratAlternates-Thin.otf in Resources */,
 				463047011FBF38F9005F1106 /* LaunchScreen.storyboard in Resources */,
-				46C5E800201124B70035B68B /* Lato-MediumItalic.ttf in Resources */,
-				46C5E803201124B70035B68B /* Lato-SemiboldItalic.ttf in Resources */,
-				46C5E7F5201124B70035B68B /* Lato-BlackItalic.ttf in Resources */,
-				46C5E7FB201124B70035B68B /* Lato-HeavyItalic.ttf in Resources */,
+				46933A072052ED9500A5B173 /* MontserratAlternates-Light.otf in Resources */,
+				46933A112052ED9500A5B173 /* Ubuntu-Medium.ttf in Resources */,
+				469339F42052ED9500A5B173 /* Lato-MediumItalic.ttf in Resources */,
+				46933A082052ED9500A5B173 /* MontserratAlternates-Medium.otf in Resources */,
+				46933A0A2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf in Resources */,
+				469339F72052ED9500A5B173 /* Lato-SemiboldItalic.ttf in Resources */,
+				46933A122052ED9500A5B173 /* Ubuntu-MediumItalic.ttf in Resources */,
+				46933A032052ED9500A5B173 /* MontserratAlternates-Black.otf in Resources */,
+				469339FD2052ED9500A5B173 /* Montserrat-ExtraLight.otf in Resources */,
+				469339E92052ED9500A5B173 /* Lato-BlackItalic.ttf in Resources */,
+				469339FB2052ED9500A5B173 /* Montserrat-Bold.otf in Resources */,
+				46933A012052ED9500A5B173 /* Montserrat-SemiBold.otf in Resources */,
+				46933A0C2052ED9500A5B173 /* Ubuntu-Bold.ttf in Resources */,
+				469339EF2052ED9500A5B173 /* Lato-HeavyItalic.ttf in Resources */,
+				46933A0F2052ED9500A5B173 /* Ubuntu-Light.ttf in Resources */,
 				463046FE1FBF38F9005F1106 /* Assets.xcassets in Resources */,
-				46C5E7F9201124B70035B68B /* Lato-HairlineItalic.ttf in Resources */,
-				46C5E7F7201124B70035B68B /* Lato-BoldItalic.ttf in Resources */,
-				46C5E802201124B70035B68B /* Lato-Semibold.ttf in Resources */,
-				46C5E7FF201124B70035B68B /* Lato-Medium.ttf in Resources */,
-				46C5E7F8201124B70035B68B /* Lato-Hairline.ttf in Resources */,
-				46C5E7FC201124B70035B68B /* Lato-Italic.ttf in Resources */,
+				46933A102052ED9500A5B173 /* Ubuntu-LightItalic.ttf in Resources */,
+				469339ED2052ED9500A5B173 /* Lato-HairlineItalic.ttf in Resources */,
+				469339FA2052ED9500A5B173 /* Montserrat-Black.otf in Resources */,
+				469339FF2052ED9500A5B173 /* Montserrat-Medium.otf in Resources */,
+				469339EB2052ED9500A5B173 /* Lato-BoldItalic.ttf in Resources */,
+				469339FE2052ED9500A5B173 /* Montserrat-Light.otf in Resources */,
+				46933A132052ED9500A5B173 /* Ubuntu-Regular.ttf in Resources */,
+				46933A052052ED9500A5B173 /* MontserratAlternates-ExtraBold.otf in Resources */,
+				46933A002052ED9500A5B173 /* Montserrat-Regular.otf in Resources */,
+				469339F62052ED9500A5B173 /* Lato-Semibold.ttf in Resources */,
+				46933A0E2052ED9500A5B173 /* Ubuntu-Italic.ttf in Resources */,
+				469339F32052ED9500A5B173 /* Lato-Medium.ttf in Resources */,
+				469339EC2052ED9500A5B173 /* Lato-Hairline.ttf in Resources */,
+				46933A062052ED9500A5B173 /* MontserratAlternates-ExtraLight.otf in Resources */,
+				469339F02052ED9500A5B173 /* Lato-Italic.ttf in Resources */,
+				46933A022052ED9500A5B173 /* Montserrat-Thin.otf in Resources */,
 				463046FC1FBF38F9005F1106 /* Main.storyboard in Resources */,
-				46C5E804201124B70035B68B /* Lato-Thin.ttf in Resources */,
-				46C5E7FE201124B70035B68B /* Lato-LightItalic.ttf in Resources */,
-				46C5E801201124B70035B68B /* Lato-Regular.ttf in Resources */,
+				46933A0D2052ED9500A5B173 /* Ubuntu-BoldItalic.ttf in Resources */,
+				469339F82052ED9500A5B173 /* Lato-Thin.ttf in Resources */,
+				469339F22052ED9500A5B173 /* Lato-LightItalic.ttf in Resources */,
+				469339F52052ED9500A5B173 /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,24 +617,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465E19FA1FD4C17100E8466B /* DateHelper.swift in Sources */,
-				465E19F51FD4C17100E8466B /* UIViewTools.swift in Sources */,
-				465E19F81FD4C17100E8466B /* TextFieldsTools.swift in Sources */,
-				46A71F50204206470069B169 /* DottedLine.swift in Sources */,
-				465E19F71FD4C17100E8466B /* Images.swift in Sources */,
-				465E19F61FD4C17100E8466B /* ProgressBar.swift in Sources */,
-				465E19FB1FD4C17100E8466B /* HTTPRequest.swift in Sources */,
-				465E19F21FD4C17100E8466B /* UIScrollViewTools.swift in Sources */,
-				465E19F41FD4C17100E8466B /* ColorTools.swift in Sources */,
-				465E19F91FD4C17100E8466B /* UILabelTools.swift in Sources */,
-				46D645BA200D288700BD3D64 /* LineGraphView.swift in Sources */,
+				46933A3E2052EDAE00A5B173 /* Utility.swift in Sources */,
+				46933A412052EDAE00A5B173 /* UIImageTools.swift in Sources */,
+				46933A3A2052EDAE00A5B173 /* CalendarTools.swift in Sources */,
+				46933A4C2052EDAE00A5B173 /* PieChart.swift in Sources */,
+				46933A3B2052EDAE00A5B173 /* DateHelper.swift in Sources */,
+				46933A422052EDAE00A5B173 /* GoogleMapTools.swift in Sources */,
+				46933A432052EDAE00A5B173 /* NavigationTools.swift in Sources */,
+				46933A502052EDAE00A5B173 /* UIScrollViewTools.swift in Sources */,
+				46933A492052EDAE00A5B173 /* FloatTools.swift in Sources */,
+				46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */,
+				46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */,
+				46933A402052EDAE00A5B173 /* Images.swift in Sources */,
+				46933A482052EDAE00A5B173 /* ColorTools.swift in Sources */,
+				46933A4D2052EDAE00A5B173 /* ProgressBar.swift in Sources */,
+				46933A3F2052EDAE00A5B173 /* LineGraph.swift in Sources */,
+				46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */,
+				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
+				46933A3D2052EDAE00A5B173 /* SafeAreaGuideExemple.swift in Sources */,
+				46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */,
+				46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */,
+				46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */,
 				463046F91FBF38F9005F1106 /* ViewController.swift in Sources */,
-				465E19F01FD4C17100E8466B /* StringTools.swift in Sources */,
-				465E19EE1FD4C17100E8466B /* GoogleMapTools.swift in Sources */,
-				465E19F31FD4C17100E8466B /* UIViewControllerTools.swift in Sources */,
-				465E19F11FD4C17100E8466B /* UIImageTools.swift in Sources */,
+				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
+				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
+				46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */,
+				46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */,
+				46933A442052EDAE00A5B173 /* TopSelector.swift in Sources */,
 				463046F71FBF38F9005F1106 /* AppDelegate.swift in Sources */,
-				465E19EF1FD4C17100E8466B /* ArrayTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
