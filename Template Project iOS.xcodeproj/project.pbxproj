@@ -84,6 +84,8 @@
 		46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A372052EDAE00A5B173 /* UITableViewTools.swift */; };
 		46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A382052EDAE00A5B173 /* UIViewControllerTools.swift */; };
 		46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A392052EDAE00A5B173 /* UIViewTools.swift */; };
+		46933A592052F07200A5B173 /* StripeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A582052F07200A5B173 /* StripeGraph.swift */; };
+		46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A5A2052F07A00A5B173 /* DottedLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,8 @@
 		46933A372052EDAE00A5B173 /* UITableViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewTools.swift; sourceTree = "<group>"; };
 		46933A382052EDAE00A5B173 /* UIViewControllerTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTools.swift; sourceTree = "<group>"; };
 		46933A392052EDAE00A5B173 /* UIViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTools.swift; sourceTree = "<group>"; };
+		46933A582052F07200A5B173 /* StripeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeGraph.swift; sourceTree = "<group>"; };
+		46933A5A2052F07A00A5B173 /* DottedLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +369,7 @@
 		46933A1D2052EDAE00A5B173 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				46933A582052F07200A5B173 /* StripeGraph.swift */,
 				46933A1E2052EDAE00A5B173 /* LineGraph.swift */,
 			);
 			path = Graph;
@@ -427,6 +432,7 @@
 		46933A312052EDAE00A5B173 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46933A5A2052F07A00A5B173 /* DottedLine.swift */,
 				46933A322052EDAE00A5B173 /* PieChart.swift */,
 				46933A332052EDAE00A5B173 /* ProgressBar.swift */,
 				46933A342052EDAE00A5B173 /* TextFieldsTools.swift */,
@@ -628,6 +634,7 @@
 				46933A492052EDAE00A5B173 /* FloatTools.swift in Sources */,
 				46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */,
 				46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */,
+				46933A592052F07200A5B173 /* StripeGraph.swift in Sources */,
 				46933A402052EDAE00A5B173 /* Images.swift in Sources */,
 				46933A482052EDAE00A5B173 /* ColorTools.swift in Sources */,
 				46933A4D2052EDAE00A5B173 /* ProgressBar.swift in Sources */,
@@ -643,6 +650,7 @@
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
 				46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */,
 				46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */,
+				46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */,
 				46933A442052EDAE00A5B173 /* TopSelector.swift in Sources */,
 				463046F71FBF38F9005F1106 /* AppDelegate.swift in Sources */,
 			);
