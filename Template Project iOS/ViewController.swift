@@ -51,13 +51,13 @@ class ViewController: UIViewController,UITextFieldDelegate{
         btnLogin.setTitleColor(UIColor().hex("#582FC0"), for: .normal)
         
         self.view.addSubview(btnLogin)
-
         
         btnLogin.addTarget(self, action: #selector(toLoginPage(sender:)), for: .touchUpInside)
         
         //login button FB
         let btnFB = UIButton()
         let labFB = UILabel()
+        let imvFB = UIImageView()
         
         btnFB.backgroundColor = UIColor().hex("#5C9DE8")
         btnFB.frame = CGRect(x: rw(55), y: rh(181), width: rw(266), height: rh(47))
@@ -69,9 +69,13 @@ class ViewController: UIViewController,UITextFieldDelegate{
         labFB.text = "Log in with Facebook"
         labFB.textAlignment = .center
         
-        
+        imvFB.image = UIImage(named: "Facebook")
+        imvFB.contentMode = .scaleAspectFit
+        imvFB.frame = CGRect(x: rw(18), y: rh(6), width: rw(35), height: rh(35))
+    
         self.view.addSubview(btnFB)
         btnFB.addSubview(labFB)
+        btnFB.addSubview(imvFB)
         
         
         

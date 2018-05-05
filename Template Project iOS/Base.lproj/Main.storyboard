@@ -39,6 +39,7 @@
                     <navigationItem key="navigationItem" id="tP4-vb-8sq"/>
                     <connections>
                         <segue destination="dO3-7J-pel" kind="show" identifier="toLoginPage" id="PaE-gj-hQo"/>
+                        <segue destination="Jqk-P0-L2M" kind="show" identifier="FBtoFriends" id="U5J-vT-uX0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33V-yS-VDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="818"/>
+            <point key="canvasLocation" x="-57" y="866"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="RoD-hj-qAJ">
@@ -79,4 +80,7 @@
             <point key="canvasLocation" x="298" y="89"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="U5J-vT-uX0"/>
+    </inferredMetricsTieBreakers>
 </document>
