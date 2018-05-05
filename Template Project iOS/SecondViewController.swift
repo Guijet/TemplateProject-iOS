@@ -28,9 +28,10 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.isHidden = false
     }
     
+    let txtUserName = UITextField()
+    let txtPassword = UITextField()
+    
     func setTextLogin() {
-        let txtUserName = UITextField()
-        let txtPassword = UITextField()
         
         // Champ user
         txtUserName.frame = CGRect(x: rw(35), y: rh(112), width: rw(307), height: rh(30))
@@ -67,6 +68,20 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func toFriendsPage(sender:UIButton) {
-        performSegue(withIdentifier: "toFriends", sender: nil)
+        
+        if !((txtUserName.text?.isEmpty)! && (txtPassword.text?.isEmpty)!) {
+            if (txtUserName.text?.isValidEmail())! {
+                if RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!) == "" {
+                    //COMPLETE WITH NEW VALID LOGIN OBJECT
+                }
+            } else {
+                Utility().alert(message: "Enter valid credentials", title: "Invalid information", control: self)
+            }
+            
+        } else {
+            Utility().alert(message: "Enter valid credentials", title: "Fields are empty", control: self)
+        }
+        
+        //performSegue(withIdentifier: "toFriends", sender: nil)
     }
 }
