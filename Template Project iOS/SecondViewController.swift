@@ -25,6 +25,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         setTextLogin()
         
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func setTextLogin() {
