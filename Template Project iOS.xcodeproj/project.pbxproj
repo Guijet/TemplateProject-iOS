@@ -87,6 +87,7 @@
 		46933A592052F07200A5B173 /* StripeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A582052F07200A5B173 /* StripeGraph.swift */; };
 		46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A5A2052F07A00A5B173 /* DottedLine.swift */; };
 		46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C65678209DF9080039EF82 /* SecondViewController.swift */; };
+		F70610CC209E22B600EB96F9 /* VCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CB209E22B600EB96F9 /* VCFriends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,7 @@
 		46933A582052F07200A5B173 /* StripeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeGraph.swift; sourceTree = "<group>"; };
 		46933A5A2052F07A00A5B173 /* DottedLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
 		46C65678209DF9080039EF82 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F70610CB209E22B600EB96F9 /* VCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFriends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
 				463047021FBF38F9005F1106 /* Info.plist */,
 				46C65678209DF9080039EF82 /* SecondViewController.swift */,
+				F70610CB209E22B600EB96F9 /* VCFriends.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
 				46933A3D2052EDAE00A5B173 /* SafeAreaGuideExemple.swift in Sources */,
+				F70610CC209E22B600EB96F9 /* VCFriends.swift in Sources */,
 				46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */,
 				46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */,
 				46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */,
