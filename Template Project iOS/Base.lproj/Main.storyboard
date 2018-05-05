@@ -71,7 +71,7 @@
                         <viewLayoutGuide key="safeArea" id="N3G-65-Glh"/>
                     </view>
                     <connections>
-                        <segue destination="Jqk-P0-L2M" kind="show" id="6w3-3k-Td2"/>
+                        <segue destination="Jqk-P0-L2M" kind="show" identifier="toFriends" id="6w3-3k-Td2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaA-A3-uNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
