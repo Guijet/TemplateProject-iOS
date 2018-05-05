@@ -288,7 +288,7 @@ class Utility {
             
             if(needToken){
                 //HANDLE TOKEN
-                request.addValue("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLmluZmx1ZW5jZW1lLWFwcC5jb20vYXV0aC9sb2dpbiIsImlhdCI6MTUyNTUzMTkyNCwiZXhwIjoxNTI2NzQxNTI0LCJuYmYiOjE1MjU1MzE5MjQsImp0aSI6InduaWpTZjlnYk8zc05jeDQiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.UcbxnNvuOD9Rp1YDWyWedZNdrxmHy1lB4eXYgPApGNw", forHTTPHeaderField: "Authorization")
+                request.addValue("Bearer \(Global.shared.token)", forHTTPHeaderField: "Authorization")
             }
             
             let config = URLSessionConfiguration.default
