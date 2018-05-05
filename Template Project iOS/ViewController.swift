@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController,UITextFieldDelegate{
 
@@ -77,6 +78,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
         btnFB.addSubview(labFB)
         btnFB.addSubview(imvFB)
         
+        btnFB.addTarget(self, action: #selector(loginFacebookAction(sender:)), for: .touchUpInside)
         
         
         //dont have an account label
@@ -93,6 +95,49 @@ class ViewController: UIViewController,UITextFieldDelegate{
     
     @objc func toLoginPage(sender:Any){
         performSegue(withIdentifier: "toLoginPage", sender: nil)
+    }
+    
+    // pop up for fb login
+    @objc func loginFacebookAction(sender: AnyObject) {
+        
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                if(fbloginresult.grantedPermissions != nil){
+                    if(fbloginresult.grantedPermissions.contains("email"))
+                    {
+                        //data fetch code
+                        self.fetchProfile()
+                        
+                    }
+                    else{
+                        return
+                    }
+                }
+                else{
+                    return
+                }
+            }
+        }
+    }
+    
+    //get profile data
+    @objc func fetchProfile(){
+        let parameters: [String: Any] = ["fields": "email,first_name,last_name,birthday"]
+        FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: { (connection, result, error) -> Void in
+            if ((error) != nil)
+            {
+                Utility().alert(message: "Error: \(String(describing: error))", title: "Erreur", control: self)
+            }
+            else{
+                print("tokenFB : \(FBSDKAccessToken.current().tokenString!)")
+                Global.shared.tokenFB = FBSDKAccessToken.current().tokenString!
+                
+                
+                
+            }
+        })
     }
     
 }
