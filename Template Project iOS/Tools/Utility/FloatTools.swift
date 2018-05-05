@@ -18,4 +18,8 @@ extension Float {
     var twoDecimalCash:String{
         return String(format: "$%.2f", self)
     }
+    
+    func totalPriceToCentTotal()->Int{
+        return Int(self*100)
+    }
 }
