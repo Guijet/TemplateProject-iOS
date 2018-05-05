@@ -18,7 +18,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = UIColor().hex("E6E1F1")
         
         let logo = UIImageView()
-        logo.image = UIImage(named: "Logo")
+        logo.image = UIImage(named: "LogoColor")
         logo.frame = CGRect(x: 0, y: rh(139), width: rw(375), height: rh(528))
         view.addSubview(logo)
         

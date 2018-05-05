@@ -128,11 +128,11 @@ class ViewController: UIViewController,UITextFieldDelegate{
         })
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "toSecondPage"){
-            (segue.destination as! SecondViewController).receivedText = tb.text!
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "toSecondPage"){
+//            (segue.destination as! SecondViewController).receivedText = tb.text!
+//        }
+//    }
     
 }
 
