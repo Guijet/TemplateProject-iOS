@@ -13,7 +13,7 @@ import UIKit
     fileprivate var labels = [UILabel]()
     var thumbView = UIView()
     
-    var items: [String] = ["Company Offers", "Current Offers"] {
+    var items: [String] = [String]() {
         didSet {
             setupLabels()
         }
@@ -55,9 +55,9 @@ import UIKit
         }
     }
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, title1:String, title2:String) {
         super.init(frame: frame)
-        
+        items = [title1,title2]
         setupView()
     }
     

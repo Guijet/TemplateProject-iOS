@@ -86,6 +86,7 @@
 		46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A392052EDAE00A5B173 /* UIViewTools.swift */; };
 		46933A592052F07200A5B173 /* StripeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A582052F07200A5B173 /* StripeGraph.swift */; };
 		46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A5A2052F07A00A5B173 /* DottedLine.swift */; };
+		46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C65678209DF9080039EF82 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,7 @@
 		46933A392052EDAE00A5B173 /* UIViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTools.swift; sourceTree = "<group>"; };
 		46933A582052F07200A5B173 /* StripeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeGraph.swift; sourceTree = "<group>"; };
 		46933A5A2052F07A00A5B173 /* DottedLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DottedLine.swift; sourceTree = "<group>"; };
+		46C65678209DF9080039EF82 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				463046FD1FBF38F9005F1106 /* Assets.xcassets */,
 				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
 				463047021FBF38F9005F1106 /* Info.plist */,
+				46C65678209DF9080039EF82 /* SecondViewController.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
 				46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */,
+				46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */,
 				46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */,
 				46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */,
 				46933A442052EDAE00A5B173 /* TopSelector.swift in Sources */,

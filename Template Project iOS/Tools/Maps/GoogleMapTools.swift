@@ -10,7 +10,7 @@
 //import GoogleMaps
 //
 //extension GMSMapView{
-//    
+//
 //    func focusMapOnSingleMarker(marker:GMSMarker){
 //        let myLocation: CLLocationCoordinate2D = marker.position
 //        let bounds: GMSCoordinateBounds = GMSCoordinateBounds(coordinate: myLocation, coordinate: myLocation)
@@ -18,7 +18,7 @@
 //        self.animate(with:update)
 //        self.animate(toZoom: 12)
 //    }
-//    
+//
 //    func focusOnMultipleMarkers(arrayMarkers:[GMSMarker]){
 //        let myLocation: CLLocationCoordinate2D = arrayMarkers.first!.position
 //        var bounds: GMSCoordinateBounds = GMSCoordinateBounds(coordinate: myLocation, coordinate: myLocation)
@@ -28,8 +28,8 @@
 //        let update = GMSCameraUpdate.fit(bounds, withPadding: 100)
 //        self.animate(with:update)
 //    }
-//    
-//    
+//
+//
 //    func applyMapStyle(){
 //        do {
 //            // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
@@ -69,7 +69,7 @@
 //                let image = UIImage(data: data!)
 //                self.icon = image?.resizeImageWith(newSize: CGSize(width: 23, height: 23)).maskRoundedImage(radius: 11.5)
 //            })
-//            
+//
 //        }).resume()
 //    }
 //}

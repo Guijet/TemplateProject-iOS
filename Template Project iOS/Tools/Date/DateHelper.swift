@@ -75,6 +75,12 @@ class DateHelper{
         return self.weekDay[weekDayIndex]
     }
     
+    func getCurrentDateSmallFormat()->String{
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return String(describing:formatter.string(from: Date()))
+    }
+    
     func getDayOfWeekAbr(date: String) -> String{
         let formatter  = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -108,7 +114,7 @@ class DateHelper{
     
     func getDayFromDate(date:String)->String{
         let day = date.substring(from: 8, to: 10)
-        return String(describing: Int(day)!)
+        return "\(day)"
     }
     
     func getYearFromDate(date:String)->String{
@@ -133,5 +139,14 @@ class DateHelper{
         let year:String = getYearFromDate(date:fullDate)
         
         return "\(abrvDay), \(dayNumber) \(monthAbrv) \(year)"
+    }
+    
+    func getDateFormatDashboard()->String{
+        var result = ""
+        let now:String = String(describing:Date())
+        result += getMonthAbrvFromDate(date: now)
+        result += " \(getDayFromDate(date: now))."
+        result += " \(getYearFromDate(date: now))"
+        return result
     }
 }
