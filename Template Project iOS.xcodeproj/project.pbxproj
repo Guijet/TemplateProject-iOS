@@ -243,16 +243,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B4D6F9C209F48BD0090B380 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				F7C32E65209F432200022C08 /* Application.storyboard */,
-				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
-				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
 		463046EA1FBF38F9005F1106 = {
 			isa = PBXGroup;
 			children = (
@@ -278,23 +268,15 @@
 		463046F51FBF38F9005F1106 /* Template Project iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F7C32E71209F63A900022C08 /* Application */,
+				F706BB18209F669B00249239 /* Main */,
+				F706BB17209F668900249239 /* Application */,
 				46933A142052EDAE00A5B173 /* Tools */,
 				469339BB2052ED9500A5B173 /* Fonts */,
 				463046F61FBF38F9005F1106 /* AppDelegate.swift */,
 				463046FD1FBF38F9005F1106 /* Assets.xcassets */,
 				463047021FBF38F9005F1106 /* Info.plist */,
-<<<<<<< HEAD
 				F70610CD209E523500EB96F9 /* Global.swift */,
-				F7C32E6A209F48C000022C08 /* Main */,
-=======
-				46C65678209DF9080039EF82 /* SecondViewController.swift */,
-				0B4D6F9C209F48BD0090B380 /* Application */,
-				F70610CD209E523500EB96F9 /* Global.swift */,
-				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
-				F7C32E63209F412B00022C08 /* VCRegister.swift */,
->>>>>>> phil
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -509,27 +491,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F7C32E6A209F48C000022C08 /* Main */ = {
+		F706BB17209F668900249239 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F7C32E6E209F639000022C08 /* Application.storyboard */,
+				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
+				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F706BB18209F669B00249239 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				463046FA1FBF38F9005F1106 /* Main.storyboard */,
 				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
 				46C65678209DF9080039EF82 /* SecondViewController.swift */,
-				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
-				F7C32E61209F35E100022C08 /* RequestObject.swift */,
-				F7C32E63209F412B00022C08 /* VCRegister.swift */,
 				463046F81FBF38F9005F1106 /* ViewController.swift */,
 				F7C32E67209F463000022C08 /* MainNC.swift */,
+				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
+				F7C32E63209F412B00022C08 /* VCRegister.swift */,
 			);
 			name = Main;
-			sourceTree = "<group>";
-		};
-		F7C32E71209F63A900022C08 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				F7C32E6E209F639000022C08 /* Application.storyboard */,
-			);
-			name = Application;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
