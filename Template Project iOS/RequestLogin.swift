@@ -16,7 +16,7 @@ class RequestLogin{
         
         let reqObj = RequestObject()
         
-        let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "email=\(email)&password=\(password)")
+        let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "login=\(email)&password=\(password)")
         
         //if server is reached
         if !response.getIsError() {
@@ -43,6 +43,11 @@ class RequestLogin{
         }
         
         return reqObj
+    }
+    
+    func verifyEmail(email:String) -> Bool {
+        let reqObj = RequestObject()
         
+        let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "email=\(email)")
     }
 }

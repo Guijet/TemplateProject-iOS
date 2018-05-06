@@ -9,24 +9,101 @@
 import UIKit
 import Photos
 
-class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
-    let imvProfile = UIImageView()
+    let arrayGenre:[String] = ["Male", "Female", "Other"]
     
+    let imvProfile = UIImageView()
     let btnChooseImage = UIButton()
     
+    let tbFirstName = UITextField()
+    let tbLastName = UITextField()
+    let tbEmail = UITextField()
+    
     let imagePicker = UIImagePickerController()
+    
+    let pickerView = UIPickerView()
+    let txtGenre = UITextField()
+    
+    let tbBirthDate = UITextField()
+    
+    let btnNext = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = UIColor().hex("E6E1F1")
         
-        loadRegisterUI()
+        
+        setUpView()
+        setUpPicker()
+        setUpViewBirthDate()
         
         imagePicker.delegate = self
+        
+        loadRegisterUI()
     }
-
+    
+    func setUpPicker(){
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        txtGenre.delegate = self
+        txtGenre.inputView = pickerView
+        txtGenre.addCustomToolBar(target: self, selector: #selector(endEditing))
+    }
+    
+    @objc func endEditing(){
+        self.view.endEditing(true)
+    }
+    
+    func setUpView(){
+        txtGenre.frame = CGRect(x: rw(82.37), y: rh(388), width: rw(212.28), height: rh(28))
+        txtGenre.placeholder = "Gendre"
+        txtGenre.textAlignment = .center
+        txtGenre.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        txtGenre.center.x = self.view.center.x
+        txtGenre.autocapitalizationType = .none
+        
+        self.view.addSubview(txtGenre)
+        
+        self.view.createHR(x: txtGenre.frame.minX, y: txtGenre.frame.maxY + rh(1), width: txtGenre.frame.width, color: UIColor().hex("B8A6E4"))
+    }
+    
+    func setUpViewBirthDate() {
+        tbBirthDate.frame = CGRect(x: rw(82.37), y: rh(428), width: rw(212.28), height: rh(28))
+        tbBirthDate.placeholder = "Birth date"
+        tbBirthDate.textAlignment = .center
+        tbBirthDate.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbBirthDate.center.x = self.view.center.x
+        tbBirthDate.autocapitalizationType = .none
+        
+        self.view.addSubview(tbBirthDate)
+        
+        self.view.createHR(x: tbBirthDate.frame.minX, y: tbBirthDate.frame.maxY + rh(1), width: tbBirthDate.frame.width, color: UIColor().hex("B8A6E4"))
+        
+        tbBirthDate.addTarget(self, action: #selector(triggerDatePicker(sender:)), for: .editingDidBegin)
+        
+        tbBirthDate.addCustomToolBar(target: self, selector: #selector(endEditing))
+    }
+    
+    @objc func triggerDatePicker(sender:UITextField) {
+        let datePicker = UIDatePicker()
+        
+        datePicker.datePickerMode = .date
+        
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(handleValueChange(sender:)), for: .valueChanged)
+    }
+    
+    @objc func handleValueChange(sender:UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        tbBirthDate.text = dateFormatter.string(from: sender.date)
+        tbBirthDate.textColor = UIColor().hex("582FC0")
+    }
+    
     func loadRegisterUI() {
         
         let imvBottom = UIImageView()
@@ -47,12 +124,93 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         btnChooseImage.layer.masksToBounds = true
         btnChooseImage.addTarget(self, action: #selector(chooseImage), for: .touchUpInside)
         
-        
-        
         self.view.addSubview(imvBottom)
         self.view.addSubview(imvProfile)
         self.view.addSubview(btnChooseImage)
         
+        tbFirstName.delegate = self
+
+        //first name text field
+        tbFirstName.frame = CGRect(x: rw(82.37), y: rh(268), width: rw(212.28), height: rh(28))
+        tbFirstName.placeholder = "First name"
+        tbFirstName.textAlignment = .center
+        tbFirstName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbFirstName.center.x = self.view.center.x
+        tbFirstName.autocapitalizationType = .none
+        tbFirstName.textColor = UIColor().hex("582FC0")
+        
+        self.view.addSubview(tbFirstName)
+        
+        self.view.createHR(x: tbFirstName.frame.minX, y: tbFirstName.frame.maxY + rh(1), width: tbFirstName.frame.width, color: UIColor().hex("B8A6E4"))
+        
+        tbLastName.delegate = self
+        
+        //last name text field
+        tbLastName.frame = CGRect(x: rw(82.37), y: rh(308), width: rw(212.28), height: rh(28))
+        tbLastName.placeholder = "Last name"
+        tbLastName.textAlignment = .center
+        tbLastName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbLastName.center.x = self.view.center.x
+        tbLastName.autocapitalizationType = .none
+        tbLastName.textColor = UIColor().hex("582FC0")
+        
+        self.view.addSubview(tbLastName)
+        
+        self.view.createHR(x: tbLastName.frame.minX, y: tbLastName.frame.maxY + rh(1), width: tbLastName.frame.width, color: UIColor().hex("B8A6E4"))
+        
+        tbEmail.delegate = self
+        
+        //email text field
+        tbEmail.frame = CGRect(x: rw(82.37), y: rh(348), width: rw(212.28), height: rh(28))
+        tbEmail.placeholder = "Email"
+        tbEmail.textAlignment = .center
+        tbEmail.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbEmail.center.x = self.view.center.x
+        tbEmail.autocapitalizationType = .none
+        tbEmail.textColor = UIColor().hex("582FC0")
+        
+        self.view.addSubview(tbEmail)
+        
+        self.view.createHR(x: tbEmail.frame.minX, y: tbEmail.frame.maxY + rh(1), width: tbEmail.frame.width, color: UIColor().hex("B8A6E4"))
+        
+        let tapGesturesRegognizer = UITapGestureRecognizer(target: self, action: #selector(endWriting(sender:)))
+        self.view.addGestureRecognizer(tapGesturesRegognizer)
+        
+        //next button
+        
+        btnNext.backgroundColor = UIColor().hex("#582FC0")
+        btnNext.frame = CGRect(x: rw(77), y: rh(578), width: rw(222), height: rh(47))
+        btnNext.layer.cornerRadius = rw(4)
+        btnNext.setTitle("Next", for: .normal)
+        btnNext.titleLabel?.font = UIFont(name: "Lato-Regular", size: rw(15))
+        btnNext.setTitleColor(UIColor().hex("#FFFFFF"), for: .normal)
+        
+        self.view.addSubview(btnNext)
+        
+        btnNext.addTarget(self, action: #selector(toLocationPage(sender:)), for: .touchUpInside)
+        
+    }
+    
+    @objc func toLocationPage(sender:UIButton){
+        
+        let requestEmailValidation = RequestLogin()
+        
+        if tbEmail.text!.isEmpty || tbLastName.text!.isEmpty || tbFirstName.text!.isEmpty {
+            Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
+        } else if !tbEmail.text!.isValidEmail() {
+            Utility().alert(message: "Enter a valid email adress", title: "Invalid email format", control: self)
+        //} else if !requestEmailValidation.verifyEmail(email:tbEmail.text!) {
+            
+        }
+    }
+    
+    @objc func endWriting(sender:UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @objc func chooseImage(){
@@ -113,10 +271,30 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == txtGenre {
+            if (textField.text?.isEmpty)! {
+                textField.text = arrayGenre[0]
+                textField.textColor = UIColor().hex("582FC0")
+            }
+        }
+    }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrayGenre[row]
+    }
     
-
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrayGenre.count
+    }
     
-    //underline: self.view. ... hr
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //HANDLE
+        txtGenre.text = arrayGenre[row]
+        txtGenre.textColor = UIColor().hex("582FC0")
+    }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
 }

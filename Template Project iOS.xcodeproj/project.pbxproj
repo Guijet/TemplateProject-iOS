@@ -277,6 +277,7 @@
 				463047021FBF38F9005F1106 /* Info.plist */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
+				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -509,7 +510,6 @@
 				46C65678209DF9080039EF82 /* SecondViewController.swift */,
 				463046F81FBF38F9005F1106 /* ViewController.swift */,
 				F7C32E67209F463000022C08 /* MainNC.swift */,
-				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E63209F412B00022C08 /* VCRegister.swift */,
 			);
 			name = Main;
