@@ -91,6 +91,7 @@
 		F70610CC209E22B600EB96F9 /* VCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CB209E22B600EB96F9 /* VCFriends.swift */; };
 		F70610CE209E523500EB96F9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CD209E523500EB96F9 /* Global.swift */; };
 		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
+		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		F70610CB209E22B600EB96F9 /* VCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFriends.swift; sourceTree = "<group>"; };
 		F70610CD209E523500EB96F9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
+		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
 		FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -268,6 +270,7 @@
 				F70610CB209E22B600EB96F9 /* VCFriends.swift */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
+				F7C32E61209F35E100022C08 /* RequestObject.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				46933A3E2052EDAE00A5B173 /* Utility.swift in Sources */,
 				46933A412052EDAE00A5B173 /* UIImageTools.swift in Sources */,
 				46933A3A2052EDAE00A5B173 /* CalendarTools.swift in Sources */,
+				F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */,
 				46933A4C2052EDAE00A5B173 /* PieChart.swift in Sources */,
 				46933A3B2052EDAE00A5B173 /* DateHelper.swift in Sources */,
 				46933A422052EDAE00A5B173 /* GoogleMapTools.swift in Sources */,
