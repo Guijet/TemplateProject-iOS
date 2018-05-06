@@ -40,3 +40,14 @@ extension Array where Element: FloatingPoint {
         return isEmpty ? 0 : total / Element(count)
     }
 }
+
+extension Array where Element == Int {
+    /// Returns the sum of all elements in the array
+    var total: Element {
+        return reduce(0, +)
+    }
+    /// Returns the average of all elements in the array
+    var average: Double {
+        return isEmpty ? 0 : Double(reduce(0, +)) / Double(count)
+    }
+}

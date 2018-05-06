@@ -72,4 +72,26 @@ extension String{
         return dateFormatter.date(from: self)!
     }
     
+    func dropLast(_ n: Int = 1) -> String {
+        return String(self.dropLast(n))
+    }
+    
+    //Format --> mm/yy
+    //
+    func getExpMonthFromCardFormat()->UInt{
+        let arrString = self.split{$0 == "/"}.map(String.init)
+        return UInt(arrString[0])!
+    }
+    
+    //Format --> mm/yy
+    //
+    func getExpYearFromCardFormat()->UInt{
+        let arrString = self.split{$0 == "/"}.map(String.init)
+        let result = UInt("20\(arrString[1])")!
+        return result
+    }
+    
+    var dropLast: String {
+        return dropLast()
+    }
 }
