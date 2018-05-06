@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F99209F45840090B380 /* TVCFriends.swift */; };
+		0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */; };
 		323D4FD6FCDAF4F864BB2FC3 /* Pods_Template_Project_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */; };
 		463046F71FBF38F9005F1106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463046F61FBF38F9005F1106 /* AppDelegate.swift */; };
 		463046F91FBF38F9005F1106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463046F81FBF38F9005F1106 /* ViewController.swift */; };
@@ -88,7 +90,6 @@
 		46933A592052F07200A5B173 /* StripeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A582052F07200A5B173 /* StripeGraph.swift */; };
 		46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A5A2052F07A00A5B173 /* DottedLine.swift */; };
 		46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C65678209DF9080039EF82 /* SecondViewController.swift */; };
-		F70610CC209E22B600EB96F9 /* VCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CB209E22B600EB96F9 /* VCFriends.swift */; };
 		F70610CE209E523500EB96F9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CD209E523500EB96F9 /* Global.swift */; };
 		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
 		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
@@ -114,6 +115,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B4D6F99209F45840090B380 /* TVCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCFriends.swift; sourceTree = "<group>"; };
+		0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellFriend.swift; sourceTree = "<group>"; };
 		463046F31FBF38F9005F1106 /* Template Project iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Project iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463046F61FBF38F9005F1106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463046F81FBF38F9005F1106 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +205,6 @@
 		46A8ADEC87B3CF4350B8E9C1 /* Pods-Template Project iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Project iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Template Project iOS/Pods-Template Project iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		46C65678209DF9080039EF82 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9793E0FC4C11488C6A2F6A48 /* Pods-Template Project iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Project iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Template Project iOS/Pods-Template Project iOS.release.xcconfig"; sourceTree = "<group>"; };
-		F70610CB209E22B600EB96F9 /* VCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFriends.swift; sourceTree = "<group>"; };
 		F70610CD209E523500EB96F9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
 		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
@@ -237,6 +239,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4D6F9C209F48BD0090B380 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F7C32E65209F432200022C08 /* Application.storyboard */,
+				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
+				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 		463046EA1FBF38F9005F1106 = {
 			isa = PBXGroup;
 			children = (
@@ -271,12 +283,11 @@
 				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
 				463047021FBF38F9005F1106 /* Info.plist */,
 				46C65678209DF9080039EF82 /* SecondViewController.swift */,
-				F70610CB209E22B600EB96F9 /* VCFriends.swift */,
+				0B4D6F9C209F48BD0090B380 /* Application */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
 				F7C32E63209F412B00022C08 /* VCRegister.swift */,
-				F7C32E65209F432200022C08 /* Application.storyboard */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -729,6 +740,7 @@
 				46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */,
 				46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */,
 				46933A592052F07200A5B173 /* StripeGraph.swift in Sources */,
+				0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */,
 				46933A402052EDAE00A5B173 /* Images.swift in Sources */,
 				46933A482052EDAE00A5B173 /* ColorTools.swift in Sources */,
 				46933A4D2052EDAE00A5B173 /* ProgressBar.swift in Sources */,
@@ -737,7 +749,6 @@
 				F70610CE209E523500EB96F9 /* Global.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
 				46933A3D2052EDAE00A5B173 /* SafeAreaGuideExemple.swift in Sources */,
-				F70610CC209E22B600EB96F9 /* VCFriends.swift in Sources */,
 				46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */,
 				46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */,
 				46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */,
@@ -747,6 +758,7 @@
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
 				46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */,
 				46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */,
+				0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */,
 				F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */,
 				46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */,
 				46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */,
