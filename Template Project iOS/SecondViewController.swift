@@ -39,6 +39,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         txtUserName.textAlignment = .center
         txtUserName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
         txtUserName.center.x = self.view.center.x
+        txtUserName.autocapitalizationType = .none
         
         self.view.addSubview(txtUserName)
         
@@ -71,11 +72,11 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         if !((txtUserName.text?.isEmpty)! && (txtPassword.text?.isEmpty)!) {
             if (txtUserName.text?.isValidEmail())! {
-                if RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!) == "" {
-                    
+                let reqObj = RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!)
+                if  reqObj.validConnexion! {
                     performSegue(withIdentifier: "toFriends", sender: nil)
                 } else {
-                    Utility().alert(message: RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!) , title: "Error occured", control: self)
+                    Utility().alert(message: reqObj.serverMsg! , title: "Error occured", control: self)
                 }
             } else {
                 Utility().alert(message: "Enter valid credentials", title: "Invalid information", control: self)
