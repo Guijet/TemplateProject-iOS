@@ -92,9 +92,9 @@
 		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
 		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
 		F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E63209F412B00022C08 /* VCRegister.swift */; };
-		F7C32E66209F432200022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E65209F432200022C08 /* Application.storyboard */; };
 		F7C32E68209F463000022C08 /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E67209F463000022C08 /* MainNC.swift */; };
 		F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E6B209F601400022C08 /* loadingIndicator.swift */; };
+		F7C32E6F209F639000022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E6E209F639000022C08 /* Application.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,9 +207,9 @@
 		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
 		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
 		F7C32E63209F412B00022C08 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
-		F7C32E65209F432200022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		F7C32E67209F463000022C08 /* MainNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
 		F7C32E6B209F601400022C08 /* loadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingIndicator.swift; sourceTree = "<group>"; };
+		F7C32E6E209F639000022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -264,6 +264,7 @@
 		463046F51FBF38F9005F1106 /* Template Project iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F7C32E71209F63A900022C08 /* Application */,
 				46933A142052EDAE00A5B173 /* Tools */,
 				469339BB2052ED9500A5B173 /* Fonts */,
 				463046F61FBF38F9005F1106 /* AppDelegate.swift */,
@@ -271,7 +272,6 @@
 				463047021FBF38F9005F1106 /* Info.plist */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F7C32E6A209F48C000022C08 /* Main */,
-				F7C32E65209F432200022C08 /* Application.storyboard */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -501,6 +501,14 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		F7C32E71209F63A900022C08 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F7C32E6E209F639000022C08 /* Application.storyboard */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -627,7 +635,7 @@
 				46933A0A2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf in Resources */,
 				469339F72052ED9500A5B173 /* Lato-SemiboldItalic.ttf in Resources */,
 				46933A122052ED9500A5B173 /* Ubuntu-MediumItalic.ttf in Resources */,
-				F7C32E66209F432200022C08 /* Application.storyboard in Resources */,
+				F7C32E6F209F639000022C08 /* Application.storyboard in Resources */,
 				46933A032052ED9500A5B173 /* MontserratAlternates-Black.otf in Resources */,
 				469339FD2052ED9500A5B173 /* Montserrat-ExtraLight.otf in Resources */,
 				469339E92052ED9500A5B173 /* Lato-BlackItalic.ttf in Resources */,
