@@ -8,17 +8,13 @@
 
 import UIKit
 
-class TVCellFriend: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+class TVCellFriend: BaseCell {
+    
+    var lblName:UILabel!
+    var ivImage:UIImageView!
+    
+    override func setUpView() {
+        // height = 100
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
