@@ -10,10 +10,10 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
     
+    let loading = loadingIndicator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.extendedLayoutIncludesOpaqueBars = true
-        self.navigationController?.navigationBar.barTintColor = UIColor().hex("582FC0")
         self.view.backgroundColor = UIColor().hex("E6E1F1")
         
         let logo = UIImageView()
@@ -71,7 +71,17 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         if !((txtUserName.text?.isEmpty)! && (txtPassword.text?.isEmpty)!) {
             if (txtUserName.text?.isValidEmail())! {
-                let reqObj = RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!)
+                
+                var reqObj:RequestObject!
+                
+                loading.startWithKeyWindows()
+                DispatchQueue.global().sync {
+                    reqObj = RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!)
+                    DispatchQueue.main.async {
+                        self.loading.removeFromKeyWindow()
+                    }
+                }
+
                 if  reqObj.validConnexion! {
                     // Change root page to friends after connect
                     let storyboard = UIStoryboard(name: "Application", bundle: nil)
