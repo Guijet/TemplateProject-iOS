@@ -12,7 +12,10 @@ class RequestLogin{
     static let shared:RequestLogin = {let instance = RequestLogin(); return instance}()
     
     //CHANGE WITH NEW VALIDATION OBJECT
-    func login(email:String, password:String) -> String{
+    func login(email:String, password:String) -> RequestObject{
+        
+        var reqObj = RequestObject()
+        
         let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "email=\(email)&password=\(password)")
         
         //if server is reached
@@ -22,18 +25,24 @@ class RequestLogin{
             
             if let token = data["token"] as? String {
                 Global.shared.token = token
-                return ""
+                reqObj.serverMsg = ""
+                reqObj.validConnexion = true
             } else {
                 if let errorName = data["error"] as? String {
-                    return errorName
+                    reqObj.serverMsg = errorName
+                    reqObj.validConnexion = false
                 } else {
-                    return "Unknown error"
+                    reqObj.serverMsg = "Unknown error"
+                    reqObj.validConnexion = false
                 }
             }
             
+        } else {
+            reqObj.serverMsg = response.getMessage()
+            reqObj.validConnexion = false
         }
         
-        return "Server could not be reached"
+        return reqObj
         
     }
 }
