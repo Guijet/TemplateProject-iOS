@@ -13,9 +13,9 @@ class VCRegister: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.navigationController?.navigationBar.barTintColor = UIColor().hex("582FC0")
         self.view.backgroundColor = UIColor().hex("E6E1F1")
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

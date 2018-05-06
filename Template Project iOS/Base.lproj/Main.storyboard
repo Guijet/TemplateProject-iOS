@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainNC-->
+        <!--Navigation Controller-->
         <scene sceneID="0bo-m0-pyQ">
             <objects>
-                <navigationController id="UYx-4v-eov" customClass="MainNC" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="UYx-4v-eov" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GSv-Gc-mAA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

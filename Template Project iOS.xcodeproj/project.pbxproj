@@ -94,9 +94,7 @@
 		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
 		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
 		F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E63209F412B00022C08 /* VCRegister.swift */; };
-		F7C32E68209F463000022C08 /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E67209F463000022C08 /* MainNC.swift */; };
-		F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E6B209F601400022C08 /* loadingIndicator.swift */; };
-		F7C32E6F209F639000022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E6E209F639000022C08 /* Application.storyboard */; };
+		F7C32E66209F432200022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E65209F432200022C08 /* Application.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,9 +209,7 @@
 		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
 		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
 		F7C32E63209F412B00022C08 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
-		F7C32E67209F463000022C08 /* MainNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
-		F7C32E6B209F601400022C08 /* loadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingIndicator.swift; sourceTree = "<group>"; };
-		F7C32E6E209F639000022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
+		F7C32E65209F432200022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -243,6 +239,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4D6F9C209F48BD0090B380 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F7C32E65209F432200022C08 /* Application.storyboard */,
+				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
+				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		0B4D6FA2209F663A0090B380 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		463046EA1FBF38F9005F1106 = {
 			isa = PBXGroup;
 			children = (
@@ -268,15 +281,21 @@
 		463046F51FBF38F9005F1106 /* Template Project iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F706BB18209F669B00249239 /* Main */,
-				F706BB17209F668900249239 /* Application */,
 				46933A142052EDAE00A5B173 /* Tools */,
 				469339BB2052ED9500A5B173 /* Fonts */,
 				463046F61FBF38F9005F1106 /* AppDelegate.swift */,
+				463046F81FBF38F9005F1106 /* ViewController.swift */,
+				463046FA1FBF38F9005F1106 /* Main.storyboard */,
 				463046FD1FBF38F9005F1106 /* Assets.xcassets */,
+				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
 				463047021FBF38F9005F1106 /* Info.plist */,
+				46C65678209DF9080039EF82 /* SecondViewController.swift */,
+				0B4D6FA2209F663A0090B380 /* New Group */,
+				0B4D6F9C209F48BD0090B380 /* Application */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
+				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
+				F7C32E63209F412B00022C08 /* VCRegister.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -460,7 +479,6 @@
 		46933A312052EDAE00A5B173 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F7C32E6B209F601400022C08 /* loadingIndicator.swift */,
 				46933A5A2052F07A00A5B173 /* DottedLine.swift */,
 				46933A322052EDAE00A5B173 /* PieChart.swift */,
 				46933A332052EDAE00A5B173 /* ProgressBar.swift */,
@@ -489,31 +507,6 @@
 				FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F706BB17209F668900249239 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				F7C32E6E209F639000022C08 /* Application.storyboard */,
-				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
-				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		F706BB18209F669B00249239 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				463046FA1FBF38F9005F1106 /* Main.storyboard */,
-				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
-				46C65678209DF9080039EF82 /* SecondViewController.swift */,
-				463046F81FBF38F9005F1106 /* ViewController.swift */,
-				F7C32E67209F463000022C08 /* MainNC.swift */,
-				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
-				F7C32E63209F412B00022C08 /* VCRegister.swift */,
-			);
-			name = Main;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,7 +635,7 @@
 				46933A0A2052ED9500A5B173 /* MontserratAlternates-SemiBold.otf in Resources */,
 				469339F72052ED9500A5B173 /* Lato-SemiboldItalic.ttf in Resources */,
 				46933A122052ED9500A5B173 /* Ubuntu-MediumItalic.ttf in Resources */,
-				F7C32E6F209F639000022C08 /* Application.storyboard in Resources */,
+				F7C32E66209F432200022C08 /* Application.storyboard in Resources */,
 				46933A032052ED9500A5B173 /* MontserratAlternates-Black.otf in Resources */,
 				469339FD2052ED9500A5B173 /* Montserrat-ExtraLight.otf in Resources */,
 				469339E92052ED9500A5B173 /* Lato-BlackItalic.ttf in Resources */,
@@ -763,7 +756,6 @@
 				46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */,
 				F70610CE209E523500EB96F9 /* Global.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
-				F7C32E68209F463000022C08 /* MainNC.swift in Sources */,
 				46933A3D2052EDAE00A5B173 /* SafeAreaGuideExemple.swift in Sources */,
 				46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */,
 				46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */,
@@ -771,7 +763,6 @@
 				F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */,
 				463046F91FBF38F9005F1106 /* ViewController.swift in Sources */,
 				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
-				F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */,
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
 				46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */,
 				46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */,
