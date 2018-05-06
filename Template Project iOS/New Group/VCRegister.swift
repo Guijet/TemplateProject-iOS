@@ -11,7 +11,7 @@ import Photos
 
 class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
-    let arrayGenre:[String] = ["Male", "Female", "Other"]
+    let arrayGendre:[String] = ["Male", "Female", "Other"]
     
     let imvProfile = UIImageView()
     let btnChooseImage = UIButton()
@@ -23,7 +23,7 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     let imagePicker = UIImagePickerController()
     
     let pickerView = UIPickerView()
-    let txtGenre = UITextField()
+    let tbGendre = UITextField()
     
     let tbBirthDate = UITextField()
     
@@ -47,9 +47,9 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     func setUpPicker(){
         pickerView.delegate = self
         pickerView.dataSource = self
-        txtGenre.delegate = self
-        txtGenre.inputView = pickerView
-        txtGenre.addCustomToolBar(target: self, selector: #selector(endEditing))
+        tbGendre.delegate = self
+        tbGendre.inputView = pickerView
+        tbGendre.addCustomToolBar(target: self, selector: #selector(endEditing))
     }
     
     @objc func endEditing(){
@@ -57,16 +57,16 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     func setUpView(){
-        txtGenre.frame = CGRect(x: rw(82.37), y: rh(388), width: rw(212.28), height: rh(28))
-        txtGenre.placeholder = "Gendre"
-        txtGenre.textAlignment = .center
-        txtGenre.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        txtGenre.center.x = self.view.center.x
-        txtGenre.autocapitalizationType = .none
+        tbGendre.frame = CGRect(x: rw(82.37), y: rh(388), width: rw(212.28), height: rh(28))
+        tbGendre.placeholder = "Gendre"
+        tbGendre.textAlignment = .center
+        tbGendre.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbGendre.center.x = self.view.center.x
+        tbGendre.autocapitalizationType = .none
         
-        self.view.addSubview(txtGenre)
+        self.view.addSubview(tbGendre)
         
-        self.view.createHR(x: txtGenre.frame.minX, y: txtGenre.frame.maxY + rh(1), width: txtGenre.frame.width, color: UIColor().hex("B8A6E4"))
+        self.view.createHR(x: tbGendre.frame.minX, y: tbGendre.frame.maxY + rh(1), width: tbGendre.frame.width, color: UIColor().hex("B8A6E4"))
     }
     
     func setUpViewBirthDate() {
@@ -198,9 +198,21 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if tbEmail.text!.isEmpty || tbLastName.text!.isEmpty || tbFirstName.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
         } else if !tbEmail.text!.isValidEmail() {
-            Utility().alert(message: "Enter a valid email adress", title: "Invalid email format", control: self)
-        //} else if !requestEmailValidation.verifyEmail(email:tbEmail.text!) {
-            
+            Utility().alert(message: "Enter a valid email address", title: "Invalid email format", control: self)
+        } else if !(requestEmailValidation.verifyEmail(email:tbEmail.text!).validConnexion!) {
+            Utility().alert(message: "This email address is already taken", title: "Invalid email address", control: self)
+        } else {
+            performSegue(withIdentifier: "toRegister2", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRegister2" {
+            (segue.destination as! VCRegister2).firstName = tbFirstName.text!
+            (segue.destination as! VCRegister2).lastName = tbLastName.text!
+            (segue.destination as! VCRegister2).email = tbEmail.text!
+            (segue.destination as! VCRegister2).gendre = tbGendre.text!
+            (segue.destination as! VCRegister2).birthDate = tbBirthDate.text!
         }
     }
     
@@ -272,26 +284,26 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == txtGenre {
+        if textField == tbGendre {
             if (textField.text?.isEmpty)! {
-                textField.text = arrayGenre[0]
+                textField.text = arrayGendre[0]
                 textField.textColor = UIColor().hex("582FC0")
             }
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return arrayGenre[row]
+        return arrayGendre[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return arrayGenre.count
+        return arrayGendre.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //HANDLE
-        txtGenre.text = arrayGenre[row]
-        txtGenre.textColor = UIColor().hex("582FC0")
+        tbGendre.text = arrayGendre[row]
+        tbGendre.textColor = UIColor().hex("582FC0")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
