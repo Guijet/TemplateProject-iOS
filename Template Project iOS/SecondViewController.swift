@@ -68,11 +68,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func toFriendsPage(sender:UIButton) {
-        let storyboard = UIStoryboard(name: "Application", bundle: nil)
-        let mainPage = storyboard.instantiateViewController(withIdentifier: "applicationNC") as! UINavigationController
-        UIApplication.shared.keyWindow?.rootViewController = mainPage
         
-        /*
         if !((txtUserName.text?.isEmpty)! && (txtPassword.text?.isEmpty)!) {
             if (txtUserName.text?.isValidEmail())! {
                 let reqObj = RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!)
@@ -91,6 +87,5 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         } else {
             Utility().alert(message: "Enter valid credentials", title: "Fields are empty", control: self)
         }
- */
     }
 }
