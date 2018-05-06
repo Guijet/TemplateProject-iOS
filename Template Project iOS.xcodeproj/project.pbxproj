@@ -92,6 +92,7 @@
 		F70610CE209E523500EB96F9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CD209E523500EB96F9 /* Global.swift */; };
 		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
 		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
+		F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E63209F412B00022C08 /* VCRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,7 @@
 		F70610CD209E523500EB96F9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
 		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
+		F7C32E63209F412B00022C08 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
 		FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,6 +273,7 @@
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
+				F7C32E63209F412B00022C08 /* VCRegister.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */,
 				46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */,
 				46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */,
+				F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */,
 				463046F91FBF38F9005F1106 /* ViewController.swift in Sources */,
 				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,

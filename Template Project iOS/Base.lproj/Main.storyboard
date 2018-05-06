@@ -40,11 +40,30 @@
                     <connections>
                         <segue destination="dO3-7J-pel" kind="show" identifier="toLoginPage" id="PaE-gj-hQo"/>
                         <segue destination="Jqk-P0-L2M" kind="show" identifier="FBtoFriends" id="U5J-vT-uX0"/>
+                        <segue destination="XB3-tp-07i" kind="show" identifier="toRegister" id="faI-Jl-CHz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-441" y="89"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="P8d-z7-IFe">
+            <objects>
+                <viewController id="XB3-tp-07i" customClass="VCRegister" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o38-SL-5mJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6wY-n9-HZ3"/>
+                    </view>
+                    <connections>
+                        <segue destination="Jqk-P0-L2M" kind="show" id="6hV-je-6na"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDR-qZ-mKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="866"/>
         </scene>
         <!--Friends-->
         <scene sceneID="aZG-Ig-sLt">
@@ -81,6 +100,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6w3-3k-Td2"/>
+        <segue reference="U5J-vT-uX0"/>
     </inferredMetricsTieBreakers>
 </document>

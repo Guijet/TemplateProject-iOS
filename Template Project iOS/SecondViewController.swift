@@ -12,8 +12,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.extendedLayoutIncludesOpaqueBars = false
+        self.extendedLayoutIncludesOpaqueBars = true
         self.navigationController?.navigationBar.barTintColor = UIColor().hex("582FC0")
         self.view.backgroundColor = UIColor().hex("E6E1F1")
         
