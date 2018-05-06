@@ -8,10 +8,13 @@
 
 import UIKit
 
-class VCFriends: UIViewController {
+class VCFriends: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.navigationController?.navigationBar.barTintColor = UIColor().hex("582FC0")
+        
 
         // Do any additional setup after loading the view.
     }
