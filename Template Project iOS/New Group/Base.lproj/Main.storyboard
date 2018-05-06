@@ -36,10 +36,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xtv-Uc-EtZ"/>
                     </view>
+                    <connections>
+                        <segue destination="fwi-dg-G6h" kind="show" identifier="toRegister2" id="7a7-51-I7Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Xw-eO-zTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="297" y="-671"/>
+        </scene>
+        <!--Register2-->
+        <scene sceneID="dxx-ti-fqp">
+            <objects>
+                <viewController id="fwi-dg-G6h" customClass="VCRegister2" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g98-TW-a1e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bID-YL-lvj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbF-3p-Zta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-672"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
