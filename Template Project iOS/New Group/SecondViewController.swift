@@ -27,37 +27,40 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.isHidden = false
     }
     
-    let txtUserName = UITextField()
-    let txtPassword = UITextField()
+    let tbUserName = UITextField()
+    let tbPassword = UITextField()
     
     func setTextLogin() {
         
+        tbUserName.delegate = self
+        tbPassword.delegate = self
+        
         // Champ user
-        txtUserName.frame = CGRect(x: rw(35), y: rh(112), width: rw(307), height: rh(30))
-        txtUserName.placeholder = "UserName / Email"
-        txtUserName.textAlignment = .center
-        txtUserName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        txtUserName.center.x = self.view.center.x
-        txtUserName.autocapitalizationType = .none
+        tbUserName.frame = CGRect(x: rw(35), y: rh(112), width: rw(307), height: rh(30))
+        tbUserName.placeholder = "UserName / Email"
+        tbUserName.textAlignment = .center
+        tbUserName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbUserName.center.x = self.view.center.x
+        tbUserName.autocapitalizationType = .none
         
-        self.view.addSubview(txtUserName)
+        self.view.addSubview(tbUserName)
         
-        self.view.createHR(x: txtUserName.frame.minX, y: txtUserName.frame.maxY + rh(1), width: txtUserName.frame.width, color: UIColor().hex("582FC0"))
+        self.view.createHR(x: tbUserName.frame.minX, y: tbUserName.frame.maxY + rh(1), width: tbUserName.frame.width, color: UIColor().hex("582FC0"))
         
         // champ Password
-        txtPassword.frame = CGRect(x: rw(35), y: rh(180), width: rw(307), height: rh(30))
-        txtPassword.placeholder = "Password"
-        txtPassword.textAlignment = .center
-        txtPassword.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        txtPassword.isSecureTextEntry = true
-        self.view.addSubview(txtPassword)
-        self.view.createHR(x: txtPassword.frame.minX, y: txtPassword.frame.maxY + rh(1), width: txtPassword.frame.width, color: UIColor().hex("582FC0"))
+        tbPassword.frame = CGRect(x: rw(35), y: rh(180), width: rw(307), height: rh(30))
+        tbPassword.placeholder = "Password"
+        tbPassword.textAlignment = .center
+        tbPassword.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbPassword.isSecureTextEntry = true
+        self.view.addSubview(tbPassword)
+        self.view.createHR(x: tbPassword.frame.minX, y: tbPassword.frame.maxY + rh(1), width: tbPassword.frame.width, color: UIColor().hex("582FC0"))
         
         // Login button
         let btnLogin = UIButton()
         
         btnLogin.backgroundColor = UIColor().hex("582FC0")
-        btnLogin.frame = CGRect(x: rw(79), y: txtPassword.frame.maxY + rh(50), width: 217, height: 47)
+        btnLogin.frame = CGRect(x: rw(79), y: tbPassword.frame.maxY + rh(50), width: 217, height: 47)
         btnLogin.center.x = self.view.center.x
         btnLogin.layer.cornerRadius = 4
         btnLogin.setTitle("Login", for: .normal)
@@ -65,18 +68,29 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         btnLogin.addTarget(self, action: #selector(toFriendsPage(sender:)), for: .touchUpInside)
         
+        let tapGesturesRegognizer = UITapGestureRecognizer(target: self, action: #selector(endWriting(sender:)))
+        self.view.addGestureRecognizer(tapGesturesRegognizer)
+    }
+    
+    @objc func endWriting(sender:UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @objc func toFriendsPage(sender:UIButton) {
         
-        if !((txtUserName.text?.isEmpty)! && (txtPassword.text?.isEmpty)!) {
-            if (txtUserName.text?.isValidEmail())! {
+        if !((tbUserName.text?.isEmpty)! && (tbPassword.text?.isEmpty)!) {
+            if (tbUserName.text?.isValidEmail())! {
                 
                 var reqObj:RequestObject!
                 
                 loading.startWithKeyWindows()
                 DispatchQueue.global().sync {
-                    reqObj = RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!)
+                    reqObj = RequestLogin.shared.login(email: tbUserName.text!, password: tbPassword.text!)
                     DispatchQueue.main.async {
                         self.loading.removeFromKeyWindow()
                     }
