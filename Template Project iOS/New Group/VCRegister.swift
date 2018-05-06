@@ -10,6 +10,8 @@ import UIKit
 import Photos
 
 class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    var isPicked = false
 
     let arrayGendre:[String] = ["Male", "Female", "Other"]
     
@@ -194,7 +196,7 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @objc func toLocationPage(sender:UIButton){
         
         let requestEmailValidation = RequestLogin()
-        
+        /*
         if tbEmail.text!.isEmpty || tbLastName.text!.isEmpty || tbFirstName.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
         } else if !tbEmail.text!.isValidEmail() {
@@ -202,10 +204,12 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         } else if !(requestEmailValidation.verifyEmail(email:tbEmail.text!).validConnexion!) {
             Utility().alert(message: "This email address is already taken", title: "Invalid email address", control: self)
         } else {
+        */
             performSegue(withIdentifier: "toRegister2", sender: nil)
-        }
+        //}
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRegister2" {
             (segue.destination as! VCRegister2).firstName = tbFirstName.text!
@@ -213,9 +217,14 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             (segue.destination as! VCRegister2).email = tbEmail.text!
             (segue.destination as! VCRegister2).gendre = tbGendre.text!
             (segue.destination as! VCRegister2).birthDate = tbBirthDate.text!
+            (segue.destination as! VCRegister2).isPicked = isPicked
+            if isPicked {
+                (segue.destination as! VCRegister2).profileImage = imvProfile.image!
+            }
         }
     }
-    
+    */
+ 
     @objc func endWriting(sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
@@ -271,6 +280,7 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.isPicked = true
             addImageToView(image: pickedImage)
             //ACTION LORSQUE L'IMAGE EST CHOISI
         }
