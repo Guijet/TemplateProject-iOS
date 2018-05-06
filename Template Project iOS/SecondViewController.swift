@@ -74,10 +74,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
                 let reqObj = RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!)
                 if  reqObj.validConnexion! {
                     // Change root page to friends after connect
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let mainPage = storyboard.instantiateViewController(withIdentifier: "mainNC") as! UINavigationController
+                    let storyboard = UIStoryboard(name: "Application", bundle: nil)
+                    let mainPage = storyboard.instantiateViewController(withIdentifier: "applicationNC") as! UINavigationController
                     UIApplication.shared.keyWindow?.rootViewController = mainPage
-                    // performSegue(withIdentifier: "toFriends", sender: nil)
                 } else {
                     Utility().alert(message: reqObj.serverMsg! , title: "Error occured", control: self)
                 }
