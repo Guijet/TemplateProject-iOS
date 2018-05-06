@@ -14,7 +14,7 @@ class RequestLogin{
     //CHANGE WITH NEW VALIDATION OBJECT
     func login(email:String, password:String) -> RequestObject{
         
-        var reqObj = RequestObject()
+        let reqObj = RequestObject()
         
         let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "email=\(email)&password=\(password)")
         
