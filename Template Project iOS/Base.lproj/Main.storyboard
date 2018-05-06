@@ -39,35 +39,32 @@
                     <navigationItem key="navigationItem" id="tP4-vb-8sq"/>
                     <connections>
                         <segue destination="dO3-7J-pel" kind="show" identifier="toLoginPage" id="PaE-gj-hQo"/>
-                        <segue destination="Jqk-P0-L2M" kind="show" identifier="FBtoFriends" id="U5J-vT-uX0"/>
-                        <segue destination="XB3-tp-07i" kind="show" identifier="toRegister" id="faI-Jl-CHz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-441" y="89"/>
         </scene>
-        <!--Register-->
-        <scene sceneID="P8d-z7-IFe">
+        <!--Navigation Controller-->
+        <scene sceneID="mgR-8o-ac8">
             <objects>
-                <viewController id="XB3-tp-07i" customClass="VCRegister" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="o38-SL-5mJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="6wY-n9-HZ3"/>
-                    </view>
+                <navigationController storyboardIdentifier="mainNC" id="VyO-xd-k7c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pn7-wH-g1a">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
                     <connections>
-                        <segue destination="Jqk-P0-L2M" kind="show" id="6hV-je-6na"/>
+                        <segue destination="Jqk-P0-L2M" kind="relationship" relationship="rootViewController" id="KJI-U5-rG2"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RDR-qZ-mKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZI9-4W-fAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1054" y="866"/>
+            <point key="canvasLocation" x="-918" y="866"/>
         </scene>
         <!--Friends-->
         <scene sceneID="aZG-Ig-sLt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33V-yS-VDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Jqk-P0-L2M" customClass="VCFriends" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J81-Sb-C2m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -75,8 +72,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CF8-fa-Jxm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Xqv-ty-FSc"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="33V-yS-VDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57" y="866"/>
         </scene>
@@ -90,16 +87,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="N3G-65-Glh"/>
                     </view>
-                    <connections>
-                        <segue destination="Jqk-P0-L2M" kind="show" identifier="toFriends" id="6w3-3k-Td2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaA-A3-uNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="89"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="U5J-vT-uX0"/>
-    </inferredMetricsTieBreakers>
 </document>
