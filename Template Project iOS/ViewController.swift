@@ -81,16 +81,22 @@ class ViewController: UIViewController,UITextFieldDelegate{
         btnFB.addTarget(self, action: #selector(loginFacebookAction(sender:)), for: .touchUpInside)
         
         
-        //dont have an account label
-        let labRegister = UILabel()
+        //register button
+        let btnRegister = UIButton()
         
-        labRegister.font = UIFont(name: "Lato-Regular", size: rw(15))
-        labRegister.textColor = .white
-        labRegister.frame = CGRect(x: rw(36), y: rh(258), width: rw(306), height: rh(40))
-        labRegister.text = "Don't have an account?"
-        labRegister.textAlignment = .center
+        btnRegister.titleLabel?.font = UIFont(name: "Lato-Regular", size: rw(15))
+        btnRegister.setTitleColor(.white, for: .normal)
+        btnRegister.frame = CGRect(x: rw(36), y: rh(258), width: rw(306), height: rh(40))
+        btnRegister.setTitle("Don't have an account?", for: .normal)
+        //labRegister.textAlignment = .center
         
-        self.view.addSubview(labRegister)
+        self.view.addSubview(btnRegister)
+        
+        btnRegister.addTarget(self, action: #selector(toRegisterPage(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func toRegisterPage(sender:Any) {
+        performSegue(withIdentifier: "toRegister", sender: nil)
     }
     
     @objc func toLoginPage(sender:Any){
@@ -133,9 +139,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
             else{
                 print("tokenFB : \(FBSDKAccessToken.current().tokenString!)")
                 Global.shared.tokenFB = FBSDKAccessToken.current().tokenString!
-                
-                
-                
+
             }
         })
     }
