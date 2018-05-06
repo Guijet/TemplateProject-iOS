@@ -72,7 +72,10 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         if !((txtUserName.text?.isEmpty)! && (txtPassword.text?.isEmpty)!) {
             if (txtUserName.text?.isValidEmail())! {
                 if RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!) == "" {
-                    //COMPLETE WITH NEW VALID LOGIN OBJECT
+                    
+                    performSegue(withIdentifier: "toFriends", sender: nil)
+                } else {
+                    Utility().alert(message: RequestLogin.shared.login(email: txtUserName.text!, password: txtPassword.text!) , title: "Error occured", control: self)
                 }
             } else {
                 Utility().alert(message: "Enter valid credentials", title: "Invalid information", control: self)
@@ -81,7 +84,5 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         } else {
             Utility().alert(message: "Enter valid credentials", title: "Fields are empty", control: self)
         }
-        
-        //performSegue(withIdentifier: "toFriends", sender: nil)
     }
 }
