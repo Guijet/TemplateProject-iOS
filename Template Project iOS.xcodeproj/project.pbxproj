@@ -92,6 +92,7 @@
 		46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C65678209DF9080039EF82 /* SecondViewController.swift */; };
 		F70610CE209E523500EB96F9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CD209E523500EB96F9 /* Global.swift */; };
 		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
+		F706BB1A209F996500249239 /* VCRegister2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706BB19209F996500249239 /* VCRegister2.swift */; };
 		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
 		F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E63209F412B00022C08 /* VCRegister.swift */; };
 		F7C32E66209F432200022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E65209F432200022C08 /* Application.storyboard */; };
@@ -207,6 +208,7 @@
 		9793E0FC4C11488C6A2F6A48 /* Pods-Template Project iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Project iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Template Project iOS/Pods-Template Project iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F70610CD209E523500EB96F9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
+		F706BB19209F996500249239 /* VCRegister2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister2.swift; sourceTree = "<group>"; };
 		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
 		F7C32E63209F412B00022C08 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
 		F7C32E65209F432200022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
@@ -295,7 +297,11 @@
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
+<<<<<<< HEAD
 				F7C32E63209F412B00022C08 /* VCRegister.swift */,
+=======
+				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
+>>>>>>> dev2
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -509,6 +515,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		F706BB17209F668900249239 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F7C32E6E209F639000022C08 /* Application.storyboard */,
+				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
+				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F706BB18209F669B00249239 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				463046FA1FBF38F9005F1106 /* Main.storyboard */,
+				463046FF1FBF38F9005F1106 /* LaunchScreen.storyboard */,
+				46C65678209DF9080039EF82 /* SecondViewController.swift */,
+				463046F81FBF38F9005F1106 /* ViewController.swift */,
+				F7C32E67209F463000022C08 /* MainNC.swift */,
+				F7C32E63209F412B00022C08 /* VCRegister.swift */,
+				F706BB19209F996500249239 /* VCRegister2.swift */,
+			);
+			name = Main;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+>>>>>>> dev2
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -747,6 +781,7 @@
 				46933A492052EDAE00A5B173 /* FloatTools.swift in Sources */,
 				46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */,
 				46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */,
+				F706BB1A209F996500249239 /* VCRegister2.swift in Sources */,
 				46933A592052F07200A5B173 /* StripeGraph.swift in Sources */,
 				0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */,
 				46933A402052EDAE00A5B173 /* Images.swift in Sources */,

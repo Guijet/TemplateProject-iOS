@@ -57,25 +57,25 @@ class ViewController: UIViewController,UITextFieldDelegate{
         
         //login button FB
         let btnFB = UIButton()
-        let labFB = UILabel()
+        let lblFB = UILabel()
         let imvFB = UIImageView()
         
         btnFB.backgroundColor = UIColor().hex("#5C9DE8")
         btnFB.frame = CGRect(x: rw(55), y: rh(181), width: rw(266), height: rh(47))
         btnFB.layer.cornerRadius = rw(4)
         
-        labFB.font = UIFont(name: "Lato-Regular", size: rw(15))
-        labFB.textColor = .white
-        labFB.frame = CGRect(x: rw(61), y: rh(16), width: rw(188), height: rh(18))
-        labFB.text = "Log in with Facebook"
-        labFB.textAlignment = .center
+        lblFB.font = UIFont(name: "Lato-Regular", size: rw(15))
+        lblFB.textColor = .white
+        lblFB.frame = CGRect(x: rw(61), y: rh(16), width: rw(188), height: rh(18))
+        lblFB.text = "Log in with Facebook"
+        lblFB.textAlignment = .center
         
         imvFB.image = UIImage(named: "Facebook")
         imvFB.contentMode = .scaleAspectFit
         imvFB.frame = CGRect(x: rw(18), y: rh(6), width: rw(35), height: rh(35))
     
         self.view.addSubview(btnFB)
-        btnFB.addSubview(labFB)
+        btnFB.addSubview(lblFB)
         btnFB.addSubview(imvFB)
         
         btnFB.addTarget(self, action: #selector(loginFacebookAction(sender:)), for: .touchUpInside)

@@ -16,7 +16,7 @@ class RequestLogin{
         
         let reqObj = RequestObject()
         
-        let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "email=\(email)&password=\(password)")
+        let response = Utility().getJson(url: "\(Global.shared.url)auth/login", method: "POST", body: "login=\(email)&password=\(password)")
         
         //if server is reached
         if !response.getIsError() {
@@ -43,6 +43,33 @@ class RequestLogin{
         }
         
         return reqObj
+    }
+    
+    func verifyEmail(email:String) -> RequestObject{
+        let reqObj = RequestObject()
         
+        let response = Utility().getJson(url: "\(Global.shared.url)verifyemail", method: "POST", body: "email=\(email)")
+        
+        let data = response.getDict()
+        
+        if !response.getIsError() {
+            if let _ = data["status"] as? String {
+                reqObj.serverMsg = ""
+                reqObj.validConnexion = true
+            } else {
+                if let errorName = data["error"] as? String {
+                    reqObj.serverMsg = errorName
+                    reqObj.validConnexion = false
+                } else {
+                    reqObj.serverMsg = "Unknown error"
+                    reqObj.validConnexion = false
+                }
+            }
+        } else {
+            reqObj.serverMsg = response.getMessage()
+            reqObj.validConnexion = false
+        }
+        
+        return reqObj
     }
 }
