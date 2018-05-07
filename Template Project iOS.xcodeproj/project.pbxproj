@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F320A08FED008D1553 /* AppNC.swift */; };
 		0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F99209F45840090B380 /* TVCFriends.swift */; };
 		0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */; };
 		323D4FD6FCDAF4F864BB2FC3 /* Pods_Template_Project_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */; };
@@ -118,6 +119,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B36E9F320A08FED008D1553 /* AppNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNC.swift; sourceTree = "<group>"; };
 		0B4D6F99209F45840090B380 /* TVCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCFriends.swift; sourceTree = "<group>"; };
 		0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellFriend.swift; sourceTree = "<group>"; };
 		463046F31FBF38F9005F1106 /* Template Project iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Project iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,6 +502,7 @@
 				F7C32E6E209F639000022C08 /* Application.storyboard */,
 				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
 				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+				0B36E9F320A08FED008D1553 /* AppNC.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 				46933A4D2052EDAE00A5B173 /* ProgressBar.swift in Sources */,
 				46933A3F2052EDAE00A5B173 /* LineGraph.swift in Sources */,
 				46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */,
+				0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */,
 				F70610CE209E523500EB96F9 /* Global.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
 				F7C32E68209F463000022C08 /* MainNC.swift in Sources */,
