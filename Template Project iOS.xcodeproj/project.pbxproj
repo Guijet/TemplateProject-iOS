@@ -98,6 +98,8 @@
 		F7C32E68209F463000022C08 /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E67209F463000022C08 /* MainNC.swift */; };
 		F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E6B209F601400022C08 /* loadingIndicator.swift */; };
 		F7C32E6F209F639000022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E6E209F639000022C08 /* Application.storyboard */; };
+		F7EE27D220A08BC300910C67 /* LocalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE27D120A08BC300910C67 /* LocalHelper.swift */; };
+		F7EE27D420A08E2700910C67 /* VCFinalRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE27D320A08E2700910C67 /* VCFinalRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +218,8 @@
 		F7C32E67209F463000022C08 /* MainNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
 		F7C32E6B209F601400022C08 /* loadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingIndicator.swift; sourceTree = "<group>"; };
 		F7C32E6E209F639000022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
+		F7EE27D120A08BC300910C67 /* LocalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalHelper.swift; sourceTree = "<group>"; };
+		F7EE27D320A08E2700910C67 /* VCFinalRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFinalRegister.swift; sourceTree = "<group>"; };
 		FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -356,6 +360,7 @@
 		46933A142052EDAE00A5B173 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F7EE27D020A08BB300910C67 /* Helper */,
 				46933A152052EDAE00A5B173 /* Date */,
 				46933A182052EDAE00A5B173 /* Gestures */,
 				46933A1A2052EDAE00A5B173 /* Global Utility */,
@@ -514,9 +519,18 @@
 				F7C32E67209F463000022C08 /* MainNC.swift */,
 				F7C32E63209F412B00022C08 /* VCRegister.swift */,
 				F706BB19209F996500249239 /* VCRegister2.swift */,
+				F7EE27D320A08E2700910C67 /* VCFinalRegister.swift */,
 			);
 			name = Main;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F7EE27D020A08BB300910C67 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7EE27D120A08BC300910C67 /* LocalHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -746,6 +760,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46933A3E2052EDAE00A5B173 /* Utility.swift in Sources */,
+				F7EE27D220A08BC300910C67 /* LocalHelper.swift in Sources */,
 				46933A412052EDAE00A5B173 /* UIImageTools.swift in Sources */,
 				46933A3A2052EDAE00A5B173 /* CalendarTools.swift in Sources */,
 				F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */,
@@ -754,6 +769,7 @@
 				46933A422052EDAE00A5B173 /* GoogleMapTools.swift in Sources */,
 				46933A432052EDAE00A5B173 /* NavigationTools.swift in Sources */,
 				46933A502052EDAE00A5B173 /* UIScrollViewTools.swift in Sources */,
+				F7EE27D420A08E2700910C67 /* VCFinalRegister.swift in Sources */,
 				46933A492052EDAE00A5B173 /* FloatTools.swift in Sources */,
 				46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */,
 				46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */,

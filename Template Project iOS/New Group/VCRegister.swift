@@ -137,7 +137,6 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         tbFirstName.placeholder = "First name"
         tbFirstName.textAlignment = .center
         tbFirstName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        tbFirstName.center.x = self.view.center.x
         tbFirstName.autocapitalizationType = .none
         tbFirstName.textColor = UIColor().hex("582FC0")
         
@@ -152,7 +151,6 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         tbLastName.placeholder = "Last name"
         tbLastName.textAlignment = .center
         tbLastName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        tbLastName.center.x = self.view.center.x
         tbLastName.autocapitalizationType = .none
         tbLastName.textColor = UIColor().hex("582FC0")
         
@@ -167,7 +165,6 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         tbEmail.placeholder = "Email"
         tbEmail.textAlignment = .center
         tbEmail.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        tbEmail.center.x = self.view.center.x
         tbEmail.autocapitalizationType = .none
         tbEmail.textColor = UIColor().hex("582FC0")
         

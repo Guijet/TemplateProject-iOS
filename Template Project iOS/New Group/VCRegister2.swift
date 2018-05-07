@@ -26,13 +26,15 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
     let pickerViewCountry = UIPickerView()
     let tbCountry = UITextField()
     
+    let btnNext = UIButton()
+    
+    var arrayCountries:[String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = UIColor().hex("E6E1F1")
-        
-        setUpPickerCity()
-        setUpViewCity()
+       
         setUpPickerCountry()
         setUpViewCountry()
         
@@ -41,20 +43,31 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         // Do any additional setup after loading the view.
     }
     
-    func setUpPickerCity(){
-        
+    @objc func endEditing(){
+        self.view.endEditing(true)
     }
     
     func setUpPickerCountry(){
+        pickerViewCountry.delegate = self
+        pickerViewCountry.dataSource = self
+        tbCountry.inputView = pickerViewCountry
+        tbCountry.addCustomToolBar(target: self, selector: #selector(endEditing))
         
-    }
-    
-    func setUpViewCity(){
-        
+        arrayCountries = LocalHelper.shared.getCountriesList().sorted(by:{$0 < $1})
     }
     
     func setUpViewCountry(){
+        tbCountry.delegate = self
         
+        tbCountry.frame = CGRect(x: rw(82), y: rh(307), width: rw(212.28), height: rh(28))
+        tbCountry.placeholder = "Country"
+        tbCountry.textAlignment = .center
+        tbCountry.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbCountry.autocapitalizationType = .none
+        tbCountry.textColor = UIColor().hex("582FC0")
+        self.view.createHR(x: tbCountry.frame.minX, y: tbCountry.frame.maxY + rh(1), width: tbCountry.frame.width, color: UIColor().hex("B8A6E4"))
+        
+        self.view.addSubview(tbCountry)
     }
 
     func loadRegister2UI(){
@@ -99,23 +112,80 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         }
         
         self.view.addSubview(imvProfile)
+        
+        //city text box
+        tbCity.frame = CGRect(x: rw(82), y: rh(267), width: rw(212.28), height: rh(28))
+        tbCity.placeholder = "City"
+        tbCity.textAlignment = .center
+        tbCity.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbCity.autocapitalizationType = .none
+        tbCity.textColor = UIColor().hex("582FC0")
+        self.view.createHR(x: tbCity.frame.minX, y: tbCity.frame.maxY + rh(1), width: tbCity.frame.width, color: UIColor().hex("B8A6E4"))
+        
+        self.view.addSubview(tbCity)
+        
+        //next button
+        btnNext.backgroundColor = UIColor().hex("#582FC0")
+        btnNext.frame = CGRect(x: rw(77), y: rh(578), width: rw(222), height: rh(47))
+        btnNext.layer.cornerRadius = rw(4)
+        btnNext.setTitle("Next", for: .normal)
+        btnNext.titleLabel?.font = UIFont(name: "Lato-Regular", size: rw(15))
+        btnNext.setTitleColor(UIColor().hex("#FFFFFF"), for: .normal)
+        
+        self.view.addSubview(btnNext)
+        
+        btnNext.addTarget(self, action: #selector(toFinalRegisterPage(sender:)), for: .touchUpInside)
     }
     
+    @objc func toFinalRegisterPage(sender:UIButton){
+        if tbCity.text!.isEmpty || tbCountry.text!.isEmpty {
+            Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
+        } else {
+            performSegue(withIdentifier: "toFinalRegisterPage", sender: nil)
+        }
+    }
+    
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFinalRegisterPage" {
+            (segue.destination as! VCFinalRegister).firstName = tbFirstName.text!
+            (segue.destination as! VCFinalRegister).lastName = tbLastName.text!
+            (segue.destination as! VCFinalRegister).email = tbEmail.text!
+            (segue.destination as! VCFinalRegister).gendre = tbGendre.text!
+            (segue.destination as! VCFinalRegister).birthDate = tbBirthDate.text!
+            (segue.destination as! VCFinalRegister).isPicked = isPicked
+            if isPicked {
+                (segue.destination as! VCRegister2).profileImage = imvProfile.image!
+            }
+        }
+    }
+ */
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "a" //TEMPORAIRE
+        
+        return arrayCountries[row] //TEMPORAIRE
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1 //TEMPORAIRE
+        return arrayCountries.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //HANDLE
-        //tbGendre.text = arrayGendre[row]
-        //tbGendre.textColor = UIColor().hex("582FC0")
+        tbCountry.text = arrayCountries[row]
+        tbCountry.textColor = UIColor().hex("582FC0")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == tbCountry {
+            if (textField.text?.isEmpty)! {
+                textField.text = arrayCountries[0]
+                textField.textColor = UIColor().hex("582FC0")
+            }
+        }
     }
 }
