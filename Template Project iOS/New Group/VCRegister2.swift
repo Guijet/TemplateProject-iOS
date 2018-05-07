@@ -19,12 +19,15 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
     var profileImage:UIImage?
     
     let imvProfile = UIImageView()
+    let profileView = UIView()
     
     let pickerViewCity = UIPickerView()
     let tbCity = UITextField()
     
     let pickerViewCountry = UIPickerView()
     let tbCountry = UITextField()
+    
+    let tbPhone = UITextField()
     
     let btnNext = UIButton()
     
@@ -38,13 +41,11 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         setUpPickerCountry()
         setUpViewCountry()
         
+        tbPhone.delegate = self
+        
         loadRegister2UI()
         
         // Do any additional setup after loading the view.
-    }
-    
-    @objc func endEditing(){
-        self.view.endEditing(true)
     }
     
     func setUpPickerCountry(){
@@ -69,6 +70,12 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         
         self.view.addSubview(tbCountry)
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        imvProfile.image = profileView.getScreenShot()
+        self.view.addSubview(imvProfile)
+    }
 
     func loadRegister2UI(){
         let imvBottom = UIImageView()
@@ -84,11 +91,11 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         imvProfile.layer.cornerRadius = rw(65)
         imvProfile.layer.masksToBounds = true
         
-        //????
         if isPicked {
             imvProfile.image = profileImage
+            self.view.addSubview(imvProfile)
         } else {
-            let profileView = UIView()
+            
             profileView.frame = CGRect(x: rw(122), y: rh(102), width: rw(130), height: rw(130))
             profileView.backgroundColor = UIColor().hex("582FC0")
             
@@ -96,22 +103,23 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
             lblInitials.font = UIFont(name: "Lato-Regular", size: rw(72))
             lblInitials.textColor = .white
             lblInitials.textAlignment = .center
-            lblInitials.frame = CGRect(x: rw(122), y: rh(102), width: rw(130), height: rw(130))
+            lblInitials.frame = CGRect(x: rw(0), y: rh(0), width: rw(130), height: rw(130))
+            lblInitials.center.x = profileView.frame.width/2
+            lblInitials.center.y = profileView.frame.height/2
             
             var letter1:String!
             var letter2:String!
             
-            letter1 = String(firstName.substring(from: 0, to: 1)).capitalized
-            letter2 = String(lastName.substring(from: 0, to: 1)).capitalized
-            lblInitials.text = "\(letter1)\(letter2)"
+            letter1 = String(firstName.substring(from: 0, to: 1)).uppercased()
+            letter2 = String(lastName.substring(from: 0, to: 1)).uppercased()
+            lblInitials.text = "\(letter1!)\(letter2!)"
+            lblInitials.adjustsFontSizeToFitWidth = true
             
             profileView.addSubview(lblInitials)
             
             imvProfile.image = profileView.getScreenShot()
-            
         }
         
-        self.view.addSubview(imvProfile)
         
         //city text box
         tbCity.frame = CGRect(x: rw(82), y: rh(267), width: rw(212.28), height: rh(28))
@@ -124,6 +132,19 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         
         self.view.addSubview(tbCity)
         
+        //Phone number text box
+        tbPhone.keyboardType = UIKeyboardType.numberPad
+        tbPhone.frame = CGRect(x: rw(82), y: rh(347), width: rw(212.28), height: rh(28))
+        tbPhone.placeholder = "Phone number"
+        tbPhone.textAlignment = .center
+        tbPhone.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
+        tbPhone.autocapitalizationType = .none
+        tbPhone.textColor = UIColor().hex("582FC0")
+        self.view.createHR(x: tbPhone.frame.minX, y: tbPhone.frame.maxY + rh(1), width: tbPhone.frame.width, color: UIColor().hex("B8A6E4"))
+        tbPhone.addCustomToolBar(target: self, selector: #selector(endEditing))
+
+        self.view.addSubview(tbPhone)
+        
         //next button
         btnNext.backgroundColor = UIColor().hex("#582FC0")
         btnNext.frame = CGRect(x: rw(77), y: rh(578), width: rw(222), height: rh(47))
@@ -135,11 +156,25 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         self.view.addSubview(btnNext)
         
         btnNext.addTarget(self, action: #selector(toFinalRegisterPage(sender:)), for: .touchUpInside)
+        
+        let tapGesturesRegognizer = UITapGestureRecognizer(target: self, action: #selector(endWriting(sender:)))
+        self.view.addGestureRecognizer(tapGesturesRegognizer)
+    }
+    
+    @objc func endEditing(){
+        self.view.endEditing(true)
+    }
+    
+    @objc func endWriting(sender:UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
     @objc func toFinalRegisterPage(sender:UIButton){
-        if tbCity.text!.isEmpty || tbCountry.text!.isEmpty {
+        
+        if tbCity.text!.isEmpty || tbCountry.text!.isEmpty || tbPhone.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
+        } else if !tbPhone.text!.verifyLenght(min: 10, max: 10){
+            Utility().alert(message: "Invalid phone number", title: "Invalid information", control: self)
         } else {
             performSegue(withIdentifier: "toFinalRegisterPage", sender: nil)
         }
@@ -153,10 +188,10 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
             (segue.destination as! VCFinalRegister).email = tbEmail.text!
             (segue.destination as! VCFinalRegister).gendre = tbGendre.text!
             (segue.destination as! VCFinalRegister).birthDate = tbBirthDate.text!
-            (segue.destination as! VCFinalRegister).isPicked = isPicked
-            if isPicked {
-                (segue.destination as! VCRegister2).profileImage = imvProfile.image!
-            }
+            (segue.destination as! VCRegister2).profileImage = imvProfile.image!
+            (segue.destination as! VCRegister2).city = tbCity.text!
+            (segue.destination as! VCRegister2).country = tbCountry.text!
+            (segue.destination as! VCRegister2).phone = tbPhone.text!
         }
     }
  */
@@ -187,5 +222,10 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
                 textField.textColor = UIColor().hex("582FC0")
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
