@@ -26,6 +26,8 @@ class TVCFriends: UITableViewController {
     let friends = [Friend(name: "Ben Charbonneau", imageURL: "instagram", id: 1), Friend(name: "Phil Dupras", imageURL: "Facebook", id: 2), Friend(name: "Guillaume Jette", imageURL: "instagram", id: 3)]
     let cellID = "friend"
     
+    var listCell = [TVCellFriend]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -54,6 +56,7 @@ class TVCFriends: UITableViewController {
         cell.lblName.text = friends[indexPath.row].name
         cell.ivImage.image = UIImage(named: friends[indexPath.row].imageURL)
         cell.tag = friends[indexPath.row].id
+        listCell.append(cell)
         
         return cell
     }
@@ -61,5 +64,20 @@ class TVCFriends: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toOneFriend", sender: listCell[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sender = sender as! TVCellFriend
+        if segue.identifier == "toOneFriend" {
+            (segue.destination as! VCMenu).name = sender.lblName.text!
+            (segue.destination as! VCMenu).image = sender.ivImage.image!
+        }
+    }
+ 
+    
+
 }
 
