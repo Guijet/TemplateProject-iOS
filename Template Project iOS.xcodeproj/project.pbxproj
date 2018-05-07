@@ -297,11 +297,8 @@
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
-<<<<<<< HEAD
 				F7C32E63209F412B00022C08 /* VCRegister.swift */,
-=======
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
->>>>>>> dev2
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -515,8 +512,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
 		F706BB17209F668900249239 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,7 +537,6 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
->>>>>>> dev2
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
