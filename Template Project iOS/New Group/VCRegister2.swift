@@ -10,9 +10,9 @@ import UIKit
 
 class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
-    var isPicked = false//:Bool!
-    var firstName = "Ben"//:String!
-    var lastName = "Charbonneau"//:String!
+    var isPicked:Bool!
+    var firstName:String!
+    var lastName:String!
     var email:String!
     var gendre:String!
     var birthDate:String!
@@ -73,8 +73,10 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
     
     
     override func viewDidAppear(_ animated: Bool) {
-        imvProfile.image = profileView.getScreenShot()
-        self.view.addSubview(imvProfile)
+        if !isPicked {
+            imvProfile.image = profileView.getScreenShot()
+            self.view.addSubview(imvProfile)
+        }
     }
 
     func loadRegister2UI(){
@@ -116,8 +118,6 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
             lblInitials.adjustsFontSizeToFitWidth = true
             
             profileView.addSubview(lblInitials)
-            
-            imvProfile.image = profileView.getScreenShot()
         }
         
         
@@ -173,29 +173,30 @@ class VCRegister2: UIViewController, UITextFieldDelegate,UIPickerViewDelegate,UI
         
         if tbCity.text!.isEmpty || tbCountry.text!.isEmpty || tbPhone.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
+        } else if tbCity.text!.containerNumber() {
+            Utility().alert(message: "City names can't contain numbers", title: "Invalid city name", control: self)
         } else if !tbPhone.text!.verifyLenght(min: 10, max: 10){
             Utility().alert(message: "Invalid phone number", title: "Invalid information", control: self)
         } else {
             performSegue(withIdentifier: "toFinalRegisterPage", sender: nil)
         }
+        
     }
     
-    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFinalRegisterPage" {
-            (segue.destination as! VCFinalRegister).firstName = tbFirstName.text!
-            (segue.destination as! VCFinalRegister).lastName = tbLastName.text!
-            (segue.destination as! VCFinalRegister).email = tbEmail.text!
-            (segue.destination as! VCFinalRegister).gendre = tbGendre.text!
-            (segue.destination as! VCFinalRegister).birthDate = tbBirthDate.text!
-            (segue.destination as! VCRegister2).profileImage = imvProfile.image!
-            (segue.destination as! VCRegister2).city = tbCity.text!
-            (segue.destination as! VCRegister2).country = tbCountry.text!
-            (segue.destination as! VCRegister2).phone = tbPhone.text!
+            (segue.destination as! VCFinalRegister).firstName = firstName
+            (segue.destination as! VCFinalRegister).lastName = lastName
+            (segue.destination as! VCFinalRegister).email = email
+            (segue.destination as! VCFinalRegister).gendre = gendre
+            (segue.destination as! VCFinalRegister).birthDate = birthDate
+            (segue.destination as! VCFinalRegister).profileImage = imvProfile.image!
+            (segue.destination as! VCFinalRegister).city = tbCity.text!
+            (segue.destination as! VCFinalRegister).country = tbCountry.text!
+            (segue.destination as! VCFinalRegister).phone = tbPhone.text!
         }
     }
- */
-    
+ 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         return arrayCountries[row] //TEMPORAIRE

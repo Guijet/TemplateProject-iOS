@@ -13,5 +13,6 @@ class Global{
     
     var token:String?
     var tokenFB:String?
-    var url:String = "http://192.168.0.111/"
+    var url:String = "http://192.168.0.155/Artifex-API/public/"
+    var user:User?
 }

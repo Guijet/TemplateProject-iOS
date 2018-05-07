@@ -9,14 +9,13 @@
 import UIKit
 
 class VCFinalRegister: UIViewController {
-    
-    //var isPicked =
-    var firstName = "Ben"//:String!
-    var lastName = "Charbonneau"//:String!
-    var email = "aaa@aaa.ca"//:String!
+
+    var firstName:String!
+    var lastName:String!
+    var email:String!
     var gendre:String!
     var birthDate:String!
-    var profileImage = UIImage(named: "instagram")//:UIImage!
+    var profileImage:UIImage!
     var city:String!
     var country:String!
     var phone:String!
@@ -101,10 +100,39 @@ class VCFinalRegister: UIViewController {
         self.view.addSubview(btnGetStarted)
         
         //move to application view controller
+        btnGetStarted.addTarget(self, action: #selector(toFinalRegisterPage(sender:)), for: .touchUpInside)
         
         let tapGesturesRegognizer = UITapGestureRecognizer(target: self, action: #selector(endWriting(sender:)))
         self.view.addGestureRecognizer(tapGesturesRegognizer)
-
+    }
+    
+    @objc func toFinalRegisterPage(sender:Any){
+        
+        let req = RequestLogin()
+        
+        
+        if tbUsername.text!.isEmpty || tbPassword.text!.isEmpty || tbConfirmPassword.text!.isEmpty {
+            Utility().alert(message: "Fill all information fields", title: "Information mmissing", control: self)
+        } else if !tbPassword.text!.containsCaps() || !tbPassword.text!.containerNumber() || !tbPassword.text!.verifyLenght(min: 7, max: 20) {
+            Utility().alert(message: "Password must contain caps, numbers and be between 7 and 20 caracters long", title: "Invalid password", control: self)
+        } else if tbPassword.text! != tbConfirmPassword.text! {
+            Utility().alert(message: "Passwords must match", title: "Wrong confirmed password", control: self)
+        } else {
+            
+            let currentDate = Date()
+            let bDay = birthDate.stringToDate(format: "yyyy-MM-dd")
+            let age =  abs(Date().daysBetween(date: bDay))/365
+            
+            let resp = req.verifyRegister(email: email, username: tbUsername.text!, password: tbPassword.text!, confirmedPassword: tbConfirmPassword.text!, firstName: firstName, lastName: lastName, birthdate: birthDate, city: city, country: country, gender: gendre, age: String(age), profileImage: profileImage!, phone: phone)
+            
+            if !(resp.validConnexion!) {
+                Utility().alert(message: resp.serverMsg!, title: "Error", control: self)
+            } else {
+                let storyboard = UIStoryboard(name: "Application", bundle: nil)
+                let mainPage = storyboard.instantiateViewController(withIdentifier: "applicationNC") as! UINavigationController
+                UIApplication.shared.keyWindow?.rootViewController = mainPage
+            }
+        }
     }
     
     @objc func endEditing(){

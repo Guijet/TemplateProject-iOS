@@ -193,20 +193,22 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @objc func toLocationPage(sender:UIButton){
         
         let requestEmailValidation = RequestLogin()
-        /*
+        
         if tbEmail.text!.isEmpty || tbLastName.text!.isEmpty || tbFirstName.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
+        } else if tbFirstName.text!.containerNumber() || tbLastName.text!.containerNumber(){
+            Utility().alert(message: "Names can't contain numbers", title: "Invalid name format", control: self)
         } else if !tbEmail.text!.isValidEmail() {
             Utility().alert(message: "Enter a valid email address", title: "Invalid email format", control: self)
         } else if !(requestEmailValidation.verifyEmail(email:tbEmail.text!).validConnexion!) {
             Utility().alert(message: "This email address is already taken", title: "Invalid email address", control: self)
         } else {
-        */
             performSegue(withIdentifier: "toRegister2", sender: nil)
-        //}
+        }
+        
     }
     
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRegister2" {
             (segue.destination as! VCRegister2).firstName = tbFirstName.text!
@@ -220,7 +222,7 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             }
         }
     }
-    */
+    
  
     @objc func endWriting(sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
