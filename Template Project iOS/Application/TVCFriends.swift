@@ -21,7 +21,7 @@ struct Friend {
 }
 
 class TVCFriends: UITableViewController {
-    
+
     // Le array friends sera rempli par une request
     let friends = [Friend(name: "Ben Charbonneau", imageURL: "instagram", id: 1), Friend(name: "Phil Dupras", imageURL: "Facebook", id: 2), Friend(name: "Guillaume Jette", imageURL: "instagram", id: 3)]
     let cellID = "friend"
@@ -34,7 +34,6 @@ class TVCFriends: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.register(TVCellFriend.self, forCellReuseIdentifier: cellID)
         self.tableView.tableFooterView = UIView()
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,8 +75,5 @@ class TVCFriends: UITableViewController {
             (segue.destination as! VCMenu).image = sender.ivImage.image!
         }
     }
- 
-    
-
 }
 

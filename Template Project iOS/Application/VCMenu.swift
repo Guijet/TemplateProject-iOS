@@ -8,57 +8,49 @@
 
 import UIKit
 
-class VCMenu: UIViewController {
+class VCMenu: UIViewController, CustomMenuViewDelegate {
+    
     
     var name:String!
     var image:UIImage!
-
+    /*
     let imvProfile = UIImageView()
     let lblName = UILabel()
     let ivBackground = UIImageView()
     let ivSide = UIImageView()
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpBackground()
-        setUpBackgroundSide()
-        setUpImage()
-        setUpLabelName()
-        
-        
-
-        // Do any additional setup after loading the view.
+        setUpMenuView()
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
-    func setUpImage()  {
-        imvProfile.image = image
-        imvProfile.backgroundColor = .white
-        imvProfile.frame = CGRect(x: 0, y: rh(102), width: rw(80), height: rw(80))
-        imvProfile.center.x = self.view.center.x
-        imvProfile.layer.cornerRadius = rw(80/2)
-        imvProfile.layer.masksToBounds = true
-        self.view.addSubview(imvProfile)
+    func selectedIndexChanged(_ selectedIndex: Int) {
+        // TODO : 
+        print("index tab : \(selectedIndex)")
+        switch selectedIndex {
+        case 1:
+            print("To page Meet Me")
+        case 2:
+            print("To page Create an Event")
+        case 3:
+            print("To page Chat")
+        case 4:
+            print("To page Profile")
+        case 5:
+            print("To page Friends")
+        case 6:
+            print("To page Settings")
+        default:
+            break
+        }
     }
     
-    func setUpLabelName() {
-        lblName.frame = CGRect(x: 0, y: rh(192), width: UIScreen.main.bounds.width, height: rh(21))
-        lblName.text = name
-        lblName.textColor = UIColor().hex("582FC0")
-        lblName.textAlignment = .center
-        lblName.font = UIFont(name: "Lato-Regular", size: rh(21))
-        self.view.addSubview(lblName)
-    }
-    
-    func setUpBackground() {
-        ivBackground.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        ivBackground.image = UIImage(named: "Fond degrade")
-        self.view.addSubview(ivBackground)
-    }
-    
-    func setUpBackgroundSide() {
-        ivSide.frame = CGRect(x: rw(278), y: 0, width: rw(100), height: UIScreen.main.bounds.height)
-        ivSide.image = UIImage(named: "Side shape")
-        self.view.addSubview(ivSide)
+    func setUpMenuView() {
+        let menuView = CustomMenuView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        menuView.delegate = self
+        self.view.addSubview(menuView)
     }
 
 }
