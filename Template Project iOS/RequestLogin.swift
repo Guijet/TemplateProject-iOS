@@ -26,10 +26,13 @@ class RequestLogin{
             if let token = data["token"] as? String {
                 Global.shared.token = token
                 
-                let getUser = Utility().getJson(url: "\(Global.shared.url)auth/me?", method: "GET", body: "Authorization=Bearer \(Global.shared.token)")
+                let getUser = Utility().getJson(url: "\(Global.shared.url)auth/me?", method: "GET", needToken: true)
                 
-                let userData = response.getDict()
+                let userData = getUser.getDict()
+                
                 let userInfo = userData["current_user"] as! [String:Any]
+                
+                print(userData)
                 
                 Global.shared.user = User(email: userInfo["email"] as! String, firstName: userInfo["first_name"] as! String, lastName: userInfo["last_name"] as! String, birthdate: userInfo["birthdate"] as! String, city: userInfo["city"] as! String, country: userInfo["country"] as! String, gender: userInfo["gender"] as! String, age: userInfo["age"] as! String, phone: userInfo["phone"] as! String, username: userInfo["username"] as! String, profileImageUrl: userInfo["profile_image_url"] as! String, coverImageUrl: userInfo["cover_image_url"] as! String)
                 

@@ -288,7 +288,7 @@ class Utility {
             
             if(needToken){
                 //HANDLE TOKEN
-                request.addValue("Bearer \(Global.shared.token)", forHTTPHeaderField: "Authorization")
+                request.addValue("Bearer \(Global.shared.token!)", forHTTPHeaderField: "Authorization")
             }
             
             let config = URLSessionConfiguration.default
