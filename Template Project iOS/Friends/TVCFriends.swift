@@ -20,7 +20,7 @@ struct Friend {
     }
 }
 
-class TVCFriends: UITableViewController {
+class TVCFriends: UIViewController {
 
     // Le array friends sera rempli par une request
     let friends = [Friend(name: "Ben Charbonneau", imageURL: "instagram", id: 1), Friend(name: "Phil Dupras", imageURL: "Facebook", id: 2), Friend(name: "Guillaume Jette", imageURL: "instagram", id: 3)]
@@ -30,12 +30,16 @@ class TVCFriends: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(TVCellFriend.self, forCellReuseIdentifier: cellID)
         self.tableView.tableFooterView = UIView()
+ */
+        
     }
     
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -63,10 +67,13 @@ class TVCFriends: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    */
     
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toOneFriend", sender: listCell[indexPath.row])
     }
+ 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let sender = sender as! TVCellFriend
@@ -75,5 +82,6 @@ class TVCFriends: UITableViewController {
             (segue.destination as! VCMenu).image = sender.ivImage.image!
         }
     }
+ */
 }
 

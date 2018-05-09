@@ -12,11 +12,13 @@ class AppNC: UINavigationController {
 
     
     override func viewWillLayoutSubviews() {
-        let btnBack = setBackButton()
         let btnNav = setBarButton()
         
+        self.navigationBar.tintColor = .white
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.navigationBar.barTintColor = UIColor().hex("582FC0")
+        
         for x in self.viewControllers {
-            x.navigationItem.backBarButtonItem = btnBack
             x.navigationItem.rightBarButtonItem = btnNav
         }
     }
@@ -36,9 +38,7 @@ class AppNC: UINavigationController {
         let backItem = UIBarButtonItem()
         
         backItem.title = ""
-        self.navigationBar.tintColor = .white
-        self.extendedLayoutIncludesOpaqueBars = true
-        self.navigationBar.barTintColor = UIColor().hex("582FC0")
+        
         return backItem
     }
 }
