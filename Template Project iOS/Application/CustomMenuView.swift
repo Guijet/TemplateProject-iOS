@@ -204,8 +204,8 @@ class CustomMenuView: UIView {
     }
     
     func setUpImage()  {
-        //imvProfile.image = UIImage(named: Global.shared.user.profileImageUrl)
-        imvProfile.image = UIImage(named: "instagram")
+        imvProfile.image = UIImage(named: Global.shared.user.profileImageUrl)
+        // imvProfile.image = UIImage(named: "instagram") // Pour testing
         imvProfile.backgroundColor = .white
         imvProfile.frame = CGRect(x: 0, y: rh(102), width: rw(80), height: rw(80))
         imvProfile.center.x = self.center.x
@@ -216,8 +216,8 @@ class CustomMenuView: UIView {
     
     func setUpLabelName() {
         lblName.frame = CGRect(x: 0, y: rh(192), width: UIScreen.main.bounds.width, height: rh(21))
-        //lblName.text = "\(Global.shared.user.firstName) \(Global.shared.user.lastName)"
-        lblName.text = "I like trains!"
+        lblName.text = "\(Global.shared.user.firstName) \(Global.shared.user.lastName)"
+        // lblName.text = "I like trains!" // Pour testing
         lblName.textColor = UIColor().hex("582FC0")
         lblName.textAlignment = .center
         lblName.font = UIFont(name: "Lato-Regular", size: rw(21))
