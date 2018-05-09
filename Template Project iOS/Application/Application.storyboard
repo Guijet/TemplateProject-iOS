@@ -24,13 +24,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="OG4-yA-ZVZ"/>
-                    <connections>
-                        <segue destination="FYJ-2U-Smu" kind="show" identifier="toOneFriend" id="5kJ-sS-u0C"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLA-kc-zLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="148"/>
+            <point key="canvasLocation" x="396" y="862"/>
         </scene>
         <!--Menu-->
         <scene sceneID="rwA-kp-gKq">
@@ -42,10 +39,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9ng-mx-j7m"/>
                     </view>
+                    <navigationItem key="navigationItem" id="V5h-LI-Xyc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZJ-Ay-kcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="148"/>
+            <point key="canvasLocation" x="396" y="148"/>
         </scene>
         <!--AppNC-->
         <scene sceneID="OtJ-qs-FDA">
@@ -56,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Nwe-rv-89z" kind="relationship" relationship="rootViewController" id="zxc-Xz-SI2"/>
+                        <segue destination="FYJ-2U-Smu" kind="relationship" relationship="rootViewController" id="q8N-yj-yIC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lv-ON-25Q" userLabel="First Responder" sceneMemberID="firstResponder"/>

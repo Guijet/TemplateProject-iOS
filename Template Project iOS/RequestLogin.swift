@@ -109,6 +109,7 @@ class RequestLogin{
                 reqObj.validConnexion = true
                 
                 Global.shared.user = User(email: userData["email"] as! String, firstName: userData["first_name"] as! String, lastName: userData["last_name"] as! String, birthdate: userData["birthdate"] as! String, city: userData["city"] as! String, country: userData["country"] as! String, gender: userData["gender"] as! String, age: userData["age"] as! String, phone: userData["phone"] as! String, username: userData["username"] as! String, profileImageUrl: data["profile_image_url"] as! String, coverImageUrl: userData["cover_image_url"] as! String)
+                
                 print("YOU IN NIBBA")
             } else {
                 if let errorName = data["error"] as? String {
