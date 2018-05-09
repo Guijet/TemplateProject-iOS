@@ -11,12 +11,14 @@ import UIKit
 extension UIImage{
     
     //We can change the resize parameter
+    
     func imageToBase64()->String{
-        let myImage = UIImagePNGRepresentation(self.resizeImageWith(newSize: CGSize(width: 1080, height: 1080)))!
+        let myImage = UIImageJPEGRepresentation(self.resizeImageWith(newSize: CGSize(width: 1080, height: 1080)), 0)!
         let strBase64 = myImage.base64EncodedString(options: .init(rawValue: 0))
         return strBase64
     }
-    
+ 
+
     func resizeImageWith(newSize: CGSize) -> UIImage {
         
         let horizontalRatio = newSize.width / size.width

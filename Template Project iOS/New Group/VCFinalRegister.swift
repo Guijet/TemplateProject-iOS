@@ -121,7 +121,6 @@ class VCFinalRegister: UIViewController {
             Utility().alert(message: "Passwords must match", title: "Wrong confirmed password", control: self)
         } else {
             
-            let currentDate = Date()
             let bDay = birthDate.stringToDate(format: "yyyy-MM-dd")
             let age =  abs(Date().daysBetween(date: bDay))/365
             
