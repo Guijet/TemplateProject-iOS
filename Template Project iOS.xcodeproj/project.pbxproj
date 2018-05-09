@@ -104,7 +104,6 @@
 		F7C32E6F209F639000022C08 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C32E6E209F639000022C08 /* Application.storyboard */; };
 		F7EE27D220A08BC300910C67 /* LocalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE27D120A08BC300910C67 /* LocalHelper.swift */; };
 		F7EE27D420A08E2700910C67 /* VCFinalRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE27D320A08E2700910C67 /* VCFinalRegister.swift */; };
-		F7EE27D620A0D22A00910C67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE27D520A0D22A00910C67 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,7 +228,6 @@
 		F7C32E6E209F639000022C08 /* Application.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Application.storyboard; sourceTree = "<group>"; };
 		F7EE27D120A08BC300910C67 /* LocalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalHelper.swift; sourceTree = "<group>"; };
 		F7EE27D320A08E2700910C67 /* VCFinalRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFinalRegister.swift; sourceTree = "<group>"; };
-		F7EE27D520A0D22A00910C67 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template_Project_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -293,7 +291,6 @@
 				463047021FBF38F9005F1106 /* Info.plist */,
 				0B36E9F920A0F7CA008D1553 /* User.swift */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
-				F7EE27D520A0D22A00910C67 /* User.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
 				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 			);
@@ -820,7 +817,6 @@
 				46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */,
 				46933A442052EDAE00A5B173 /* TopSelector.swift in Sources */,
 				463046F71FBF38F9005F1106 /* AppDelegate.swift in Sources */,
-				F7EE27D620A0D22A00910C67 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
