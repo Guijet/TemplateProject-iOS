@@ -20,36 +20,30 @@ struct Friend {
     }
 }
 
-class TVCFriends: UIViewController {
+class TVCFriends: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // Le array friends sera rempli par une request
     let friends = [Friend(name: "Ben Charbonneau", imageURL: "instagram", id: 1), Friend(name: "Phil Dupras", imageURL: "Facebook", id: 2), Friend(name: "Guillaume Jette", imageURL: "instagram", id: 3)]
     let cellID = "friend"
     
     var listCell = [TVCellFriend]()
+    var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.register(TVCellFriend.self, forCellReuseIdentifier: cellID)
-        self.tableView.tableFooterView = UIView()
- */
-        
+        setUpTableView()
     }
     
-    /*
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return friends.count
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! TVCellFriend
         
         cell.preservesSuperviewLayoutMargins = false
@@ -64,13 +58,22 @@ class TVCFriends: UIViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    */
+    
+    func setUpTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TVCellFriend.self, forCellReuseIdentifier: cellID)
+        tableView.tableFooterView = UIView()
+        tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        self.view.addSubview(tableView)
+    }
     
     /*
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toOneFriend", sender: listCell[indexPath.row])
     }
  
@@ -83,5 +86,6 @@ class TVCFriends: UIViewController {
         }
     }
  */
+
 }
 
