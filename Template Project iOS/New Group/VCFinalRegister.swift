@@ -109,9 +109,7 @@ class VCFinalRegister: UIViewController {
     }
     
     @objc func toFinalRegisterPage(sender:Any){
-        
-        let req = RequestLogin()
-        
+    
         
         if tbUsername.text!.isEmpty || tbPassword.text!.isEmpty || tbConfirmPassword.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Information mmissing", control: self)
@@ -127,8 +125,8 @@ class VCFinalRegister: UIViewController {
             var resp:RequestObject!
             
             loading.startWithKeyWindows()
-            DispatchQueue.global().sync {
-                 resp = req.verifyRegister(email: email, username: tbUsername.text!, password: tbPassword.text!, confirmedPassword: tbConfirmPassword.text!, firstName: firstName, lastName: lastName, birthdate: birthDate, city: city, country: country, gender: gendre, age: String(age), profileImage: profileImage!, phone: phone)
+            DispatchQueue.global(qos: .background).sync {
+                 resp = RequestLogin.shared.verifyRegister(email: email, username: tbUsername.text!, password: tbPassword.text!, confirmedPassword: tbConfirmPassword.text!, firstName: firstName, lastName: lastName, birthdate: birthDate, city: city, country: country, gender: gendre, age: age, profileImage: profileImage!, phone: phone)
                 DispatchQueue.main.async {
                     self.loading.removeFromKeyWindow()
                 }
@@ -137,6 +135,7 @@ class VCFinalRegister: UIViewController {
             if !(resp.validConnexion!) {
                 Utility().alert(message: resp.serverMsg!, title: "Error", control: self)
             } else {
+                UIView.transition(with: UIApplication.shared.keyWindow!, duration: 0.3, animations: nil, completion: nil)
                 let storyboard = UIStoryboard(name: "Application", bundle: nil)
                 let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsStoryboard") as! UINavigationController
                 UIApplication.shared.keyWindow?.rootViewController = mainPage
