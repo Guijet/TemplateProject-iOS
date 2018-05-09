@@ -257,7 +257,9 @@ class CustomMenuView: UIView {
             case 4:
                 print("Profile")
             case 5:
-                print("Friends")
+                openPage()
+                let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsStoryboard")
+                UIApplication.shared.keyWindow?.rootViewController = main
             case 6:
                 print("Settings")
             default:
@@ -267,6 +269,10 @@ class CustomMenuView: UIView {
             selectedIndex = sender.tag
             // delegate?.selectedIndexChanged(selectedIndex)
         }
+    }
+    
+    func openPage(){
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

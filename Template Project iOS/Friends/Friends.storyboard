@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AppNC-->
+        <scene sceneID="KC4-5m-UbG">
+            <objects>
+                <navigationController storyboardIdentifier="FriendsStoryboard" id="ROW-NW-unu" customClass="AppNC" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="clo-mC-Vbg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8qr-UQ-kPf" kind="relationship" relationship="rootViewController" id="oPF-59-BNA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFU-gH-qVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="81"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="Txe-ds-3VA">
+            <objects>
+                <tableViewController restorationIdentifier="FriendsPageR" storyboardIdentifier="FriendsPage" id="8qr-UQ-kPf" customClass="TVCFriends" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iiV-B3-Y0W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="8qr-UQ-kPf" id="kne-0q-2u7"/>
+                            <outlet property="delegate" destination="8qr-UQ-kPf" id="uVQ-sz-6RX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1I4-Wp-fVO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urr-ME-5Ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="81"/>
+        </scene>
+    </scenes>
+</document>
