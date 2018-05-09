@@ -42,7 +42,7 @@ class CustomMenuView: UIView {
         btnMeet.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         
         lblMeet.text = "Meet Me"
-        lblMeet.frame = CGRect(x: rw(100), y: 0, width: width - rw(80), height: rw(20))
+        lblMeet.frame = CGRect(x: rw(100), y: 0, width: width - rw(100), height: rw(20))
         lblMeet.textColor = Global.shared.mainColor
         lblMeet.center.y = rh(35)
         lblMeet.font = UIFont(name: "Lato-Regular", size: rw(18))
@@ -70,7 +70,7 @@ class CustomMenuView: UIView {
         btnCreate.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         
         lblCreate.text = "Create an Event"
-        lblCreate.frame = CGRect(x: rw(100), y: 0, width: width - rw(80), height: rw(20))
+        lblCreate.frame = CGRect(x: rw(100), y: 0, width: width - rw(100), height: rw(20))
         lblCreate.textColor = Global.shared.mainColor
         lblCreate.center.y = rh(35)
         lblCreate.font = UIFont(name: "Lato-Regular", size: rw(18))
@@ -98,7 +98,7 @@ class CustomMenuView: UIView {
         btnChat.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         
         lblChat.text = "Chat"
-        lblChat.frame = CGRect(x: rw(100), y: 0, width: width - rw(80), height: rw(20))
+        lblChat.frame = CGRect(x: rw(100), y: 0, width: width - rw(100), height: rw(20))
         lblChat.textColor = Global.shared.mainColor
         lblChat.center.y = rh(35)
         lblChat.font = UIFont(name: "Lato-Regular", size: rw(18))
@@ -126,7 +126,7 @@ class CustomMenuView: UIView {
         btnProfile.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         
         lblProfile.text = "Profile"
-        lblProfile.frame = CGRect(x: rw(100), y: 0, width: width - rw(80), height: rw(20))
+        lblProfile.frame = CGRect(x: rw(100), y: 0, width: width - rw(100), height: rw(20))
         lblProfile.textColor = Global.shared.mainColor
         lblProfile.center.y = rh(35)
         lblProfile.font = UIFont(name: "Lato-Regular", size: rw(18))
@@ -154,7 +154,7 @@ class CustomMenuView: UIView {
         btnFriends.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         
         lblFriends.text = "Friends"
-        lblFriends.frame = CGRect(x: rw(100), y: 0, width: width - rw(80), height: rw(20))
+        lblFriends.frame = CGRect(x: rw(100), y: 0, width: width - rw(100), height: rw(20))
         lblFriends.textColor = Global.shared.mainColor
         lblFriends.center.y = rh(35)
         lblFriends.font = UIFont(name: "Lato-Regular", size: rw(18))
@@ -182,7 +182,7 @@ class CustomMenuView: UIView {
         btnSettings.addTarget(self, action: #selector(buttonPressed(sender:)), for: .touchUpInside)
         
         lblSettings.text = "Settings"
-        lblSettings.frame = CGRect(x: rw(100), y: 0, width: width - rw(80), height: rw(20))
+        lblSettings.frame = CGRect(x: rw(100), y: 0, width: width - rw(100), height: rw(20))
         lblSettings.textColor = Global.shared.mainColor
         lblSettings.center.y = rh(35)
         lblSettings.font = UIFont(name: "Lato-Regular", size: rw(18))
