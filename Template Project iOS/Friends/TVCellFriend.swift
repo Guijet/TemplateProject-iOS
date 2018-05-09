@@ -32,7 +32,6 @@ class TVCellFriend: BaseCell {
         self.addSubview(ivImage)
         
         self.createHR(x: 0, y: 100, width: UIScreen.main.bounds.width, color: UIColor().hex("582FC0"))
-        
     }
     
 }
