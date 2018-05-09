@@ -12,6 +12,11 @@
 		0B36E9FA20A0F7CA008D1553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F920A0F7CA008D1553 /* User.swift */; };
 		0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F99209F45840090B380 /* TVCFriends.swift */; };
 		0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */; };
+		0B534D5020A388BF000416F9 /* VCMeetMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534D4F20A388BF000416F9 /* VCMeetMe.swift */; };
+		0B534D5620A3899B000416F9 /* VCChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534D5520A3899B000416F9 /* VCChat.swift */; };
+		0B534D5820A389AD000416F9 /* VCCreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534D5720A389AD000416F9 /* VCCreateEvent.swift */; };
+		0B534D5A20A38A31000416F9 /* VCSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534D5920A38A31000416F9 /* VCSettings.swift */; };
+		0B534D5C20A38A42000416F9 /* VCProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534D5B20A38A42000416F9 /* VCProfile.swift */; };
 		323D4FD6FCDAF4F864BB2FC3 /* Pods_Template_Project_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */; };
 		463046F71FBF38F9005F1106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463046F61FBF38F9005F1106 /* AppDelegate.swift */; };
 		463046F91FBF38F9005F1106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463046F81FBF38F9005F1106 /* ViewController.swift */; };
@@ -129,6 +134,11 @@
 		0B36E9F920A0F7CA008D1553 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4D6F99209F45840090B380 /* TVCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCFriends.swift; sourceTree = "<group>"; };
 		0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellFriend.swift; sourceTree = "<group>"; };
+		0B534D4F20A388BF000416F9 /* VCMeetMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMeetMe.swift; sourceTree = "<group>"; };
+		0B534D5520A3899B000416F9 /* VCChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCChat.swift; sourceTree = "<group>"; };
+		0B534D5720A389AD000416F9 /* VCCreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCreateEvent.swift; sourceTree = "<group>"; };
+		0B534D5920A38A31000416F9 /* VCSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSettings.swift; sourceTree = "<group>"; };
+		0B534D5B20A38A42000416F9 /* VCProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProfile.swift; sourceTree = "<group>"; };
 		463046F31FBF38F9005F1106 /* Template Project iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Project iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		463046F61FBF38F9005F1106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463046F81FBF38F9005F1106 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +267,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B534D4E20A3889D000416F9 /* MeetMe */ = {
+			isa = PBXGroup;
+			children = (
+				0B534D4F20A388BF000416F9 /* VCMeetMe.swift */,
+			);
+			path = MeetMe;
+			sourceTree = "<group>";
+		};
+		0B534D5120A38950000416F9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0B534D5B20A38A42000416F9 /* VCProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0B534D5220A3895B000416F9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0B534D5920A38A31000416F9 /* VCSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0B534D5320A38969000416F9 /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				0B534D5720A389AD000416F9 /* VCCreateEvent.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
+		0B534D5420A38980000416F9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0B534D5520A3899B000416F9 /* VCChat.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		463046EA1FBF38F9005F1106 = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +332,11 @@
 		463046F51FBF38F9005F1106 /* Template Project iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0B534D5420A38980000416F9 /* Chat */,
+				0B534D5320A38969000416F9 /* CreateEvent */,
+				0B534D5220A3895B000416F9 /* Settings */,
+				0B534D5120A38950000416F9 /* Profile */,
+				0B534D4E20A3889D000416F9 /* MeetMe */,
 				F712631320A3492700EEAF35 /* Friends */,
 				F706BB18209F669B00249239 /* Main */,
 				F706BB17209F668900249239 /* Application */,
@@ -781,6 +836,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B534D5620A3899B000416F9 /* VCChat.swift in Sources */,
 				F712631720A35E8E00EEAF35 /* PageAnimations.swift in Sources */,
 				46933A3E2052EDAE00A5B173 /* Utility.swift in Sources */,
 				F7EE27D220A08BC300910C67 /* LocalHelper.swift in Sources */,
@@ -793,6 +849,7 @@
 				46933A432052EDAE00A5B173 /* NavigationTools.swift in Sources */,
 				46933A502052EDAE00A5B173 /* UIScrollViewTools.swift in Sources */,
 				F7EE27D420A08E2700910C67 /* VCFinalRegister.swift in Sources */,
+				0B534D5A20A38A31000416F9 /* VCSettings.swift in Sources */,
 				46933A492052EDAE00A5B173 /* FloatTools.swift in Sources */,
 				46933A472052EDAE00A5B173 /* AttributedStringTools.swift in Sources */,
 				46933A3C2052EDAE00A5B173 /* CircleGesture.swift in Sources */,
@@ -808,12 +865,14 @@
 				0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */,
 				F70610CE209E523500EB96F9 /* Global.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
+				0B534D5C20A38A42000416F9 /* VCProfile.swift in Sources */,
 				F7C32E68209F463000022C08 /* MainNC.swift in Sources */,
 				46933A3D2052EDAE00A5B173 /* SafeAreaGuideExemple.swift in Sources */,
 				46933A532052EDAE00A5B173 /* UIViewTools.swift in Sources */,
 				46933A522052EDAE00A5B173 /* UIViewControllerTools.swift in Sources */,
 				46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */,
 				F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */,
+				0B534D5820A389AD000416F9 /* VCCreateEvent.swift in Sources */,
 				463046F91FBF38F9005F1106 /* ViewController.swift in Sources */,
 				0B36E9FA20A0F7CA008D1553 /* User.swift in Sources */,
 				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
@@ -821,6 +880,7 @@
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
 				46933A462052EDAE00A5B173 /* ArrayTools.swift in Sources */,
 				46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */,
+				0B534D5020A388BF000416F9 /* VCMeetMe.swift in Sources */,
 				0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */,
 				F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */,
 				46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */,
