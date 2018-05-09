@@ -21,7 +21,6 @@ class RequestLogin{
         //if server is reached
         if !response.getIsError() {
             let data = response.getDict()
-            print(data)
             
             if let token = data["token"] as? String {
                 Global.shared.token = token
@@ -32,9 +31,10 @@ class RequestLogin{
                 
                 let userInfo = userData["current_user"] as! [String:Any]
                 
-                print(userData)
+                let ageInt:NSInteger = userInfo["age"] as! NSInteger
+                let ageString = String(ageInt)
                 
-                Global.shared.user = User(email: userInfo["email"] as! String, firstName: userInfo["first_name"] as! String, lastName: userInfo["last_name"] as! String, birthdate: userInfo["birthdate"] as! String, city: userInfo["city"] as! String, country: userInfo["country"] as! String, gender: userInfo["gender"] as! String, age: userInfo["age"] as! String, phone: userInfo["phone"] as! String, username: userInfo["username"] as! String, profileImageUrl: userInfo["profile_image_url"] as! String, coverImageUrl: userInfo["cover_image_url"] as! String)
+                Global.shared.user = User(email: userInfo["email"]! as! String, firstName: userInfo["first_name"]! as! String, lastName: userInfo["last_name"]! as! String, birthdate: userInfo["birthdate"]! as! String, city: userInfo["city"]! as! String, country: userInfo["country"]! as! String, gender: userInfo["gender"]! as! String, age: ageString, phone: userInfo["phone"]! as! String, username: userInfo["username"]! as! String, profileImageUrl: userInfo["profile_image_url"]! as! String, coverImageUrl: userInfo["cover_image_url"]! as! String)
                 
                 reqObj.serverMsg = ""
                 reqObj.validConnexion = true

@@ -9,6 +9,8 @@
 import UIKit
 
 class VCFinalRegister: UIViewController {
+    
+    let loading = loadingIndicator()
 
     var firstName:String!
     var lastName:String!
@@ -123,7 +125,15 @@ class VCFinalRegister: UIViewController {
             let bDay = birthDate.stringToDate(format: "yyyy-MM-dd")
             let age =  abs(Date().daysBetween(date: bDay))/365
             
-            let resp = req.verifyRegister(email: email, username: tbUsername.text!, password: tbPassword.text!, confirmedPassword: tbConfirmPassword.text!, firstName: firstName, lastName: lastName, birthdate: birthDate, city: city, country: country, gender: gendre, age: String(age), profileImage: profileImage!, phone: phone)
+            var resp:RequestObject!
+            
+            loading.startWithKeyWindows()
+            DispatchQueue.global().sync {
+                 resp = req.verifyRegister(email: email, username: tbUsername.text!, password: tbPassword.text!, confirmedPassword: tbConfirmPassword.text!, firstName: firstName, lastName: lastName, birthdate: birthDate, city: city, country: country, gender: gendre, age: String(age), profileImage: profileImage!, phone: phone)
+                DispatchQueue.main.async {
+                    self.loading.removeFromKeyWindow()
+                }
+            }
             
             if !(resp.validConnexion!) {
                 Utility().alert(message: resp.serverMsg!, title: "Error", control: self)
