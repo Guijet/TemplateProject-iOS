@@ -263,11 +263,11 @@ class CustomMenuView: UIView {
             let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "ProfileSB")
             UIApplication.shared.keyWindow?.rootViewController = main
         case 5:
-            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "FriendsStoryboardR" {
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "FriendsSBR" {
                 self.closeMenu(control: control)
                 return
             }
-            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsStoryboard")
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsSB")
             UIApplication.shared.keyWindow?.rootViewController = main
         case 6:
             if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "SettingsSBR" {

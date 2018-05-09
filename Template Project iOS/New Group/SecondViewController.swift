@@ -98,7 +98,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
                 if  reqObj.validConnexion! {
                     // Change root page to friends after connect
                     let storyboard = UIStoryboard(name: "Application", bundle: nil)
-                    let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsStoryboard") as! UINavigationController
+                    let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsSB") as! UINavigationController
                     UIApplication.shared.keyWindow?.rootViewController = mainPage
                 } else {
                     Utility().alert(message: reqObj.serverMsg! , title: "Error occured", control: self)
