@@ -7,12 +7,7 @@
 //
 
 import UIKit
-
-/*
-protocol CustomMenuViewDelegate: class {
-    func selectedIndexChanged(_ selectedIndex:Int)
-}
-*/
+import Kingfisher
 
 class CustomMenuView: UIView {
     
@@ -207,20 +202,15 @@ class CustomMenuView: UIView {
     }
     
     func setUpImage()  {
-        do{
-            let url = URL(string: Global.shared.user!.profileImageUrl!)
-            let data = try Data(contentsOf: url!)
-            imvProfile.image = UIImage(data: data)
-        }
-        catch {
-            print("Life is sad. The image didn't load")
-        }
-        // imvProfile.image = UIImage(named: "instagram") // Pour testing
+        imvProfile.kf.indicatorType = .activity
+        imvProfile.kf.setImage(with: URL(string: (Global.shared.user?.profileImageUrl)!))
+        
         imvProfile.backgroundColor = .white
         imvProfile.frame = CGRect(x: 0, y: rh(102), width: rw(80), height: rw(80))
-        imvProfile.center.x = self.center.x
-        imvProfile.layer.cornerRadius = rw(80/2)
+        imvProfile.center.x = self.bounds.width/2
+        imvProfile.layer.cornerRadius = rw(80)/2
         imvProfile.layer.masksToBounds = true
+        imvProfile.clipsToBounds = true
         self.addSubview(imvProfile)
     }
     
@@ -257,7 +247,10 @@ class CustomMenuView: UIView {
             case 4:
                 print("Profile")
             case 5:
-                
+                if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "FriendsStoryboardR"{
+                    self.closeMenu(control: self.control)
+                    return
+                }
                 let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsStoryboard")
                 UIApplication.shared.keyWindow?.rootViewController = main
             case 6:

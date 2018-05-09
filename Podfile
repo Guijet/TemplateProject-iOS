@@ -7,5 +7,6 @@ inhibit_all_warnings!
 pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
+pod 'Kingfisher', '~> 4.0'
 end
 

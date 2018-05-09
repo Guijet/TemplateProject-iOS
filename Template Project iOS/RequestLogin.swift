@@ -31,10 +31,93 @@ class RequestLogin{
                 
                 let userInfo = userData["current_user"] as! [String:Any]
                 
-                let ageInt:NSInteger = userInfo["age"] as! NSInteger
-                let ageString = String(ageInt)
+                var email:String!
+                if let emailS = userInfo["email"] as? String{
+                    email = emailS
+                } else {
+                    email = ""
+                }
                 
-                Global.shared.user = User(email: userInfo["email"]! as! String, firstName: userInfo["first_name"]! as! String, lastName: userInfo["last_name"]! as! String, birthdate: userInfo["birthdate"]! as! String, city: userInfo["city"]! as! String, country: userInfo["country"]! as! String, gender: userInfo["gender"]! as! String, age: ageString, phone: userInfo["phone"]! as! String, username: userInfo["username"]! as! String, profileImageUrl: userInfo["profile_image_url"]! as! String, coverImageUrl: userInfo["cover_image_url"]! as! String)
+                var firstname:String!
+                if let firstnameS = userInfo["first_name"] as? String{
+                    firstname = firstnameS
+                } else {
+                    firstname = ""
+                }
+                
+                var lastname:String!
+                if let lastnameS = userInfo["last_name"] as? String{
+                    lastname = lastnameS
+                } else {
+                    lastname = ""
+                }
+                
+                var birthdate:String!
+                if let birthdateS = userInfo["birthdate"] as? String{
+                    birthdate = birthdateS
+                } else {
+                    birthdate = ""
+                }
+                
+                var city:String!
+                if let cityS = userInfo["birthdate"] as? String{
+                    city = cityS
+                } else {
+                    city = ""
+                }
+                
+                var country:String!
+                if let countryS = userInfo["country"] as? String{
+                    country = countryS
+                } else {
+                    country = ""
+                }
+                
+                var gender:String!
+                if let genderS = userInfo["gender"] as? String{
+                    gender = genderS
+                } else {
+                    gender = ""
+                }
+                
+                var age:Int!
+                if let ageN = userInfo["age"] as? NSNumber{
+                    age = ageN.intValue
+                } else if let ageS = userInfo["age"] as? String {
+                    age = Int(ageS)
+                } else {
+                    age = 0
+                }
+                
+                var phone:String!
+                if let phoneS = userInfo["phone"] as? String{
+                    phone = phoneS
+                } else {
+                    phone = ""
+                }
+                
+                var username:String!
+                if let usernameS = userInfo["username"] as? String{
+                    username = usernameS
+                } else {
+                    username = ""
+                }
+                
+                var profileImageUrl:String!
+                if let profileImageUrlS = userInfo["profile_image_url"] as? String{
+                    profileImageUrl = profileImageUrlS
+                } else {
+                    profileImageUrl = ""
+                }
+                
+                var coverImageUrl:String!
+                if let coverImageUrlS = userInfo["cover_image_url"] as? String{
+                    coverImageUrl = coverImageUrlS
+                } else {
+                    coverImageUrl = ""
+                }
+                
+                Global.shared.user = User(email: email, firstName: firstname, lastName: lastname, birthdate: birthdate, city: city, country: country, gender: gender, age: age, phone: phone, username: username, profileImageUrl: profileImageUrl, coverImageUrl: coverImageUrl)
                 
                 reqObj.serverMsg = ""
                 reqObj.validConnexion = true
@@ -85,7 +168,11 @@ class RequestLogin{
     }
     
     func verifyRegister(email:String, username:String, password:String, confirmedPassword:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:String, profileImage:UIImage, phone:String) -> RequestObject {
-        let imageBase64 = profileImage.imageToBase64()
+        var imageBase64 = profileImage.imageToBase64()
+        
+        imageBase64 = imageBase64.replacingOccurrences(of: "+", with: "%2B")
+        imageBase64 = imageBase64.replacingOccurrences(of: "/", with: "%2F")
+        imageBase64 = imageBase64.replacingOccurrences(of: "=", with: "%3D")
         
         let reqObj = RequestObject()
         
@@ -94,8 +181,6 @@ class RequestLogin{
         let response = Utility().getJson(url: "\(Global.shared.url)auth/signup", method: "POST", body: reqString)
         
         let data = response.getDict()
-        
-        print(imageBase64)
         
         if !response.getIsError() {
             if let _ = data["status"] as? String {
@@ -108,9 +193,94 @@ class RequestLogin{
                 reqObj.serverMsg = ""
                 reqObj.validConnexion = true
                 
-                Global.shared.user = User(email: userData["email"] as! String, firstName: userData["first_name"] as! String, lastName: userData["last_name"] as! String, birthdate: userData["birthdate"] as! String, city: userData["city"] as! String, country: userData["country"] as! String, gender: userData["gender"] as! String, age: userData["age"] as! String, phone: userData["phone"] as! String, username: userData["username"] as! String, profileImageUrl: data["profile_image_url"] as! String, coverImageUrl: userData["cover_image_url"] as! String)
+                var email:String!
+                if let emailS = userData["email"] as? String{
+                    email = emailS
+                } else {
+                    email = ""
+                }
                 
-                print("YOU IN NIBBA")
+                var firstname:String!
+                if let firstnameS = userData["first_name"] as? String{
+                    firstname = firstnameS
+                } else {
+                    firstname = ""
+                }
+                
+                var lastname:String!
+                if let lastnameS = userData["last_name"] as? String{
+                    lastname = lastnameS
+                } else {
+                    lastname = ""
+                }
+                
+                var birthdate:String!
+                if let birthdateS = userData["birthdate"] as? String{
+                    birthdate = birthdateS
+                } else {
+                    birthdate = ""
+                }
+                
+                var city:String!
+                if let cityS = userData["birthdate"] as? String{
+                    city = cityS
+                } else {
+                    city = ""
+                }
+                
+                var country:String!
+                if let countryS = userData["country"] as? String{
+                    country = countryS
+                } else {
+                    country = ""
+                }
+                
+                var gender:String!
+                if let genderS = userData["gender"] as? String{
+                    gender = genderS
+                } else {
+                    gender = ""
+                }
+                
+                var age:Int!
+                if let ageN = userData["age"] as? NSNumber{
+                    age = ageN.intValue
+                } else if let ageS = userData["age"] as? String {
+                    age = Int(ageS)
+                } else {
+                    age = 0
+                }
+                
+                var phone:String!
+                if let phoneS = userData["phone"] as? String{
+                    phone = phoneS
+                } else {
+                    phone = ""
+                }
+                
+                var username:String!
+                if let usernameS = userData["username"] as? String{
+                    username = usernameS
+                } else {
+                    username = ""
+                }
+                
+                var profileImageUrl:String!
+                if let profileImageUrlS = userData["profile_image_url"] as? String{
+                    profileImageUrl = profileImageUrlS
+                } else {
+                    profileImageUrl = ""
+                }
+                
+                var coverImageUrl:String!
+                if let coverImageUrlS = userData["cover_image_url"] as? String{
+                    coverImageUrl = coverImageUrlS
+                } else {
+                    coverImageUrl = ""
+                }
+                
+                Global.shared.user = User(email: email, firstName: firstname, lastName: lastname, birthdate: birthdate, city: city, country: country, gender: gender, age: age, phone: phone, username: username, profileImageUrl: profileImageUrl, coverImageUrl: coverImageUrl)
+                
             } else {
                 if let errorName = data["error"] as? String {
                     reqObj.serverMsg = errorName
