@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F320A08FED008D1553 /* AppNC.swift */; };
+		0B36E9F620A096AC008D1553 /* VCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F520A096AC008D1553 /* VCMenu.swift */; };
+		0B36E9F820A09705008D1553 /* CustomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F720A09705008D1553 /* CustomMenuView.swift */; };
+		0B36E9FA20A0F7CA008D1553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F920A0F7CA008D1553 /* User.swift */; };
 		0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F99209F45840090B380 /* TVCFriends.swift */; };
 		0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */; };
 		323D4FD6FCDAF4F864BB2FC3 /* Pods_Template_Project_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3767D8B247B11F6B5466BF /* Pods_Template_Project_iOS.framework */; };
@@ -121,6 +125,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B36E9F320A08FED008D1553 /* AppNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNC.swift; sourceTree = "<group>"; };
+		0B36E9F520A096AC008D1553 /* VCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMenu.swift; sourceTree = "<group>"; };
+		0B36E9F720A09705008D1553 /* CustomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuView.swift; sourceTree = "<group>"; };
+		0B36E9F920A0F7CA008D1553 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4D6F99209F45840090B380 /* TVCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCFriends.swift; sourceTree = "<group>"; };
 		0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellFriend.swift; sourceTree = "<group>"; };
 		463046F31FBF38F9005F1106 /* Template Project iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Template Project iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +291,7 @@
 				463046F61FBF38F9005F1106 /* AppDelegate.swift */,
 				463046FD1FBF38F9005F1106 /* Assets.xcassets */,
 				463047021FBF38F9005F1106 /* Info.plist */,
+				0B36E9F920A0F7CA008D1553 /* User.swift */,
 				F70610CD209E523500EB96F9 /* Global.swift */,
 				F7EE27D520A0D22A00910C67 /* User.swift */,
 				F7C32E61209F35E100022C08 /* RequestObject.swift */,
@@ -506,8 +515,11 @@
 			isa = PBXGroup;
 			children = (
 				F7C32E6E209F639000022C08 /* Application.storyboard */,
+				0B36E9F520A096AC008D1553 /* VCMenu.swift */,
+				0B36E9F720A09705008D1553 /* CustomMenuView.swift */,
 				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
 				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+				0B36E9F320A08FED008D1553 /* AppNC.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -779,11 +791,14 @@
 				F706BB1A209F996500249239 /* VCRegister2.swift in Sources */,
 				46933A592052F07200A5B173 /* StripeGraph.swift in Sources */,
 				0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */,
+				0B36E9F620A096AC008D1553 /* VCMenu.swift in Sources */,
 				46933A402052EDAE00A5B173 /* Images.swift in Sources */,
 				46933A482052EDAE00A5B173 /* ColorTools.swift in Sources */,
 				46933A4D2052EDAE00A5B173 /* ProgressBar.swift in Sources */,
 				46933A3F2052EDAE00A5B173 /* LineGraph.swift in Sources */,
+				0B36E9F820A09705008D1553 /* CustomMenuView.swift in Sources */,
 				46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */,
+				0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */,
 				F70610CE209E523500EB96F9 /* Global.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
 				F7C32E68209F463000022C08 /* MainNC.swift in Sources */,
@@ -793,6 +808,7 @@
 				46933A4A2052EDAE00A5B173 /* NSNumberTools.swift in Sources */,
 				F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */,
 				463046F91FBF38F9005F1106 /* ViewController.swift in Sources */,
+				0B36E9FA20A0F7CA008D1553 /* User.swift in Sources */,
 				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
 				F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */,
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,

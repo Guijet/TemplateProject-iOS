@@ -82,7 +82,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func toFriendsPage(sender:UIButton) {
-        
+        let storyboard = UIStoryboard(name: "Application", bundle: nil)
+        let mainPage = storyboard.instantiateViewController(withIdentifier: "applicationNC") as! UINavigationController
+        UIApplication.shared.keyWindow?.rootViewController = mainPage
         if !((tbUserName.text?.isEmpty)! && (tbPassword.text?.isEmpty)!) {
             if (tbUserName.text?.isValidEmail())! {
                 
