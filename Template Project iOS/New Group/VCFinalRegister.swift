@@ -137,7 +137,7 @@ class VCFinalRegister: UIViewController {
             } else {
                 UIView.transition(with: UIApplication.shared.keyWindow!, duration: 0.3, animations: nil, completion: nil)
                 let storyboard = UIStoryboard(name: "Application", bundle: nil)
-                let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsStoryboard") as! UINavigationController
+                let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsSB") as! UINavigationController
                 UIApplication.shared.keyWindow?.rootViewController = mainPage
             }
         }

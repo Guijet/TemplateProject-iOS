@@ -8,5 +8,7 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
 pod 'Kingfisher', '~> 4.0'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 end
 
