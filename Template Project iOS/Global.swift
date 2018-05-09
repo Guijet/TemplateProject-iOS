@@ -14,6 +14,6 @@ class Global{
     var token:String?
     var tokenFB:String?
     var url:String = "http://192.168.0.155/Artifex-API/public/"
+    var user:User?
     var mainColor = UIColor().hex("582FC0")
-    var user:User!
 }

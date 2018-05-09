@@ -19,11 +19,10 @@ class User {
     var age:String!
     var phone:String!
     var username:String!
-    var id:Int!
     var profileImageUrl:String!
     var coverImageUrl:String!
     
-    init(email:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:String, phone:String, username:String, id:Int, profileImageUrl:String, coverImageUrl:String) {
+    init(email:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:String, phone:String, username:String, profileImageUrl:String, coverImageUrl:String) {
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
@@ -34,7 +33,6 @@ class User {
         self.age = age
         self.phone = phone
         self.username = username
-        self.id = id
         self.profileImageUrl = profileImageUrl
         self.coverImageUrl = coverImageUrl
     }

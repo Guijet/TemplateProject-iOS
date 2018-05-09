@@ -20,17 +20,8 @@ extension String{
         return decimalRange != nil
     }
     
-    func verifyLenght(min:Int = 0,max:Int = 0)->Bool{
-        if(min == 0){
-            return self.count >= min
-        }
-        else if(max == 0){
-            return self.count <= 30
-        }
-        else{
+    func verifyLenght(min:Int,max:Int)->Bool{
            return self.count >= min && self.count <= max
-        }
-        
     }
     
     func isValidEmail()->Bool{

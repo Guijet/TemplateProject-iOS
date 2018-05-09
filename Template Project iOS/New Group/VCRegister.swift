@@ -10,6 +10,8 @@ import UIKit
 import Photos
 
 class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    var isPicked = false
 
     let arrayGendre:[String] = ["Male", "Female", "Other"]
     
@@ -135,7 +137,6 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         tbFirstName.placeholder = "First name"
         tbFirstName.textAlignment = .center
         tbFirstName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        tbFirstName.center.x = self.view.center.x
         tbFirstName.autocapitalizationType = .none
         tbFirstName.textColor = UIColor().hex("582FC0")
         
@@ -150,7 +151,6 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         tbLastName.placeholder = "Last name"
         tbLastName.textAlignment = .center
         tbLastName.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        tbLastName.center.x = self.view.center.x
         tbLastName.autocapitalizationType = .none
         tbLastName.textColor = UIColor().hex("582FC0")
         
@@ -165,7 +165,6 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         tbEmail.placeholder = "Email"
         tbEmail.textAlignment = .center
         tbEmail.setUpPlaceholder(color: UIColor().hex("582FC0"), fontName: "Lato-Regular", fontSize: rw(16))
-        tbEmail.center.x = self.view.center.x
         tbEmail.autocapitalizationType = .none
         tbEmail.textColor = UIColor().hex("582FC0")
         
@@ -197,6 +196,8 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         if tbEmail.text!.isEmpty || tbLastName.text!.isEmpty || tbFirstName.text!.isEmpty {
             Utility().alert(message: "Fill all information fields", title: "Incomplete information", control: self)
+        } else if tbFirstName.text!.containerNumber() || tbLastName.text!.containerNumber(){
+            Utility().alert(message: "Names can't contain numbers", title: "Invalid name format", control: self)
         } else if !tbEmail.text!.isValidEmail() {
             Utility().alert(message: "Enter a valid email address", title: "Invalid email format", control: self)
         } else if !(requestEmailValidation.verifyEmail(email:tbEmail.text!).validConnexion!) {
@@ -204,7 +205,9 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         } else {
             performSegue(withIdentifier: "toRegister2", sender: nil)
         }
+        
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRegister2" {
@@ -213,9 +216,14 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             (segue.destination as! VCRegister2).email = tbEmail.text!
             (segue.destination as! VCRegister2).gendre = tbGendre.text!
             (segue.destination as! VCRegister2).birthDate = tbBirthDate.text!
+            (segue.destination as! VCRegister2).isPicked = isPicked
+            if isPicked {
+                (segue.destination as! VCRegister2).profileImage = imvProfile.image!
+            }
         }
     }
     
+ 
     @objc func endWriting(sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
@@ -271,6 +279,7 @@ class VCRegister: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.isPicked = true
             addImageToView(image: pickedImage)
             //ACTION LORSQUE L'IMAGE EST CHOISI
         }
