@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VCMenu: UIViewController, CustomMenuViewDelegate {
+class VCMenu: UIViewController /*, CustomMenuViewDelegate*/ {
     
     
     var name:String!
@@ -26,6 +26,7 @@ class VCMenu: UIViewController, CustomMenuViewDelegate {
         self.navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
+    /*
     func selectedIndexChanged(_ selectedIndex: Int) {
         // TODO : 
         print("index tab : \(selectedIndex)")
@@ -46,10 +47,11 @@ class VCMenu: UIViewController, CustomMenuViewDelegate {
             break
         }
     }
-    
+ 
+ */
     func setUpMenuView() {
-        let menuView = CustomMenuView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        menuView.delegate = self
+        let menuView = CustomMenuView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), control: self)
+        // menuView.delegate = self
         self.view.addSubview(menuView)
     }
 
