@@ -29,12 +29,22 @@ class TVCFriends: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var listCell = [TVCellFriend]()
     var tableView = UITableView()
     
+    var menuView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        self.navigationItem.rightBarButtonItem?.target = self
+        self.navigationItem.rightBarButtonItem?.action = #selector(navBtnAction)
+        menuView = CustomMenuView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), control: self)
+        self.view.addSubview(self.menuView)
+        menuView.closeMenu(control: self)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+    }
+        menuView.openMenu(control: self)
+    @objc func navBtnAction(){
         return 1
     }
     
