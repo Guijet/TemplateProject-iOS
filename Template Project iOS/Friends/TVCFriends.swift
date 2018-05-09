@@ -28,15 +28,28 @@ class TVCFriends: UIViewController {
     
     var listCell = [TVCellFriend]()
     
+    var menuView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuView = CustomMenuView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), control: self)
+        self.view.addSubview(self.menuView)
+        
+        menuView.closeMenu(control: self)
+        
         /*
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(TVCellFriend.self, forCellReuseIdentifier: cellID)
         self.tableView.tableFooterView = UIView()
  */
-        
+        self.navigationItem.rightBarButtonItem?.target = self
+        self.navigationItem.rightBarButtonItem?.action = #selector(navBtnAction)
+    }
+    
+    @objc func navBtnAction(){
+        menuView.openMenu(control: self)
     }
     
     /*
