@@ -34,6 +34,7 @@ class TVCFriends: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.register(TVCellFriend.self, forCellReuseIdentifier: cellID)
         self.tableView.tableFooterView = UIView()
+        setUpMenuView()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -75,5 +76,12 @@ class TVCFriends: UITableViewController {
             (segue.destination as! VCMenu).image = sender.ivImage.image!
         }
     }
+    
+    func setUpMenuView() {
+        let menuView = CustomMenuView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), control: self)
+        // menuView.delegate = self
+        self.view.addSubview(menuView)
+    }
+    
 }
 
