@@ -83,28 +83,29 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @objc func toFriendsPage(sender:UIButton) {
         if !((tbUserName.text?.isEmpty)! && (tbPassword.text?.isEmpty)!) {
-            if (tbUserName.text?.isValidEmail())! {
-                
-                var reqObj:RequestObject!
-                
-                loading.startWithKeyWindows()
-                DispatchQueue.global().sync {
-                    reqObj = RequestLogin.shared.login(email: tbUserName.text!, password: tbPassword.text!)
-                    DispatchQueue.main.async {
-                        self.loading.removeFromKeyWindow()
-                    }
+        
+            var reqObj:RequestObject!
+            
+            let email = tbUserName.text!
+            let pw = tbPassword.text!
+            
+            self.loading.startWithKeyWindows()
+            DispatchQueue.global(qos: .background).sync {
+                reqObj = RequestLogin.shared.login(email: email, password: pw)
+                DispatchQueue.main.async {
+                    self.loading.removeFromKeyWindow()
                 }
-
-                if  reqObj.validConnexion! {
-                    // Change root page to friends after connect
-                    let storyboard = UIStoryboard(name: "Application", bundle: nil)
-                    let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsSB") as! UINavigationController
-                    UIApplication.shared.keyWindow?.rootViewController = mainPage
-                } else {
-                    Utility().alert(message: reqObj.serverMsg! , title: "Error occured", control: self)
-                }
+            }
+            
+            if  reqObj.validConnexion! {
+                // Change root page to friends after connect
+                
+                let storyboard = UIStoryboard(name: "Application", bundle: nil)
+                let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsStoryboard") as! UINavigationController
+                UIApplication.shared.keyWindow?.rootViewController = mainPage
+                
             } else {
-                Utility().alert(message: "Enter valid credentials", title: "Invalid information", control: self)
+                Utility().alert(message: reqObj.serverMsg! , title: "Error occured", control: self)
             }
             
         } else {
