@@ -44,9 +44,10 @@ class TVCFriends: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     @objc func navBtnAction(){
         menuView.openMenu(control: self)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
