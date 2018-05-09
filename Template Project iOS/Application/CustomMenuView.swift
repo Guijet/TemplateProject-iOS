@@ -8,24 +8,27 @@
 
 import UIKit
 
+/*
 protocol CustomMenuViewDelegate: class {
     func selectedIndexChanged(_ selectedIndex:Int)
 }
-
+*/
 
 class CustomMenuView: UIView {
     
-    weak var delegate: CustomMenuViewDelegate?
+    // weak var delegate: CustomMenuViewDelegate?
     
-    var selectedIndex = 1
-    
+    var selectedIndex = 0
+    var control:UIViewController!
     let imvProfile = UIImageView()
     let lblName = UILabel()
     let ivBackground = UIImageView()
     let ivSide = UIImageView()
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, control:UIViewController) {
         super.init(frame: frame)
+        self.control = control
+        
         setUpBackground()
         setUpBackgroundSide()
         setUpImage()
@@ -204,7 +207,14 @@ class CustomMenuView: UIView {
     }
     
     func setUpImage()  {
-        imvProfile.image = UIImage(named: (Global.shared.user?.profileImageUrl)!)
+        do{
+            let url = URL(string: Global.shared.user!.profileImageUrl!)
+            let data = try Data(contentsOf: url!)
+            imvProfile.image = UIImage(data: data)
+        }
+        catch {
+            print("Life is sad. The image didn't load")
+        }
         // imvProfile.image = UIImage(named: "instagram") // Pour testing
         imvProfile.backgroundColor = .white
         imvProfile.frame = CGRect(x: 0, y: rh(102), width: rw(80), height: rw(80))
@@ -215,9 +225,8 @@ class CustomMenuView: UIView {
     }
     
     func setUpLabelName() {
-        lblName.frame = CGRect(x: 0, y: rh(192), width: UIScreen.main.bounds.width, height: rh(21))
-        lblName.text = "\(Global.shared.user?.firstName) \(Global.shared.user?.lastName)"
-        // lblName.text = "I like trains!" // Pour testing
+        lblName.frame = CGRect(x: 0, y: rh(192), width: self.frame.width, height: rh(21))
+        lblName.text = "\(Global.shared.user!.firstName!) \(Global.shared.user!.lastName!)"
         lblName.textColor = UIColor().hex("582FC0")
         lblName.textAlignment = .center
         lblName.font = UIFont(name: "Lato-Regular", size: rw(21))
@@ -225,21 +234,38 @@ class CustomMenuView: UIView {
     }
     
     func setUpBackground() {
-        ivBackground.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        ivBackground.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         ivBackground.image = UIImage(named: "Fond degrade")
         self.addSubview(ivBackground)
     }
     
     func setUpBackgroundSide() {
-        ivSide.frame = CGRect(x: rw(278), y: 0, width: rw(100), height: UIScreen.main.bounds.height)
+        ivSide.frame = CGRect(x: rw(278), y: 0, width: rw(100), height: self.frame.height)
         ivSide.image = UIImage(named: "Side shape")
         self.addSubview(ivSide)
     }
     
     @objc func buttonPressed(sender:UIButton) {
         if (sender.tag != selectedIndex) {
+            switch sender.tag {
+            case 1:
+                print("meet me")
+            case 2:
+                print("Create an Event")
+            case 3:
+                print("Chat")
+            case 4:
+                print("Profile")
+            case 5:
+                print("Friends")
+            case 6:
+                print("Settings")
+            default:
+                break
+            }
+            
             selectedIndex = sender.tag
-            delegate?.selectedIndexChanged(selectedIndex)
+            // delegate?.selectedIndexChanged(selectedIndex)
         }
     }
     
