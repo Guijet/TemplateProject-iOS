@@ -257,7 +257,7 @@ class CustomMenuView: UIView {
             case 4:
                 print("Profile")
             case 5:
-                openPage()
+                
                 let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsStoryboard")
                 UIApplication.shared.keyWindow?.rootViewController = main
             case 6:
@@ -271,9 +271,7 @@ class CustomMenuView: UIView {
         }
     }
     
-    func openPage(){
-        
-    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
