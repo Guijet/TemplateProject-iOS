@@ -23,7 +23,9 @@ class VCMenu: UIViewController /*, CustomMenuViewDelegate*/ {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMenuView()
-        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        self.navigationController?.navigationBar.tintColor = .white
+        self.extendedLayoutIncludesOpaqueBars = true
+        self.navigationController?.navigationBar.barTintColor = UIColor().hex("582FC0")
     }
     
     /*

@@ -282,6 +282,7 @@
 		463046F51FBF38F9005F1106 /* Template Project iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F712631320A3492700EEAF35 /* Friends */,
 				F706BB18209F669B00249239 /* Main */,
 				F706BB17209F668900249239 /* Application */,
 				46933A142052EDAE00A5B173 /* Tools */,
@@ -514,8 +515,6 @@
 				F7C32E6E209F639000022C08 /* Application.storyboard */,
 				0B36E9F520A096AC008D1553 /* VCMenu.swift */,
 				0B36E9F720A09705008D1553 /* CustomMenuView.swift */,
-				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
-				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
 				0B36E9F320A08FED008D1553 /* AppNC.swift */,
 			);
 			path = Application;
@@ -535,6 +534,15 @@
 			);
 			name = Main;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F712631320A3492700EEAF35 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				0B4D6F99209F45840090B380 /* TVCFriends.swift */,
+				0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 		F7EE27D020A08BB300910C67 /* Helper */ = {
