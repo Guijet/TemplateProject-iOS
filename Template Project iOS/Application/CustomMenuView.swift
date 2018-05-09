@@ -11,9 +11,6 @@ import Kingfisher
 
 class CustomMenuView: UIView {
     
-    // weak var delegate: CustomMenuViewDelegate?
-    
-    var selectedIndex = 0
     var control:UIViewController!
     let imvProfile = UIImageView()
     let lblName = UILabel()
@@ -236,31 +233,51 @@ class CustomMenuView: UIView {
     }
     
     @objc func buttonPressed(sender:UIButton) {
-        if (sender.tag != selectedIndex) {
-            switch sender.tag {
-            case 1:
-                print("meet me")
-            case 2:
-                print("Create an Event")
-            case 3:
-                print("Chat")
-            case 4:
-                print("Profile")
-            case 5:
-                if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "FriendsStoryboardR"{
-                    self.closeMenu(control: self.control)
-                    return
-                }
-                let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsStoryboard")
-                UIApplication.shared.keyWindow?.rootViewController = main
-            case 6:
-                print("Settings")
-            default:
-                break
+        switch sender.tag {
+        case 1:
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "MeetMeSBR" {
+                self.closeMenu(control: control)
+                return
             }
-            
-            selectedIndex = sender.tag
-            // delegate?.selectedIndexChanged(selectedIndex)
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "MeetMeSB")
+            UIApplication.shared.keyWindow?.rootViewController = main
+        case 2:
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "CreateEventSBR" {
+                self.closeMenu(control: control)
+                return
+            }
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "CreateEventSB")
+            UIApplication.shared.keyWindow?.rootViewController = main
+        case 3:
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "ChatSBR" {
+                self.closeMenu(control: control)
+                return
+            }
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "ChatSB")
+            UIApplication.shared.keyWindow?.rootViewController = main
+        case 4:
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "ProfileSBR" {
+                self.closeMenu(control: control)
+                return
+            }
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "ProfileSB")
+            UIApplication.shared.keyWindow?.rootViewController = main
+        case 5:
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "FriendsStoryboardR" {
+                self.closeMenu(control: control)
+                return
+            }
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "FriendsStoryboard")
+            UIApplication.shared.keyWindow?.rootViewController = main
+        case 6:
+            if UIApplication.shared.keyWindow?.rootViewController?.restorationIdentifier == "SettingsSBR" {
+                self.closeMenu(control: control)
+                return
+            }
+            let main = UIStoryboard(name: "Application", bundle: nil).instantiateViewController(withIdentifier: "SettingsSB")
+            UIApplication.shared.keyWindow?.rootViewController = main
+        default:
+            break
         }
     }
     
