@@ -83,18 +83,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @objc func toFriendsPage(sender:UIButton) {
         if !((tbUserName.text?.isEmpty)! && (tbPassword.text?.isEmpty)!) {
-            
-            let username = tbUserName.text!
-            var validEmail:Bool!
-            
-            self.loading.startWithKeyWindows()
-            DispatchQueue.global(qos: .background).sync {
-                validEmail = username.isValidEmail()
-                DispatchQueue.main.async {
-                    self.loading.removeFromKeyWindow()
-                }
-            }
-            
+        
             var reqObj:RequestObject!
             
             let email = tbUserName.text!

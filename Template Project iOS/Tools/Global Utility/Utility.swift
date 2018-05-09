@@ -267,7 +267,7 @@ class Utility {
         var finish = false
         var result: HTTPResult!
         
-        DispatchQueue.global(qos:.background).async {
+        DispatchQueue.global(qos:.background).sync {
             var request = URLRequest(url: URL(string: url)!)
             request.httpMethod = method
             
