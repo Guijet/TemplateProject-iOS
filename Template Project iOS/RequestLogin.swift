@@ -167,7 +167,7 @@ class RequestLogin{
         return reqObj
     }
     
-    func verifyRegister(email:String, username:String, password:String, confirmedPassword:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:String, profileImage:UIImage, phone:String) -> RequestObject {
+    func verifyRegister(email:String, username:String, password:String, confirmedPassword:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:Int, profileImage:UIImage, phone:String) -> RequestObject {
         var imageBase64 = profileImage.imageToBase64()
         
         imageBase64 = imageBase64.replacingOccurrences(of: "+", with: "%2B")
