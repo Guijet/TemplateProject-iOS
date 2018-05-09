@@ -138,7 +138,7 @@ class VCFinalRegister: UIViewController {
                 Utility().alert(message: resp.serverMsg!, title: "Error", control: self)
             } else {
                 let storyboard = UIStoryboard(name: "Application", bundle: nil)
-                let mainPage = storyboard.instantiateViewController(withIdentifier: "applicationNC") as! UINavigationController
+                let mainPage = storyboard.instantiateViewController(withIdentifier: "FriendsStoryboard") as! UINavigationController
                 UIApplication.shared.keyWindow?.rootViewController = mainPage
             }
         }

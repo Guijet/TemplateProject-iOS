@@ -10,42 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu-->
-        <scene sceneID="rwA-kp-gKq">
-            <objects>
-                <viewController id="FYJ-2U-Smu" customClass="VCMenu" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a9w-dz-scV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="9ng-mx-j7m"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="V5h-LI-Xyc"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QZJ-Ay-kcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="396" y="148"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OtJ-qs-FDA">
-            <objects>
-                <navigationController storyboardIdentifier="applicationNC" id="8PD-Gt-Qxf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GEu-8H-3TT">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="FYJ-2U-Smu" kind="relationship" relationship="rootViewController" id="q8N-yj-yIC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4lv-ON-25Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-604" y="148"/>
-        </scene>
         <!--AppNC-->
         <scene sceneID="NH2-i6-07x">
             <objects>
-                <navigationController storyboardIdentifier="FriendsStoryboard" id="rRd-Wg-9EN" customClass="AppNC" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="FriendsStoryboardR" storyboardIdentifier="FriendsStoryboard" id="rRd-Wg-9EN" customClass="AppNC" customModule="Template_Project_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Aao-p3-Jlu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

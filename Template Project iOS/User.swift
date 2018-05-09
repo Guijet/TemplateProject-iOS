@@ -16,13 +16,28 @@ class User {
     var city:String!
     var country:String!
     var gender:String!
-    var age:String!
+    var age:Int!
     var phone:String!
     var username:String!
     var profileImageUrl:String!
     var coverImageUrl:String!
     
-    init(email:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:String, phone:String, username:String, profileImageUrl:String, coverImageUrl:String) {
+    init() {
+        self.email = ""
+        self.firstName = ""
+        self.lastName = ""
+        self.birthdate = ""
+        self.city = ""
+        self.country = ""
+        self.gender = ""
+        self.age = 0
+        self.phone = ""
+        self.username = ""
+        self.profileImageUrl = ""
+        self.coverImageUrl = ""
+    }
+    
+    init(email:String, firstName:String, lastName:String, birthdate:String, city:String, country:String, gender:String, age:Int, phone:String, username:String, profileImageUrl:String, coverImageUrl:String) {
         self.email = email
         self.firstName = firstName
         self.lastName = lastName
