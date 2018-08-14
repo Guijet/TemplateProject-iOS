@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F320A08FED008D1553 /* AppNC.swift */; };
 		0B36E9F820A09705008D1553 /* CustomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F720A09705008D1553 /* CustomMenuView.swift */; };
-		0B36E9FA20A0F7CA008D1553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B36E9F920A0F7CA008D1553 /* User.swift */; };
 		0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F99209F45840090B380 /* TVCFriends.swift */; };
 		0B4D6F9E209F608C0090B380 /* TVCellFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */; };
 		0B534D5020A388BF000416F9 /* VCMeetMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B534D4F20A388BF000416F9 /* VCMeetMe.swift */; };
@@ -98,11 +97,8 @@
 		46933A592052F07200A5B173 /* StripeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A582052F07200A5B173 /* StripeGraph.swift */; };
 		46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46933A5A2052F07A00A5B173 /* DottedLine.swift */; };
 		46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C65678209DF9080039EF82 /* SecondViewController.swift */; };
-		F70610CE209E523500EB96F9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CD209E523500EB96F9 /* Global.swift */; };
-		F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70610CF209E53F700EB96F9 /* RequestLogin.swift */; };
 		F706BB1A209F996500249239 /* VCRegister2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706BB19209F996500249239 /* VCRegister2.swift */; };
 		F712631720A35E8E00EEAF35 /* PageAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712631620A35E8E00EEAF35 /* PageAnimations.swift */; };
-		F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E61209F35E100022C08 /* RequestObject.swift */; };
 		F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E63209F412B00022C08 /* VCRegister.swift */; };
 		F7C32E68209F463000022C08 /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E67209F463000022C08 /* MainNC.swift */; };
 		F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C32E6B209F601400022C08 /* loadingIndicator.swift */; };
@@ -131,7 +127,6 @@
 /* Begin PBXFileReference section */
 		0B36E9F320A08FED008D1553 /* AppNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNC.swift; sourceTree = "<group>"; };
 		0B36E9F720A09705008D1553 /* CustomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuView.swift; sourceTree = "<group>"; };
-		0B36E9F920A0F7CA008D1553 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4D6F99209F45840090B380 /* TVCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCFriends.swift; sourceTree = "<group>"; };
 		0B4D6F9D209F608C0090B380 /* TVCellFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCellFriend.swift; sourceTree = "<group>"; };
 		0B534D4F20A388BF000416F9 /* VCMeetMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMeetMe.swift; sourceTree = "<group>"; };
@@ -227,11 +222,8 @@
 		46A8ADEC87B3CF4350B8E9C1 /* Pods-Template Project iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Project iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Template Project iOS/Pods-Template Project iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		46C65678209DF9080039EF82 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9793E0FC4C11488C6A2F6A48 /* Pods-Template Project iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template Project iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Template Project iOS/Pods-Template Project iOS.release.xcconfig"; sourceTree = "<group>"; };
-		F70610CD209E523500EB96F9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		F70610CF209E53F700EB96F9 /* RequestLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLogin.swift; sourceTree = "<group>"; };
 		F706BB19209F996500249239 /* VCRegister2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister2.swift; sourceTree = "<group>"; };
 		F712631620A35E8E00EEAF35 /* PageAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageAnimations.swift; sourceTree = "<group>"; };
-		F7C32E61209F35E100022C08 /* RequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObject.swift; sourceTree = "<group>"; };
 		F7C32E63209F412B00022C08 /* VCRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCRegister.swift; sourceTree = "<group>"; };
 		F7C32E67209F463000022C08 /* MainNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
 		F7C32E6B209F601400022C08 /* loadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingIndicator.swift; sourceTree = "<group>"; };
@@ -345,10 +337,6 @@
 				463046F61FBF38F9005F1106 /* AppDelegate.swift */,
 				463046FD1FBF38F9005F1106 /* Assets.xcassets */,
 				463047021FBF38F9005F1106 /* Info.plist */,
-				0B36E9F920A0F7CA008D1553 /* User.swift */,
-				F70610CD209E523500EB96F9 /* Global.swift */,
-				F7C32E61209F35E100022C08 /* RequestObject.swift */,
-				F70610CF209E53F700EB96F9 /* RequestLogin.swift */,
 			);
 			path = "Template Project iOS";
 			sourceTree = "<group>";
@@ -863,7 +851,6 @@
 				F7EE27D220A08BC300910C67 /* LocalHelper.swift in Sources */,
 				46933A412052EDAE00A5B173 /* UIImageTools.swift in Sources */,
 				46933A3A2052EDAE00A5B173 /* CalendarTools.swift in Sources */,
-				F7C32E62209F35E100022C08 /* RequestObject.swift in Sources */,
 				46933A4C2052EDAE00A5B173 /* PieChart.swift in Sources */,
 				46933A3B2052EDAE00A5B173 /* DateHelper.swift in Sources */,
 				46933A422052EDAE00A5B173 /* GoogleMapTools.swift in Sources */,
@@ -884,7 +871,6 @@
 				0B36E9F820A09705008D1553 /* CustomMenuView.swift in Sources */,
 				46933A452052EDAE00A5B173 /* StripeClass.swift in Sources */,
 				0B36E9F420A08FED008D1553 /* AppNC.swift in Sources */,
-				F70610CE209E523500EB96F9 /* Global.swift in Sources */,
 				46933A4E2052EDAE00A5B173 /* TextFieldsTools.swift in Sources */,
 				0B534D5C20A38A42000416F9 /* VCProfile.swift in Sources */,
 				F7C32E68209F463000022C08 /* MainNC.swift in Sources */,
@@ -895,7 +881,6 @@
 				F7C32E64209F412B00022C08 /* VCRegister.swift in Sources */,
 				0B534D5820A389AD000416F9 /* VCCreateEvent.swift in Sources */,
 				463046F91FBF38F9005F1106 /* ViewController.swift in Sources */,
-				0B36E9FA20A0F7CA008D1553 /* User.swift in Sources */,
 				46933A4B2052EDAE00A5B173 /* StringTools.swift in Sources */,
 				F7C32E6C209F601400022C08 /* loadingIndicator.swift in Sources */,
 				46933A4F2052EDAE00A5B173 /* UILabelTools.swift in Sources */,
@@ -903,7 +888,6 @@
 				46C65679209DF9080039EF82 /* SecondViewController.swift in Sources */,
 				0B534D5020A388BF000416F9 /* VCMeetMe.swift in Sources */,
 				0B4D6F9A209F45840090B380 /* TVCFriends.swift in Sources */,
-				F70610D0209E53F700EB96F9 /* RequestLogin.swift in Sources */,
 				46933A512052EDAE00A5B173 /* UITableViewTools.swift in Sources */,
 				46933A5B2052F07A00A5B173 /* DottedLine.swift in Sources */,
 				46933A442052EDAE00A5B173 /* TopSelector.swift in Sources */,
