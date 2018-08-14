@@ -32,7 +32,7 @@ class VCShowcasePicture: UIViewController,  UIScrollViewDelegate {
     
     private func loadUI() {
         //bg
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = .clear
         
         //image
         setImageWithZoom()

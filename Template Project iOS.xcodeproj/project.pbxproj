@@ -94,6 +94,7 @@
 		F70DFC1821232434004ADAA1 /* DoubleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DFBF621232434004ADAA1 /* DoubleTools.swift */; };
 		F70DFC1D21232708004ADAA1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DFC1C21232708004ADAA1 /* Global.swift */; };
 		F70DFC1F2123277D004ADAA1 /* SwipePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70DFC1E2123277D004ADAA1 /* SwipePageController.swift */; };
+		F76F6F51212355E50072A392 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F6F50212355E50072A392 /* UIViewControllerExtensions.swift */; };
 		F7E4D19A21232E9400285C11 /* ShowcasePictureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4D19921232E9400285C11 /* ShowcasePictureController.swift */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +211,7 @@
 		F70DFBF621232434004ADAA1 /* DoubleTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTools.swift; sourceTree = "<group>"; };
 		F70DFC1C21232708004ADAA1 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F70DFC1E2123277D004ADAA1 /* SwipePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePageController.swift; sourceTree = "<group>"; };
+		F76F6F50212355E50072A392 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		F7E4D19921232E9400285C11 /* ShowcasePictureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcasePictureController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -513,6 +515,7 @@
 			children = (
 				F70DFC1E2123277D004ADAA1 /* SwipePageController.swift */,
 				F7E4D19921232E9400285C11 /* ShowcasePictureController.swift */,
+				F76F6F50212355E50072A392 /* UIViewControllerExtensions.swift */,
 			);
 			path = ArtifexImageShowcase;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				F70DFC0021232434004ADAA1 /* StripeGraph.swift in Sources */,
 				F70DFC0E21232434004ADAA1 /* Utility.swift in Sources */,
 				F70DFC0221232434004ADAA1 /* CircleGesture.swift in Sources */,
+				F76F6F51212355E50072A392 /* UIViewControllerExtensions.swift in Sources */,
 				F70DFC0821232434004ADAA1 /* TextFieldsTools.swift in Sources */,
 				F70DFC1421232434004ADAA1 /* ArrayTools.swift in Sources */,
 				F70DFBF721232434004ADAA1 /* TopSelector.swift in Sources */,
