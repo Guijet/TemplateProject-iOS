@@ -63,5 +63,30 @@ extension Date {
         let a = calendar.dateComponents([.day], from: date1, to: date2)
         return a.value(for: .day)!
     }
+    
+    func fromNow(nbDays:Int)->Date{
+        return (Calendar.current as NSCalendar).date(byAdding: .day, value: -nbDays, to: Date(), options: [])!
+    }
+    
+    func endDate(nbDays:Int, beginDate: String)->Date{
+        return (Calendar.current as NSCalendar).date(byAdding: .day, value: nbDays, to: DateHelper().stringToDateWithTime(dateS: beginDate, needTimeZone: false), options: [])!
+    }
+}
+
+extension String{
+    func isBetweeen(date1: String, date2: String) -> Bool {
+        return date1.stringToDate().compare(self.stringToDate()) == self.stringToDate().compare(date2.stringToDate())
+    }
+    
+    func isBetweeenInclusive(date1: String, date2: String) -> Bool {
+        return date1.stringToDate().compare(self.stringToDate()).rawValue * self.stringToDate().compare(date2.stringToDate()).rawValue >= 0
+    }
+    
+    func stringToDate()->Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.date(from: self)!
+    }
+    
 }
 

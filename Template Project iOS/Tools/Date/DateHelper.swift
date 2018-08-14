@@ -10,13 +10,20 @@ import UIKit
 
 class DateHelper{
     var weekDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    let weekDayFR = ["Dimanche","Lundi","Mardi","Mecredi","Jeudi","Vendredi","Samedi"]
+    
     var month = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"]
+    let monthFR = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
     
-    var monthAbreviation = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]
+    var monthAbreviation = ["Jan.","Feb.","Mar.","Apr.","May","June","July","Aug.","Sept.","Oct.","Nov.","Dec."]
+    var monthAbreviationFR = ["Janv.","Févr.","Mars","Avr.","Mai","Juin","Juill.","Août","Sept.","Oct.","Nov.","Déc."]
+    
     var dayAbreviation = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+    var dayAbreviationFR = ["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"]
     
-    func getArrayMouths()->[String]{
-        return month
+    func getArrayMouths()->[String] {
+        let months = Locale.preferredLanguages[0].substring(from: 0, to: 2) == "fr" ? monthFR : month
+        return months
     }
     
     func getArrayDays()->[String]{
@@ -59,8 +66,18 @@ class DateHelper{
     
     func stringToDate(dateS:String)->Date{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd" //Your date format
+        dateFormatter.dateFormat = "yyyy-MM-dd" //Your date format
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00") //Current time zone
+        let date = dateFormatter.date(from: dateS) //according to date format your date string
+        return date!
+    }
+    
+    func stringToDateWithTime(dateS:String, needTimeZone:Bool = true)->Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Your date format
+        if needTimeZone {
+            dateFormatter.timeZone = TimeZone(abbreviation: "\(TimeZone.current.abbreviation()!)") //Current time zone
+        }
         let date = dateFormatter.date(from: dateS) //according to date format your date string
         return date!
     }
@@ -72,7 +89,14 @@ class DateHelper{
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
         let myComponents = myCalendar.components(.weekday, from: todayDate)
         let weekDayIndex = myComponents.weekday! - 1
-        return self.weekDay[weekDayIndex]
+        let weekDays = Locale.preferredLanguages[0].substring(from: 0, to: 2) == "fr" ? weekDayFR : weekDay
+        return weekDays[weekDayIndex]
+    }
+    
+    func getCurrentDateSmallFormat()->String{
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return String(describing:formatter.string(from: Date()))
     }
     
     func getDayOfWeekAbr(date: String) -> String{
@@ -82,7 +106,8 @@ class DateHelper{
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
         let myComponents = myCalendar.components(.weekday, from: todayDate)
         let weekDayIndex = myComponents.weekday! - 1
-        return self.dayAbreviation[weekDayIndex]
+        let dayAbr = Locale.preferredLanguages[0].substring(from: 0, to: 2) == "fr" ? dayAbreviationFR : dayAbreviation
+        return dayAbr[weekDayIndex]
     }
     
     func getWeekIndexOfDay(date: String) -> Int{
@@ -97,18 +122,19 @@ class DateHelper{
     
     func getMonthFromDate(date:String)->String{
         let monthIndex = date.substring(from: 5, to: 7)
-        let month = self.month[Int(monthIndex)! - 1]
+        let month = getArrayMouths()[Int(monthIndex)! - 1]
         return month
     }
     
     func getMonthAbrvFromDate(date:String)->String{
         let monthIndex = date.substring(from: 5, to: 7)
-        return self.monthAbreviation[Int(monthIndex)! - 1]
+        let monthAbr = Locale.preferredLanguages[0].substring(from: 0, to: 2) == "fr" ? monthAbreviationFR : monthAbreviation
+        return monthAbr[Int(monthIndex)! - 1]
     }
     
     func getDayFromDate(date:String)->String{
         let day = date.substring(from: 8, to: 10)
-        return String(describing: Int(day)!)
+        return "\(day)"
     }
     
     func getYearFromDate(date:String)->String{
@@ -132,6 +158,15 @@ class DateHelper{
         let dayNumber:String = getDayFromDate(date: fullDate)
         let year:String = getYearFromDate(date:fullDate)
         
-        return "\(abrvDay), \(dayNumber) \(monthAbrv) \(year)"
+        return "\(monthAbrv) \(dayNumber), \(year)"
+    }
+    
+    func getDateFormatDashboard()->String{
+        var result = ""
+        let now:String = String(describing:Date())
+        result += getMonthAbrvFromDate(date: now)
+        result += " \(getDayFromDate(date: now))."
+        result += " \(getYearFromDate(date: now))"
+        return result
     }
 }

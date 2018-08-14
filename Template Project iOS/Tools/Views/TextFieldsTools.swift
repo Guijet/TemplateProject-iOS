@@ -9,6 +9,7 @@
 import UIKit
 
 extension UITextField{
+
     func setUpPlaceholder(color:UIColor,fontName:String,fontSize:CGFloat){
         self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedStringKey.foregroundColor : color,NSAttributedStringKey.font : UIFont(name: fontName, size: fontSize)!])
     }
@@ -23,5 +24,6 @@ extension UITextField{
         toolBar.setItems([spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         self.inputAccessoryView = toolBar
+        
     }
 }

@@ -20,7 +20,6 @@ extension UIScrollView{
         for x in self.subviews {
             if(x.frame.maxY > bigger) {
                 bigger = x.frame.maxY
-                print(x.classForCoder)
             }
         }
         let offset : CGFloat = translucant ? 0 : 64
@@ -32,7 +31,6 @@ extension UIScrollView{
         for x in self.subviews {
             if(x.frame.maxX > bigger) {
                 bigger = x.frame.maxX
-                print(x.classForCoder)
             }
         }
         self.contentSize = CGSize(width: bigger + 10, height: 1)

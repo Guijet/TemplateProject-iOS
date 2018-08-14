@@ -12,8 +12,13 @@ import ObjectiveC
 
 class Utility {
     
-    //Shuffle Any Arrays
+    //VALIDATE IF DATE IS IN RANGE
     //
+    func isDateStringInRange(firstDate:String,secondDate:String)->Bool{
+        return firstDate <= secondDate
+    }
+    
+    //Shuffle Any Arrays
     //
     func shuffle(array : [Any]) ->[Any] {
         var array = array
@@ -27,9 +32,7 @@ class Utility {
         return array
     }
     
-
     //Verifiy if URL is valid
-    //
     //
     func verifyUrl (urlString: String?) -> Bool {
         //Check for nil
@@ -46,7 +49,6 @@ class Utility {
     //Recursive text color for
     //Used for Alerts
     //
-    //
     func recursifTextColor(rootView: UIView) {
         rootView.tintColor = .white
         rootView.layer.borderColor = UIColor.white.cgColor
@@ -59,7 +61,6 @@ class Utility {
     //Recursive background color for
     //Used for Alerts
     //
-    //
     func recursifBackgroundColor(rootView: UIView) {
         
         for x in rootView.subviews {
@@ -71,7 +72,6 @@ class Utility {
     
     //Alert with 2 Choices (Yes/No)
     //You can change titles
-    //
     //
     func alertYesNo(message: String,title: String,control: UIViewController,yesAction:(()->())?,noAction:(()->())?,titleYes: String,titleNo: String,style: UIAlertControllerStyle) {
         
@@ -91,12 +91,14 @@ class Utility {
         //        recursifTextColor(rootView: refreshAlert.view)
         
         refreshAlert.addAction(UIAlertAction(title: titleYes, style: .default, handler: { (action: UIAlertAction!) in
-            yesAction?()
+            
             refreshAlert.dismiss(animated: true, completion: nil)
+            yesAction?()
         }))
         refreshAlert.addAction(UIAlertAction(title: titleNo, style: .default, handler: { (action: UIAlertAction!) in
-            noAction?()
+            
             refreshAlert.dismiss(animated: true, completion: nil)
+            noAction?()
         }))
         control.present(refreshAlert, animated: true, completion: nil)
     }
@@ -104,8 +106,7 @@ class Utility {
     //Alert with 2 Choices (Yes/No) + Cancel
     //You can change titles
     //
-    //
-    func alertWithChoice(message: String,title: String,control: UIViewController,actionTitle1: String,actionTitle2: String,action1:(()->())?,action2:(()->())?,style: UIAlertControllerStyle) {
+    func alertWithChoice(message: String,title: String,control: UIViewController,actionTitle1: String,actionTitle2: String,action1:(()->())?,action2:(()->())?,style: UIAlertControllerStyle, btnStyle:UIAlertActionStyle = .default) {
         
         let attributedString = NSAttributedString(string: title, attributes: [
             NSAttributedStringKey.font : UIFont(name: "Lato-Regular", size: 22)!,
@@ -127,11 +128,11 @@ class Utility {
                 refreshAlert.dismiss(animated: true, completion: nil)
             }))
         }
-        refreshAlert.addAction(UIAlertAction(title: actionTitle2, style: .default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: actionTitle2, style: btnStyle, handler: { (action: UIAlertAction!) in
             action2?()
             refreshAlert.dismiss(animated: true, completion: nil)
         }))
-        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+        let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .default, handler: { (action: UIAlertAction!) in
             refreshAlert.dismiss(animated: true, completion: nil)
         })
         
@@ -142,7 +143,6 @@ class Utility {
     
     //Alert with message and
     //Title that can be define
-    //
     //
     func alert(message: String,title: String,control:UIViewController) {
         
@@ -250,7 +250,7 @@ class Utility {
         }
         catch let error as NSError
         {
-            print(error)
+            
         }
         return UIImage()
     }
@@ -260,12 +260,12 @@ class Utility {
     //
     //Used for HTTP Request
     //
-    func getJson(url:String,method:String,body:String = "",needToken:Bool = false)->HTTPResult{
+    func getJson(url:String, method:String, body:String = "",needToken:Bool = false)->HTTPResult{
         
         var finish = false
         var result: HTTPResult!
         
-        DispatchQueue.global(qos:.background).async {
+        DispatchQueue.global(qos:.background).sync {
             var request = URLRequest(url: URL(string: url)!)
             request.httpMethod = method
             
@@ -285,10 +285,7 @@ class Utility {
             }
             
             if(needToken){
-                //
-                //HANDLE UR TOKEN HERE
-                //
-                //request.addValue("Bearer \(Global.global.token)", forHTTPHeaderField: "Authorization")
+                request.addValue("Bearer \(Global.shared.token!)", forHTTPHeaderField: "Authorization")
             }
             
             let config = URLSessionConfiguration.default
@@ -298,18 +295,15 @@ class Utility {
             let task = session.dataTask(with: request) { data, response, error in
                 
                 guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(String(describing: error))")
+                    
                     result = HTTPResult(isError: true, message: "Network error. Can not connect to the server. Please try again later.", dict: ["nil":"nil"])
                     finish = true
                     return
                 }
                 
                 let responseText: String = String(data: data, encoding: String.Encoding.utf8)!
-                print(responseText)
                 
                 if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                    print("statusCode should be 200, buxt is \(httpStatus.statusCode)")
-                    print("response = \(String(describing: response))")
                     result = HTTPResult(isError: true, message: String(describing: response!), dict: ["nil":"nil"])
                 }
                 
@@ -325,7 +319,6 @@ class Utility {
                 }
                 catch let error as NSError
                 {
-                    //print(error)
                     result = HTTPResult(isError: true, message: error.localizedDescription, dict: ["nil":"nil"])
                     finish = true
                 }
@@ -336,6 +329,20 @@ class Utility {
         }
         while(!finish) { usleep(300) }
         return result
+    }
+    
+    func getTextHeight(frameToFit: CGRect, fontName:String, fontSize:CGFloat, text:String, maximumLines:Int = -1) -> CGFloat {
+        let fakeTv = UITextView()
+        fakeTv.frame = frameToFit
+        fakeTv.font = UIFont(name: fontName, size: fontSize)
+        fakeTv.text = text
+        if maximumLines != -1 {
+            fakeTv.textContainer.maximumNumberOfLines = maximumLines
+        }
+        fakeTv.textContainer.lineBreakMode = .byTruncatingTail
+        fakeTv.translatesAutoresizingMaskIntoConstraints = true
+        fakeTv.sizeToFit()
+        return fakeTv.frame.height
     }
 }
 

@@ -21,11 +21,30 @@ extension UIApplication{
     //DEFAULT VALUE OF APP STATUS BAR
     //
     //
-    func setStatusBarDefault(){
+    func setStatusBarBlack(){
         let statusBar: UIView = self.value(forKey: "statusBar") as! UIView
         if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
-            statusBar.tintColor = UIColor().hex("#FFFFFF")
+            statusBar.tintColor = UIColor().hex("000000")
             statusBar.backgroundColor = UIColor.clear
+        }
+        self.statusBarStyle = .default
+    }
+    
+    func setStatusBarWhite(){
+        let statusBar: UIView = self.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.tintColor = UIColor().hex("FFFFFF")
+            statusBar.backgroundColor = UIColor.clear
+        }
+        self.statusBarStyle = .lightContent
+    }
+    
+    func setStatusBarDegrade(){
+        let statusBar: UIView = self.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.tintColor = UIColor().hex("FFFFFF")
+            statusBar.setGradientBackground(color1: UIColor().hex("C628FF").cgColor, color2: UIColor().hex("6F1DFF").cgColor)
+            //statusBar.tintColor = UIColor().hex("FFFFFF")
         }
         self.statusBarStyle = .lightContent
     }
@@ -47,5 +66,9 @@ extension UINavigationController{
         self.navigationBar.shadowImage = nil
     }
     
-    
+    func setDegradeBar(image:UIImage) {
+        self.navigationBar.isTranslucent = true
+        let resizedImage = image.resizeImageWith(newSize: navigationBar.frame.size)
+        self.navigationBar.setBackgroundImage(resizedImage, for: UIBarMetrics.default)
+    }
 }

@@ -12,31 +12,31 @@ import Foundation
 
 class StripeGraph: UIView {
     
-    private var control:UIViewController!
-    private var dataX:[Int] = [Int]()
-    private var dataY:[Int] = [Int]()
-    private var offsetY:CGFloat!
-    private var offsetX:CGFloat!
-    
-    private let dataViewY = UIView()
-    private let dataViewX = UIView()
-    private let lineX = UIView()
-    private let lineY = UIView()
-    private var averageLine:DottedLineView!
-    private var MAX = 0
-    
     @IBInspectable
-    public var lineColor:UIColor = UIColor.white
+    public var lineColor            :UIColor = UIColor.white
+    private var control             :UIViewController!
+    private var dataX               :[Int] = [Int]()
+    private var dataY               :[Int] = [Int]()
+    private var offsetY             :CGFloat!
+    private var offsetX             :CGFloat!
+    private let dataViewY           = UIView()
+    private let dataViewX           = UIView()
+    private let lineX               = UIView()
+    private let lineY               = UIView()
+    private var averageLine         :DottedLineView!
+    private var MAX                 = 0
+    public var tapGesure            :UITapGestureRecognizer!
+    private var NBCLASSES           = 4
     
-    public var tapGesure:UITapGestureRecognizer!
+    
     
     //VIEW INIT
     //
     init(frame:CGRect,dataX:[Int],dataY:[Int],control:UIViewController) {
         super.init(frame:frame)
         self.control = control
-        self.offsetY = control.rh(12)
-        self.offsetX = control.rw(12)
+        self.offsetY = control.rh(15)
+        self.offsetX = control.rw(20)
         self.dataY = dataY
         self.dataX = dataX
         setUpVisibleGraph()
@@ -49,12 +49,10 @@ class StripeGraph: UIView {
     //
     //
     private func setUpVisibleGraph(){
-        //Line X
         lineY.backgroundColor = lineColor
         lineY.frame = CGRect(x: offsetX * 1.5, y: offsetY, width: 2, height: (self.frame.height - (offsetY * 2)))
         self.addSubview(lineY)
         
-        //Line Y
         lineX.backgroundColor = lineColor
         lineX.frame = CGRect(x: offsetX * 1.5, y: self.frame.height - offsetY, width:  (self.frame.width - (offsetX * 2)), height:2)
         self.addSubview(lineX)
@@ -85,7 +83,7 @@ class StripeGraph: UIView {
             for x in self.dataX{
                 let lbl = UILabel()
                 lbl.accessibilityIdentifier = "lblX\(index)"
-                lbl.createLabel(x: 0, y: 0, width: control.rw(12), height: control.rh(12), textColor: UIColor.white, fontName: "Lato-Regular", fontSize: control.rw(11), textAignment: .center, text: String(describing: Int(x)))
+                lbl.createLabel(x: 0, y: 0, width: control.rw(18), height: control.rh(12), textColor: UIColor.white, fontName: "Lato-Regular", fontSize: control.rw(9), textAignment: .center, text: String(describing: Int(x)))
                 lbl.center.x = toX
                 lbl.center.y = dataViewX.frame.height/2
                 dataViewX.addSubview(lbl)
@@ -99,7 +97,7 @@ class StripeGraph: UIView {
     //
     //
     private func setUpYAxis(){
-        dataViewY.frame = CGRect(x: lineY.frame.minX - (offsetX * 1.5), y: lineY.frame.minY, width: control.rw(12), height: lineY.frame.height)
+        dataViewY.frame = CGRect(x: lineY.frame.minX - (offsetX * 1.6), y: lineY.frame.minY, width: control.rw(30), height: lineY.frame.height)
         self.addSubview(dataViewY)
         if(self.dataY.count > 0){
             var index = 1
@@ -107,17 +105,18 @@ class StripeGraph: UIView {
             var toY:CGFloat = dataViewY.frame.height - rh(5)
             
             for x in getYDataTemplate(){
+                
                 let val = round(Double(x))
-                print(val)
                 let lbl = UILabel()
                 lbl.accessibilityIdentifier = "lblY\(index)"
-                lbl.createLabel(x: 0, y: 0, width: control.rw(30), height: control.rh(12),textColor: UIColor.white, fontName: "Lato-Regular", fontSize: control.rw(9), textAignment: .center, text: "\(String(describing:Int(val)))")
+                lbl.createLabel(x: 0, y: 0, width: control.rw(30), height: control.rh(12),textColor: UIColor.white, fontName: "Lato-Regular", fontSize: control.rw(9), textAignment: .center, text: "\(String(describing:Int(val).roundedWithAbbreviations))")
                 if(Int(val) > 2){
-                    lbl.font = UIFont(name: "Lato-Regular", size: control.rw(9))
+                    lbl.font = UIFont(name: "Lato-Regular", size: control.rw(8))
                 }
                 else{
-                    lbl.font = UIFont(name: "Lato-Regular", size: control.rw(11))
+                    lbl.font = UIFont(name: "Lato-Regular", size: control.rw(10))
                 }
+                
                 lbl.center.x = dataViewY.frame.width/2
                 lbl.center.y = toY
                 dataViewY.addSubview(lbl)
@@ -131,13 +130,32 @@ class StripeGraph: UIView {
     //
     //
     func getYDataTemplate()->[Int]{
-        var staticData = dataY
-        if(staticData.contains(0)){staticData = staticData.filter({$0 != 0})}
-        let maxValue:Int = Int(ceil(Double(staticData.reduce(Int.min, { max($0, $1) }))))
-        MAX = maxValue
-        let averageDataY = getAverageFromArray(arr: staticData)
-        return [0,getAverageFromArray(arr:[0,averageDataY]),averageDataY,getAverageFromArray(arr:[averageDataY,maxValue]),maxValue]
-        
+        var val = 0
+        var arrayDataY = [Int]()
+        let amplitude = getAmplitude()
+        for _ in 0...NBCLASSES{
+            arrayDataY.append(val)
+            val += amplitude
+        }
+        return arrayDataY
+    }
+    
+    func getEtendue()->Int{
+        let staticData = dataY
+        MAX = staticData.reduce(Int.min, { max($0, $1) }).getCeiledValue()
+        let maxValue = MAX
+        let numMin = staticData.reduce(Int.max, { min($0, $1) })
+        return maxValue - numMin
+    }
+    
+    func getAmplitude()->Int{
+        let amplitude = getEtendue()/NBCLASSES
+        if(amplitude == 0){
+            return 50
+        }
+        else{
+            return amplitude
+        }
     }
     
     //GET AVG FROM ARRAY OF INT
@@ -153,7 +171,7 @@ class StripeGraph: UIView {
         
         var index = 1
         let originalSpacing = dataViewX.frame.width/CGFloat(self.dataX.count + 1)
-        var toX = (originalSpacing + ((self.frame.width - dataViewX.frame.width)/1.5))
+        var toX = (originalSpacing + ((self.frame.width - dataViewX.frame.width)/1.5) + rw(3))
         
         for _ in 0...dataX.count - 1{
             let stripe = UIView()
@@ -186,13 +204,12 @@ class StripeGraph: UIView {
     func animateGraphIn(){
         let arrayStripes = getStripes()
         var index = 0
-        print(arrayStripes)
         UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseIn, animations: {
-            //INFINITE LOOP
             for x in arrayStripes{
                 if(self.dataY[index] != 0){
                     let heightVal = self.getStripeHeightFromDataY(dataY:self.dataY[index])
                     repeat{
+                        if(heightVal == 0){break}
                         x.frame.origin.y -= 1
                         x.frame.size.height += 1
                         
@@ -207,7 +224,7 @@ class StripeGraph: UIView {
     
     //GET HEIGHT OF STRIPE WITH DATA Y
     func getStripeHeightFromDataY(dataY:Int)->Int{
-        return Int((CGFloat(dataY) * lineY.frame.height)/CGFloat(MAX))
+        return Int(ceil((CGFloat(dataY) * lineY.frame.height)/CGFloat(MAX)))
     }
     
     //ADD TOUCH ON GRAPH TO PERFORM ACTION

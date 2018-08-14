@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 extension String{
     
@@ -30,7 +31,6 @@ extension String{
         else{
            return self.count >= min && self.count <= max
         }
-        
     }
     
     func isValidEmail()->Bool{
@@ -72,4 +72,66 @@ extension String{
         return dateFormatter.date(from: self)!
     }
     
+    func stringToUtcDate(format:String)->Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)!
+    }
+    
+    func toUTC() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let convertedDate = formatter.date(from: self)
+        formatter.timeZone = TimeZone(identifier: "UTC")
+        return formatter.string(from: convertedDate!).substring(from: 0, to: 19)
+    }
+    
+    func toMyTimeZone() -> String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = TimeZone(identifier: "UTC")
+        let convertedDate = formatter.date(from: "\(self.substring(from: 0, to: 19))")
+        formatter.timeZone = TimeZone.current
+        return formatter.string(from: convertedDate!).substring(from: 0, to: 19)
+    }
+    
+    func fromBase64() -> String? {
+        guard let data = Data(base64Encoded: self, options: Data.Base64DecodingOptions(rawValue: 0)) else {
+            return nil
+        }
+        
+        return String(data: data as Data, encoding: String.Encoding.utf8)
+    }
+    
+    func toBase64() -> String? {
+        guard let data = self.data(using: String.Encoding.utf8) else {
+            return nil
+        }
+        
+        return data.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+    }
+    
+//    func dropLast(_ n: Int = 1) -> String {
+//        return String(self.dropLast(n))
+//    }
+    
+    //Format --> mm/yy
+    //
+    func getExpMonthFromCardFormat()->UInt{
+        let arrString = self.split{$0 == "/"}.map(String.init)
+        return UInt(arrString[0])!
+    }
+    
+    //Format --> mm/yy
+    //
+    func getExpYearFromCardFormat()->UInt{
+        let arrString = self.split{$0 == "/"}.map(String.init)
+        let result = UInt("20\(arrString[1])")!
+        return result
+    }
+    
+//    var dropLast: String {
+//        return dropLast()
+//    }
 }

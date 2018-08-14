@@ -47,15 +47,57 @@ extension UIView{
     //Start points and end points can be changed
     //
     //
-    func setGradientBackground(color1:UIColor,color2:UIColor){
+//    func setGradientBackground(color1:CGColor,color2:CGColor){
+//        let gradient: CAGradientLayer = CAGradientLayer()
+//        
+//        gradient.colors = [color1, color2]
+//        gradient.locations = [0.0 , 1.0]
+//        gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+//        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+//        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.bounds.width, height: self.bounds.height)
+//        self.layer.addSublayer(gradient)
+//    }
+    
+    //Create gradient color as background
+    //based on two colors from Sketch and a custom position
+    //Start points and end points can be changed
+    // By default, it's from left to right
+    //
+    func setGradientBackground(color1:CGColor,color2:CGColor, location1:NSNumber = 0.0, location2:NSNumber = 1.0, startPoint:CGPoint = CGPoint(x: 0.0, y: 1.0), endPoint:CGPoint = CGPoint(x: 1.0, y: 1.0)){
+        let gradient: CAGradientLayer = CAGradientLayer()
+        
+        gradient.colors = [color1, color2]
+        gradient.locations = [location1, location2]
+        gradient.startPoint = startPoint
+        gradient.endPoint = endPoint
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.bounds.width, height: self.bounds.height)
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    // Create a gradient color as a background
+    // based on three colors and a custom position
+    // startPoint, endPoints can be changed
+    // By default, it's from left to right
+    func setGradientBackground(color1:CGColor, color2:CGColor, color3:CGColor, location1:NSNumber = 0, location2:NSNumber = 0.5, location3:NSNumber = 1.0, startPoint:CGPoint = CGPoint(x: 0.0, y: 1.0), endPoint:CGPoint = CGPoint(x: 1.0, y: 1.0)) {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        
+        gradient.colors = [color1, color2, color3]
+        gradient.locations = [location1 , location2, location3]
+        gradient.startPoint = startPoint
+        gradient.endPoint = endPoint
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.bounds.width, height: self.bounds.height)
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    func setGradientBgVertical(color1:CGColor,color2:CGColor) {
         let gradient: CAGradientLayer = CAGradientLayer()
         
         gradient.colors = [color1, color2]
         gradient.locations = [0.0 , 1.0]
-        gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradient.startPoint = CGPoint(x: 1.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
-        self.layer.insertSublayer(gradient, at: 0)
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height)
+        self.layer.insertSublayer(gradient, at:0)
     }
     
     //ROUNDED CORNERS FOR CHOSEN SIDES
@@ -95,12 +137,12 @@ extension UIView{
     //
     //
     //
-    func createHR(x: CGFloat,y: CGFloat, width: CGFloat,color: UIColor,isAlphaZero:Bool = false) {
+    func createHR(x: CGFloat,y: CGFloat, width: CGFloat,color: UIColor,isAlphaZero:Bool = false, height:CGFloat = 1) {
         let hr = UITextView()
         hr.accessibilityIdentifier = "HR"
         hr.isSelectable = false
         hr.isEditable = false
-        hr.frame = CGRect(x: x, y: y, width: width, height: 1)
+        hr.frame = CGRect(x: x, y: y, width: width, height: height)
         hr.backgroundColor = color
         hr.isUserInteractionEnabled = false
         if(isAlphaZero){

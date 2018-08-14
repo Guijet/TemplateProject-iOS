@@ -73,7 +73,6 @@ extension UIImageView{
     @objc fileprivate func showBigImage(){
         let scrollview = self.superview! as! UIScrollView
         let view = scrollview.superview!
-        print(self.indexInArray)
         let scale = view.frame.width / self.frame.width
         let midx = view.frame.midX - (view.frame.width / 2)
         let midy = (view.frame.midY - ((self.frame.height * scale) / 2) - 64) + scrollview.contentOffset.y
@@ -175,7 +174,6 @@ extension UIImageView{
     
     @objc func swipeLeftArray(){
         var index = 0
-        print(arrayImage.count)
         for x in arrayImage{
             if x == self{
                 if index + 1 < arrayImage.count{
@@ -183,7 +181,6 @@ extension UIImageView{
                     arrayImage[index + 1].frame.origin.y = self.frame.maxY
                     UIView.animate(withDuration: 0.40, delay: 0, options: .curveEaseIn, animations: {
                         self.frame.origin.x = self.superview!.frame.minX - self.frame.width
-                        print(arrayImage[index + 1].indexInArray)
                         arrayImage[index + 1].showBigImageSwipe()
                     }, completion: {_ in
                         self.ReturnToOrigin()
@@ -196,7 +193,6 @@ extension UIImageView{
     
     @objc func swipeRightArray(){
         var index = 0
-        print(arrayImage.count)
         for x in arrayImage{
             if x == self{
                 if index - 1 >= 0{
@@ -204,7 +200,6 @@ extension UIImageView{
                     arrayImage[index - 1].frame.origin.y = self.frame.minY
                     UIView.animate(withDuration: 0.40, delay: 0, options: .curveEaseIn, animations: {
                         self.frame.origin.x = self.superview!.frame.maxX + self.frame.width
-                        print(arrayImage[index - 1].indexInArray)
                         arrayImage[index - 1].showBigImageSwipe()
                     }, completion: {_ in
                         self.ReturnToOrigin()

@@ -12,8 +12,8 @@ extension UIImage{
     
     //We can change the resize parameter
     func imageToBase64()->String{
-        let myImage = UIImageJPEGRepresentation(self.resizeImageWith(newSize: CGSize(width: 1080, height: 1080)), 0)!
-        let strBase64 = myImage.base64EncodedString(options: .init(rawValue: 0))
+        let myImage = UIImageJPEGRepresentation(self.resizeImageWith(newSize: CGSize(width: 400, height: 400)), 0)!
+        let strBase64 = myImage.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
         return strBase64
     }
     
